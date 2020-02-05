@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PI_UDP_Recieve'.
 //
-// Model version                  : 1.42
+// Model version                  : 1.43
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 14:14:41 2020
+// C/C++ source code generated on : Wed Feb  5 14:39:07 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -25,6 +25,7 @@
 #ifndef PI_UDP_Recieve_COMMON_INCLUDES_
 # define PI_UDP_Recieve_COMMON_INCLUDES_
 #include "rtwtypes.h"
+#include "zero_crossing_types.h"
 #include "rtw_extmode.h"
 #include "sysran_types.h"
 #include "rtw_continuous.h"
@@ -34,7 +35,6 @@
 #include "MW_SPI.h"
 #include "MW_SPI_Helper.h"
 #include "slros_initialize.h"
-#include "DAHostLib_Network.h"
 #endif                                 // PI_UDP_Recieve_COMMON_INCLUDES_
 
 #include "PI_UDP_Recieve_types.h"
@@ -93,19 +93,23 @@
 
 // Block signals (default storage)
 typedef struct {
+  SL_Bus_PI_UDP_Recieve_geometry_msgs_Twist In1;// '<S7>/In1'
   SL_Bus_PI_UDP_Recieve_geometry_msgs_Twist b_varargout_2;
-  char_T cv[17];
   uint8_T rdDataRaw[14];
   uint8_T wrDataRaw[14];
   real32_T Left_right;                 // '<S2>/1-D Lookup Table9'
   real32_T Up_Down;                    // '<S2>/1-D Lookup Table1'
-  real32_T Axes[6];                    // '<Root>/UDP Receive'
   real32_T Up_Down_h;                  // '<Root>/1-D Lookup Table7'
   real32_T uDLookupTable1;             // '<Root>/1-D Lookup Table1'
   real32_T Left_right_c;               // '<Root>/1-D Lookup Table2'
   real32_T Up_Down_n;                  // '<Root>/1-D Lookup Table3'
   real32_T Constant2;                  // '<Root>/Constant2'
-  uint16_T UDPReceive_o2;              // '<Root>/UDP Receive'
+  real32_T DataTypeConversion1;        // '<S3>/Data Type Conversion1'
+  real32_T DataTypeConversion2;        // '<S3>/Data Type Conversion2'
+  real32_T DataTypeConversion3;        // '<S3>/Data Type Conversion3'
+  real32_T DataTypeConversion4;        // '<S3>/Data Type Conversion4'
+  real32_T DataTypeConversion5;        // '<S3>/Data Type Conversion5'
+  real32_T DataTypeConversion6;        // '<S3>/Data Type Conversion6'
   uint16_T SPIMasterTransfer[7];       // '<Root>/SPI Master Transfer'
   uint8_T Output;                      // '<S1>/Output'
 } B_PI_UDP_Recieve_T;
@@ -113,26 +117,45 @@ typedef struct {
 // Block states (default storage) for system '<Root>'
 typedef struct {
   codertarget_raspi_internal_SP_T obj; // '<Root>/SPI Master Transfer'
-  ros_slros_internal_block_Subs_T obj_c;// '<S3>/SourceBlock'
-  real_T UDPReceive_NetworkLib[137];   // '<Root>/UDP Receive'
-  uint16_T RateTransition1_Buffer[7];  // '<Root>/Rate Transition1'
+  ros_slros_internal_block_Subs_T obj_c;// '<S4>/SourceBlock'
   uint8_T Output_DSTATE;               // '<S1>/Output'
-  int8_T EnabledSubsystem_SubsysRanBC; // '<S3>/Enabled Subsystem'
+  int8_T EnabledSubsystem_SubsysRanBC; // '<S4>/Enabled Subsystem'
+  int8_T GetRosMessage_SubsysRanBC;    // '<Root>/GetRosMessage'
 } DW_PI_UDP_Recieve_T;
+
+// Zero-crossing (trigger) state
+typedef struct {
+  ZCSigState GetRosMessage_Trig_ZCE;   // '<Root>/GetRosMessage'
+} PrevZCX_PI_UDP_Recieve_T;
 
 // Parameters (default storage)
 struct P_PI_UDP_Recieve_T_ {
   uint8_T CounterLimited_uplimit;      // Mask Parameter: CounterLimited_uplimit
-                                          //  Referenced by: '<S5>/FixPt Switch'
+                                          //  Referenced by: '<S6>/FixPt Switch'
 
   SL_Bus_PI_UDP_Recieve_geometry_msgs_Twist Out1_Y0;// Computed Parameter: Out1_Y0
-                                                       //  Referenced by: '<S6>/Out1'
+                                                       //  Referenced by: '<S7>/Out1'
 
   SL_Bus_PI_UDP_Recieve_geometry_msgs_Twist Constant_Value;// Computed Parameter: Constant_Value
-                                                              //  Referenced by: '<S3>/Constant'
+                                                              //  Referenced by: '<S4>/Constant'
 
-  int32_T UDPReceive_Port;             // Computed Parameter: UDPReceive_Port
-                                          //  Referenced by: '<Root>/UDP Receive'
+  real32_T Lx_Y0;                      // Computed Parameter: Lx_Y0
+                                          //  Referenced by: '<S3>/Lx'
+
+  real32_T Ly_Y0;                      // Computed Parameter: Ly_Y0
+                                          //  Referenced by: '<S3>/Ly '
+
+  real32_T Lz_Y0;                      // Computed Parameter: Lz_Y0
+                                          //  Referenced by: '<S3>/Lz'
+
+  real32_T Ax_Y0;                      // Computed Parameter: Ax_Y0
+                                          //  Referenced by: '<S3>/Ax'
+
+  real32_T Ay_Y0;                      // Computed Parameter: Ay_Y0
+                                          //  Referenced by: '<S3>/Ay '
+
+  real32_T Az_Y0;                      // Computed Parameter: Az_Y0
+                                          //  Referenced by: '<S3>/Az '
 
   real32_T Gain7_Gain;                 // Computed Parameter: Gain7_Gain
                                           //  Referenced by: '<Root>/Gain7'
@@ -156,6 +179,9 @@ struct P_PI_UDP_Recieve_T_ {
                                   // Computed Parameter: uDLookupTable1_bp01Data
                                      //  Referenced by: '<S2>/1-D Lookup Table1'
 
+  real32_T Constant4_Value;            // Computed Parameter: Constant4_Value
+                                          //  Referenced by: '<Root>/Constant4'
+
   real32_T Gain6_Gain;                 // Computed Parameter: Gain6_Gain
                                           //  Referenced by: '<Root>/Gain6'
 
@@ -166,6 +192,9 @@ struct P_PI_UDP_Recieve_T_ {
   real32_T uDLookupTable7_bp01Data[5];
                                   // Computed Parameter: uDLookupTable7_bp01Data
                                      //  Referenced by: '<Root>/1-D Lookup Table7'
+
+  real32_T Constant5_Value;            // Computed Parameter: Constant5_Value
+                                          //  Referenced by: '<Root>/Constant5'
 
   real32_T Gain2_Gain;                 // Computed Parameter: Gain2_Gain
                                           //  Referenced by: '<Root>/Gain2'
@@ -178,6 +207,9 @@ struct P_PI_UDP_Recieve_T_ {
                                 // Computed Parameter: uDLookupTable1_bp01Data_b
                                    //  Referenced by: '<Root>/1-D Lookup Table1'
 
+  real32_T Constant6_Value;            // Computed Parameter: Constant6_Value
+                                          //  Referenced by: '<Root>/Constant6'
+
   real32_T Gain3_Gain;                 // Computed Parameter: Gain3_Gain
                                           //  Referenced by: '<Root>/Gain3'
 
@@ -188,6 +220,9 @@ struct P_PI_UDP_Recieve_T_ {
   real32_T uDLookupTable2_bp01Data[3];
                                   // Computed Parameter: uDLookupTable2_bp01Data
                                      //  Referenced by: '<Root>/1-D Lookup Table2'
+
+  real32_T Constant7_Value;            // Computed Parameter: Constant7_Value
+                                          //  Referenced by: '<Root>/Constant7'
 
   real32_T Gain1_Gain;                 // Computed Parameter: Gain1_Gain
                                           //  Referenced by: '<Root>/Gain1'
@@ -204,13 +239,13 @@ struct P_PI_UDP_Recieve_T_ {
                                           //  Referenced by: '<Root>/Constant2'
 
   uint8_T Constant_Value_m;            // Computed Parameter: Constant_Value_m
-                                          //  Referenced by: '<S5>/Constant'
+                                          //  Referenced by: '<S6>/Constant'
 
   uint8_T Output_InitialCondition;// Computed Parameter: Output_InitialCondition
                                      //  Referenced by: '<S1>/Output'
 
   uint8_T FixPtConstant_Value;        // Computed Parameter: FixPtConstant_Value
-                                         //  Referenced by: '<S4>/FixPt Constant'
+                                         //  Referenced by: '<S5>/FixPt Constant'
 
 };
 
@@ -248,14 +283,9 @@ struct tag_RTM_PI_UDP_Recieve_T {
     uint32_T clockTick0;
     time_T stepSize0;
     uint32_T clockTick1;
-    uint32_T clockTick2;
     struct {
-      uint8_T TID[3];
+      uint8_T TID[2];
     } TaskCounters;
-
-    struct {
-      boolean_T TID0_1;
-    } RateInteraction;
 
     time_T tFinal;
     boolean_T stopRequestedFlag;
@@ -292,6 +322,11 @@ extern "C" {
 
 // Block states (default storage)
 extern DW_PI_UDP_Recieve_T PI_UDP_Recieve_DW;
+
+// External data declarations for dependent source files
+
+// Zero-crossing (trigger) state
+extern PrevZCX_PI_UDP_Recieve_T PI_UDP_Recieve_PrevZCX;
 
 // External function called from main
 #ifdef __cplusplus
@@ -341,9 +376,12 @@ extern "C" {
 //-
 //  These blocks were eliminated from the model due to optimizations:
 //
+//  Block '<Root>/Constant1' : Unused code path elimination
+//  Block '<Root>/Constant3' : Unused code path elimination
 //  Block '<S1>/Data Type Propagation' : Unused code path elimination
-//  Block '<S4>/FixPt Data Type Duplicate' : Unused code path elimination
-//  Block '<S5>/FixPt Data Type Duplicate1' : Unused code path elimination
+//  Block '<S5>/FixPt Data Type Duplicate' : Unused code path elimination
+//  Block '<S6>/FixPt Data Type Duplicate1' : Unused code path elimination
+//  Block '<Root>/Rate Transition1' : Eliminated since input and output rates are identical
 
 
 //-
@@ -363,10 +401,11 @@ extern "C" {
 //  '<Root>' : 'PI_UDP_Recieve'
 //  '<S1>'   : 'PI_UDP_Recieve/Counter Limited'
 //  '<S2>'   : 'PI_UDP_Recieve/ForwardBack_LeftRight'
-//  '<S3>'   : 'PI_UDP_Recieve/Subscribe'
-//  '<S4>'   : 'PI_UDP_Recieve/Counter Limited/Increment Real World'
-//  '<S5>'   : 'PI_UDP_Recieve/Counter Limited/Wrap To Zero'
-//  '<S6>'   : 'PI_UDP_Recieve/Subscribe/Enabled Subsystem'
+//  '<S3>'   : 'PI_UDP_Recieve/GetRosMessage'
+//  '<S4>'   : 'PI_UDP_Recieve/Subscribe'
+//  '<S5>'   : 'PI_UDP_Recieve/Counter Limited/Increment Real World'
+//  '<S6>'   : 'PI_UDP_Recieve/Counter Limited/Wrap To Zero'
+//  '<S7>'   : 'PI_UDP_Recieve/Subscribe/Enabled Subsystem'
 
 #endif                                 // RTW_HEADER_PI_UDP_Recieve_h_
 

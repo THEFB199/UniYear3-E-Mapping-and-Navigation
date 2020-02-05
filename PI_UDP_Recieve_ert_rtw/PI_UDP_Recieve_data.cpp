@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PI_UDP_Recieve'.
 //
-// Model version                  : 1.42
+// Model version                  : 1.43
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 14:14:41 2020
+// C/C++ source code generated on : Wed Feb  5 14:39:07 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -22,12 +22,12 @@
 // Block parameters (default storage)
 P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
   // Mask Parameter: CounterLimited_uplimit
-  //  Referenced by: '<S5>/FixPt Switch'
+  //  Referenced by: '<S6>/FixPt Switch'
 
   7U,
 
   // Computed Parameter: Out1_Y0
-  //  Referenced by: '<S6>/Out1'
+  //  Referenced by: '<S7>/Out1'
 
   {
     {
@@ -44,7 +44,7 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
   },
 
   // Computed Parameter: Constant_Value
-  //  Referenced by: '<S3>/Constant'
+  //  Referenced by: '<S4>/Constant'
 
   {
     {
@@ -60,10 +60,35 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
     }                                  // Angular
   },
 
-  // Computed Parameter: UDPReceive_Port
-  //  Referenced by: '<Root>/UDP Receive'
+  // Computed Parameter: Lx_Y0
+  //  Referenced by: '<S3>/Lx'
 
-  25000,
+  0.0F,
+
+  // Computed Parameter: Ly_Y0
+  //  Referenced by: '<S3>/Ly '
+
+  0.0F,
+
+  // Computed Parameter: Lz_Y0
+  //  Referenced by: '<S3>/Lz'
+
+  0.0F,
+
+  // Computed Parameter: Ax_Y0
+  //  Referenced by: '<S3>/Ax'
+
+  0.0F,
+
+  // Computed Parameter: Ay_Y0
+  //  Referenced by: '<S3>/Ay '
+
+  0.0F,
+
+  // Computed Parameter: Az_Y0
+  //  Referenced by: '<S3>/Az '
+
+  0.0F,
 
   // Computed Parameter: Gain7_Gain
   //  Referenced by: '<Root>/Gain7'
@@ -95,6 +120,11 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
 
   { -100.0F, -50.0F, 0.0F, 50.0F, 100.0F },
 
+  // Computed Parameter: Constant4_Value
+  //  Referenced by: '<Root>/Constant4'
+
+  1.0F,
+
   // Computed Parameter: Gain6_Gain
   //  Referenced by: '<Root>/Gain6'
 
@@ -109,6 +139,11 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
   //  Referenced by: '<Root>/1-D Lookup Table7'
 
   { -100.0F, -50.0F, 0.0F, 50.0F, 100.0F },
+
+  // Computed Parameter: Constant5_Value
+  //  Referenced by: '<Root>/Constant5'
+
+  1.0F,
 
   // Computed Parameter: Gain2_Gain
   //  Referenced by: '<Root>/Gain2'
@@ -125,6 +160,11 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
 
   { -100.0F, -50.0F, 0.0F, 50.0F, 100.0F },
 
+  // Computed Parameter: Constant6_Value
+  //  Referenced by: '<Root>/Constant6'
+
+  1.0F,
+
   // Computed Parameter: Gain3_Gain
   //  Referenced by: '<Root>/Gain3'
 
@@ -139,6 +179,11 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
   //  Referenced by: '<Root>/1-D Lookup Table2'
 
   { 0.0F, 50.0F, 100.0F },
+
+  // Computed Parameter: Constant7_Value
+  //  Referenced by: '<Root>/Constant7'
+
+  1.0F,
 
   // Computed Parameter: Gain1_Gain
   //  Referenced by: '<Root>/Gain1'
@@ -161,7 +206,7 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
   65535.0F,
 
   // Computed Parameter: Constant_Value_m
-  //  Referenced by: '<S5>/Constant'
+  //  Referenced by: '<S6>/Constant'
 
   0U,
 
@@ -171,7 +216,7 @@ P_PI_UDP_Recieve_T PI_UDP_Recieve_P = {
   0U,
 
   // Computed Parameter: FixPtConstant_Value
-  //  Referenced by: '<S4>/FixPt Constant'
+  //  Referenced by: '<S5>/FixPt Constant'
 
   1U
 };

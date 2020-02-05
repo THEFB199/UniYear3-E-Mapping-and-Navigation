@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'PI_UDP_Recieve'. 
 ## 
 ## Makefile     : PI_UDP_Recieve.mk
-## Generated on : Wed Feb 05 13:50:05 2020
+## Generated on : Wed Feb 05 14:37:19 2020
 ## MATLAB Coder version: 4.3 (R2019b)
 ## 
 ## Build Info:
@@ -23,11 +23,11 @@
 
 PRODUCT_NAME              = PI_UDP_Recieve
 MAKEFILE                  = PI_UDP_Recieve.mk
-MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2019b
-MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2019b/bin
-MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
+MATLAB_ROOT               = /usr/local/MATLAB/R2019b
+MATLAB_BIN                = /usr/local/MATLAB/R2019b/bin
+MATLAB_ARCH_BIN           = $(MATLAB_BIN)/glnxa64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/FRED-Surface/Documents/GitHub/E-Mapping
+START_DIR                 = /home/earth/GitHub/E-Mapping-and-Navigation
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -51,7 +51,6 @@ CPP_STANDARD_OPTS         =
 # MACROS
 #-----------
 
-SHELL        = %SystemRoot%/system32/cmd.exe
 CCOUTPUTFLAG = --output_file=
 LDOUTPUTFLAG = --output_file=
 
@@ -112,9 +111,9 @@ OUTPUT_FLAG         = -o
 ARDEBUG             =
 STATICLIB_OUTPUT_FLAG =
 MEX_DEBUG           = -g
-RM                  = @del /F
+RM                  = @rm -f
 ECHO                = @echo
-MV                  = @move
+MV                  = @mv
 RUN                 =
 
 #--------------------------------------
@@ -154,7 +153,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/realtime/targets/raspi/server -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/RASPBE~1/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include -I$(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/include -I$(START_DIR)/PI_UDP_Recieve_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
+INCLUDES_BUILDINFO = -I$(START_DIR) -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/include -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/shared/svd/include -I$(START_DIR)/PI_UDP_Recieve_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -162,13 +161,13 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMODEL=PI_UDP_Recieve -DNUMST=3 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DEXTMODE_STATIC -DEXTMODE_STATIC_SIZE=1000000 -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=1 -DROS_PROJECT -DMW_SCHED_OTHER -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT=RT -D_USE_TARGET_UDP_
+DEFINES_ = -DMODEL=PI_UDP_Recieve -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DUNIX -DEXTMODE_STATIC -DEXTMODE_STATIC_SIZE=1000000 -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=1 -DROS_PROJECT -DMW_SCHED_OTHER -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT=RT
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=1
 DEFINES_CUSTOM = 
 DEFINES_IMPLIED = -DTID01EQ=0
 DEFINES_OPTS = -DEXTMODE_STATIC -DEXTMODE_STATIC_SIZE=1000000 -DON_TARGET_WAIT_FOR_START=1
 DEFINES_SKIPFORSIL = -DROS_PROJECT -DMW_SCHED_OTHER -DSTACK_SIZE=64
-DEFINES_STANDARD = -DMODEL=PI_UDP_Recieve -DNUMST=3 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_STANDARD = -DMODEL=PI_UDP_Recieve -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DUNIX
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_IMPLIED) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
 
@@ -176,7 +175,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_IMPLIED)
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/DAHostLib_Network.c $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/DAHostLib_rtw.c $(START_DIR)/PI_UDP_Recieve_ert_rtw/PI_UDP_Recieve.cpp $(START_DIR)/PI_UDP_Recieve_ert_rtw/PI_UDP_Recieve_data.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/mem_mgr.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/PI_UDP_Recieve_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/PI_UDP_Recieve_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/linuxUDP.c
+SRCS = /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/PI_UDP_Recieve_ert_rtw/PI_UDP_Recieve.cpp $(START_DIR)/PI_UDP_Recieve_ert_rtw/PI_UDP_Recieve_data.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/mem_mgr.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/PI_UDP_Recieve_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/PI_UDP_Recieve_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
 
 MAIN_SRC = $(START_DIR)/PI_UDP_Recieve_ert_rtw/ert_main.cpp
 
@@ -186,7 +185,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = MW_SPI.c.o DAHostLib_Network.c.o DAHostLib_rtw.c.o PI_UDP_Recieve.cpp.o PI_UDP_Recieve_data.cpp.o ext_svr.c.o updown.c.o ext_work.c.o mem_mgr.c.o rtiostream_utils.c.o rtiostream_interface.c.o rtiostream_tcpip.c.o linuxinitialize.cpp.o slros_busmsg_conversion.cpp.o slros_initialize.cpp.o slros_generic_param.cpp.o linuxUDP.c.o
+OBJS = MW_SPI.c.o PI_UDP_Recieve.cpp.o PI_UDP_Recieve_data.cpp.o ext_svr.c.o updown.c.o ext_work.c.o mem_mgr.c.o rtiostream_utils.c.o rtiostream_interface.c.o rtiostream_tcpip.c.o linuxinitialize.cpp.o slros_busmsg_conversion.cpp.o slros_initialize.cpp.o slros_generic_param.cpp.o
 
 MAIN_OBJ = ert_main.cpp.o
 
@@ -236,37 +235,33 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_ = -ldl
 CPP_LDFLAGS_SKIPFORSIL = -lrt
 
-CPP_LDFLAGS += $(CPP_LDFLAGS_) $(CPP_LDFLAGS_SKIPFORSIL)
+CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
 #------------------------------
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_ = -ldl
 CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -lrt
 
-CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_) $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
+CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 #-----------
 # Linker
 #-----------
 
-LDFLAGS_ = -ldl
 LDFLAGS_SKIPFORSIL = -lrt
 
-LDFLAGS += $(LDFLAGS_) $(LDFLAGS_SKIPFORSIL)
+LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
 #--------------------------
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_ = -ldl
 SHAREDLIB_LDFLAGS_SKIPFORSIL = -lrt
 
-SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_) $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
+SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 ###########################################################################
 ## INLINED COMMANDS
@@ -365,27 +360,15 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-%.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.c
+%.c.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
-%.s.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.s
+%.s.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
 
-%.cpp.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o $@ $<
-
-
-%.c.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/%.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/%.s
-	$(AS) $(ASFLAGS) -o $@ $<
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/%.cpp
+%.cpp.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
@@ -449,15 +432,7 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-MW_SPI.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-DAHostLib_Network.c.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/DAHostLib_Network.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-DAHostLib_rtw.c.o : $(MATLAB_ROOT)/toolbox/shared/spc/src_ml/extern/src/DAHostLib_rtw.c
+MW_SPI.c.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
@@ -517,10 +492,6 @@ slros_generic_param.cpp.o : $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_p
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-linuxUDP.c.o : $(MATLAB_ROOT)/toolbox/ros/slros/src/linuxUDP.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
 ###########################################################################
 ## DEPENDENCIES
 ###########################################################################
@@ -563,8 +534,8 @@ info :
 
 clean : 
 	$(ECHO) "### Deleting all derived files..."
-	$(RM) $(subst /,\,$(PRODUCT))
-	$(RM) $(subst /,\,$(ALL_OBJS))
+	$(RM) $(PRODUCT)
+	$(RM) $(ALL_OBJS)
 	$(RM) *Object
 	$(ECHO) "### Deleted all derived files."
 

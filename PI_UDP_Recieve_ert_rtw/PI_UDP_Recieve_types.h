@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PI_UDP_Recieve'.
 //
-// Model version                  : 1.42
+// Model version                  : 1.43
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 14:14:41 2020
+// C/C++ source code generated on : Wed Feb  5 14:39:07 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -20,6 +20,7 @@
 #define RTW_HEADER_PI_UDP_Recieve_types_h_
 #include "rtwtypes.h"
 #include "multiword_types.h"
+#include "zero_crossing_types.h"
 #ifndef DEFINED_TYPEDEF_FOR_SL_Bus_PI_UDP_Recieve_geometry_msgs_Vector3_
 #define DEFINED_TYPEDEF_FOR_SL_Bus_PI_UDP_Recieve_geometry_msgs_Vector3_
 

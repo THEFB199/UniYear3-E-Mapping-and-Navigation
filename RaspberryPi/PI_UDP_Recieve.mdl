@@ -1,12 +1,12 @@
 Model {
   Name			  "PI_UDP_Recieve"
   Version		  10.0
-  SavedCharacterEncoding  "windows-1252"
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.43"
+    ComputedModelVersion    "1.44"
     NumModelReferences	    0
     NumTestPointedSignals   4
     TestPointedSignal {
@@ -47,7 +47,7 @@ Model {
     IsArchitectureModel	    0
     IsAUTOSARArchitectureModel 0
     NumParameterArguments   0
-    NumExternalFileReferences 4
+    NumExternalFileReferences 3
     ExternalFileReference {
       Reference		      "simulink/Sources/Counter\nLimited"
       Path		      "PI_UDP_Recieve/Counter Limited"
@@ -66,48 +66,42 @@ Model {
       SID		      "153"
       Type		      "LIBRARY_BLOCK"
     }
-    ExternalFileReference {
-      Reference		      "embdlinuxlib/UDP Receive"
-      Path		      "PI_UDP_Recieve/UDP Receive"
-      SID		      "60"
-      Type		      "LIBRARY_BLOCK"
-    }
     OrderedModelArguments   1
   }
   DiagnosticSuppressor	  "on"
   SuppressorTable	  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n<!DOCTYPE boost_serialization>\n<"
   "boost_serialization signature=\"serialization::archive\" version=\"15\">\n<DiagnosticSuppressor class_id=\"0\" track"
   "ing_level=\"0\" version=\"6\">\n	<Table class_id=\"1\" tracking_level=\"0\" version=\"0\">\n		<count>1</count>\n		<b"
-  "ucket_count>8</bucket_count>\n		<item_version>0</item_version>\n		<item class_id=\"2\" tracking_level=\"0\" version="
+  "ucket_count>2</bucket_count>\n		<item_version>0</item_version>\n		<item class_id=\"2\" tracking_level=\"0\" version="
   "\"0\">\n			<first class_id=\"3\" tracking_level=\"0\" version=\"6\">\n				<Source class_id=\"4\" tracking_level=\"0\""
   " version=\"0\">\n					<count>1</count>\n					<item_version>0</item_version>\n					<item>PI_UDP_Recieve/Counter Limit"
   "ed</item>\n				</Source>\n			</first>\n			<second class_id=\"5\" tracking_level=\"0\" version=\"6\">\n				<Suppresse"
-  "dData class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<count>2</count>\n					<bucket_count>8</bucket_count>"
+  "dData class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<count>2</count>\n					<bucket_count>5</bucket_count>"
   "\n					<item_version>0</item_version>\n					<item class_id=\"7\" tracking_level=\"0\" version=\"0\">\n						<first c"
-  "lass_id=\"8\" tracking_level=\"0\" version=\"6\">\n							<ID>Simulink:DataType:WarningOverFlowDetected</ID>\n						"
-  "	<Cause>\n								<Source>\n									<count>0</count>\n									<item_version>0</item_version>\n								</Source>\n	"
-  "						</Cause>\n						</first>\n						<second class_id=\"9\" tracking_level=\"0\" version=\"6\">\n							<Comment></"
-  "Comment>\n							<User></User>\n							<LastModified class_id=\"10\" tracking_level=\"0\" version=\"0\">\n								<p"
-  "time_date class_id=\"11\" tracking_level=\"0\" version=\"0\">\n									<date>20160608</date>\n								</ptime_date>"
-  "\n								<ptime_time_duration class_id=\"12\" tracking_level=\"0\" version=\"0\">\n									<is_special>0</is_speci"
-  "al>\n									<time_duration_hours>15</time_duration_hours>\n									<time_duration_minutes>23</time_duration_minut"
-  "es>\n									<time_duration_seconds>17</time_duration_seconds>\n									<time_duration_fractional_seconds>0</time_"
-  "duration_fractional_seconds>\n								</ptime_time_duration>\n							</LastModified>\n							<SuppressionType>1</Sup"
-  "pressionType>\n						</second>\n					</item>\n					<item>\n						<first>\n							<ID>SimulinkFixedPoint:util:Overflo"
-  "woccurred</ID>\n							<Cause>\n								<Source>\n									<count>0</count>\n									<item_version>0</item_version>"
-  "\n								</Source>\n							</Cause>\n						</first>\n						<second>\n							<Comment></Comment>\n							<User></Use"
-  "r>\n							<LastModified>\n								<ptime_date>\n									<date>20160608</date>\n								</ptime_date>\n								<pti"
-  "me_time_duration>\n									<is_special>0</is_special>\n									<time_duration_hours>15</time_duration_hours>\n				"
-  "					<time_duration_minutes>23</time_duration_minutes>\n									<time_duration_seconds>17</time_duration_seconds>\n"
-  "									<time_duration_fractional_seconds>0</time_duration_fractional_seconds>\n								</ptime_time_duration>\n			"
-  "				</LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedDat"
-  "a>\n			</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
-  LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "db1d0dea-daf4-49a5-865c-471e128446e0,48fb4b40-4eda-496c-aded-dfb39eef3e7e,bd087c1e-8b80"
-  "-42f3-8cd6-3d9603fa049d,68d9c3e6-32bf-4577-87c3-59d7003f0071"
-  SLCCPlugin		  "on"
+  "lass_id=\"8\" tracking_level=\"0\" version=\"6\">\n							<ID>SimulinkFixedPoint:util:Overflowoccurred</ID>\n							"
+  "<Cause>\n								<Source>\n									<count>0</count>\n									<item_version>0</item_version>\n								</Source>\n		"
+  "					</Cause>\n						</first>\n						<second class_id=\"9\" tracking_level=\"0\" version=\"6\">\n							<Comment></C"
+  "omment>\n							<User></User>\n							<LastModified class_id=\"10\" tracking_level=\"0\" version=\"0\">\n								<pt"
+  "ime_date class_id=\"11\" tracking_level=\"0\" version=\"0\">\n									<date>20160608</date>\n								</ptime_date>\n"
+  "								<ptime_time_duration class_id=\"12\" tracking_level=\"0\" version=\"0\">\n									<is_special>0</is_special"
+  ">\n									<time_duration_hours>15</time_duration_hours>\n									<time_duration_minutes>23</time_duration_minutes"
+  ">\n									<time_duration_seconds>17</time_duration_seconds>\n									<time_duration_fractional_seconds>0</time_du"
+  "ration_fractional_seconds>\n								</ptime_time_duration>\n							</LastModified>\n							<SuppressionType>1</Suppr"
+  "essionType>\n						</second>\n					</item>\n					<item>\n						<first>\n							<ID>Simulink:DataType:WarningOverFlow"
+  "Detected</ID>\n							<Cause>\n								<Source>\n									<count>0</count>\n									<item_version>0</item_version>\n"
+  "								</Source>\n							</Cause>\n						</first>\n						<second>\n							<Comment></Comment>\n							<User></User>"
+  "\n							<LastModified>\n								<ptime_date>\n									<date>20160608</date>\n								</ptime_date>\n								<ptime"
+  "_time_duration>\n									<is_special>0</is_special>\n									<time_duration_hours>15</time_duration_hours>\n						"
+  "			<time_duration_minutes>23</time_duration_minutes>\n									<time_duration_seconds>17</time_duration_seconds>\n		"
+  "							<time_duration_fractional_seconds>0</time_duration_fractional_seconds>\n								</ptime_time_duration>\n					"
+  "		</LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedData>"
+  "\n			</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
   AnimationPlugin	  "on"
+  LogicAnalyzerPlugin	  "on"
+  LogicAnalyzerSignalOrdering "48fb4b40-4eda-496c-aded-dfb39eef3e7e,68d9c3e6-32bf-4577-87c3-59d7003f0071,bd087c1e-8b80"
+  "-42f3-8cd6-3d9603fa049d,db1d0dea-daf4-49a5-865c-471e128446e0"
   WebScopes_FoundationPlugin "on"
+  SLCCPlugin		  "on"
   NotesPlugin		  "on"
   slprops.hdlmdlprops {
     $PropName		    "HDLParams"
@@ -130,7 +124,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
-  LastSavedArchitecture	  "win64"
+  LastSavedArchitecture	  "glnxa64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    2
@@ -140,7 +134,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, -7.0, 1839.0, 1191.0]
+      Location		      [993.0, 27.0, 927.0, 1053.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -167,10 +161,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-1163.6980068993794, -457.97841833475718]
-	  SceneRectInView	  [-1163.6980068993794, -457.97841833475718, 2895.5555555555557, 1604.4444444444446]
+	  Extents		  [827.0, 821.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-558.5365622123237, -60.197140073304354]
+	  SceneRectInView	  [-558.5365622123237, -60.197140073304354, 1033.75, 1026.25]
 	}
 	Object {
 	  $ObjectID		  7
@@ -201,19 +195,6 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  9
-	  Type			  "GLUE2:SpreadSheet"
-	  ID			  "ModelData"
-	  Visible		  [0]
-	  CreateCallback	  "DataView.createSpreadSheetComponent"
-	  UserData		  ""
-	  Floating		  [0]
-	  DockPosition		  "Bottom"
-	  Width			  [426]
-	  Height		  [320]
-	  Minimized		  "Off"
-	}
-	Object {
-	  $ObjectID		  10
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [1]
@@ -221,19 +202,32 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
-	  Width			  [426]
-	  Height		  [320]
+	  Width			  [640]
+	  Height		  [480]
 	  Minimized		  "On"
+	}
+	Object {
+	  $ObjectID		  10
+	  Type			  "GLUE2:SpreadSheet"
+	  ID			  "ModelData"
+	  Visible		  [0]
+	  CreateCallback	  "DataView.createSpreadSheetComponent"
+	  UserData		  ""
+	  Floating		  [0]
+	  DockPosition		  "Bottom"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Off"
 	}
 	PropName		"DockComponentsInfo"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAAP////8AAAAAAP////r/////AgAAAAH7AAAAUgBHA"
       "EwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAA"
-      "P////8AAACTAAf//wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvA"
-      "FAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAAUwD///8AAAADAAAAAAAAAAD8AQAAAAH8AAAAAP////8AAAAAA"
+      "P////8AAABiAAf//wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvA"
+      "FAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAADAAAAAAAAAAD8AQAAAAH8AAAAAP////8AAAAAA"
       "P////r/////AQAAAAH7AAAANgBHAEwAVQBFADIAOgBTAHAAcgBlAGEAZABTAGgAZQBlAHQALwBNAG8AZABlAGwARABhAHQAYQAAAAAA/////wAAA"
-      "YsA////AAAKZgAABfAAAAABAAAAAgAAAAEAAAAC/AAAAAMAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8Ab"
+      "RYA////AAADYQAAA3IAAAABAAAAAgAAAAEAAAAC/AAAAAMAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8Ab"
       "wBsAEIAYQByAEwAZQBmAHQDAAAAAP////8AAAAAAAAAAAAAAAEAAAABAAAAOABjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvA"
       "GwAQgBhAHIAUgBpAGcAaAB0AwAAAAD/////AAAAAAAAAAAAAAADAAAAAQAAADoAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8Ab"
       "wBsAEIAYQByAEIAbwB0AHQAbwBtAAAAAAD/////AAAAAAAAAAA="
@@ -251,11 +245,11 @@ Model {
   Creator		  "fredd"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "FRED-Surface"
+  LastModifiedBy	  "earth"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Feb 05 14:17:54 2020"
-  RTWModifiedTimeStamp	  502813070
-  ModelVersionFormat	  "1.%<AutoIncrement:43>"
+  LastModifiedDate	  "Wed Feb 05 14:49:51 2020"
+  RTWModifiedTimeStamp	  502814426
+  ModelVersionFormat	  "1.%<AutoIncrement:44>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -2135,7 +2129,7 @@ Model {
 	    Type		    "Struct"
 	    Dimension		    1
 	    MATStruct {
-	      UseCoderTarget	      [1]
+	      UseCoderTarget	      [1.0]
 	      TargetHardware	      "Robot Operating System (ROS)"
 	      Array {
 		Type			"Struct"
@@ -2147,8 +2141,8 @@ Model {
 		    MATStruct {
 		    IPAddress		    "ros.codertarget.internal.DeviceParameters.getDeviceAddress"
 		    Port		    "17725"
-		    Verbose		    [0]
-		    RunInBackground	    [1]
+		    Verbose		    [0.0]
+		    RunInBackground	    [1.0]
 		    }
 		    PropName		    "TCPIP"
 		  }
@@ -2191,7 +2185,7 @@ Model {
 		Type			"Struct"
 		Dimension		1
 		MATStruct {
-		  BuildAction		  "Build and run"
+		  BuildAction		  "None"
 		}
 		PropName		"Runtime"
 	      }
@@ -2301,12 +2295,12 @@ Model {
     }
     Array {
       Type		      "Simulink.CoderDictionary.PeriodicFunctionMapping"
-      Dimension		      3
+      Dimension		      2
       Object {
 	$ObjectID		51
 	PartitionName		""
-	Id			[1]
-	Period			[0.01]
+	Id			[2]
+	Period			[0.1]
 	Offset			[0.0]
 	Prototype		""
 	SimulinkFunctionName	"Step0"
@@ -2335,8 +2329,8 @@ Model {
       Object {
 	$ObjectID		55
 	PartitionName		""
-	Id			[2]
-	Period			[0.1]
+	Id			[1]
+	Period			[1.0]
 	Offset			[0.0]
 	Prototype		""
 	SimulinkFunctionName	"Step1"
@@ -2362,36 +2356,6 @@ Model {
 	  }
 	}
       }
-      Object {
-	$ObjectID		59
-	PartitionName		""
-	Id			[3]
-	Period			[1.0]
-	Offset			[0.0]
-	Prototype		""
-	SimulinkFunctionName	"Step2"
-	Object {
-	  $PropName		  "ParentMapping"
-	  $ObjectID		  42
-	}
-	Object {
-	  $PropName		  "FunctionReference"
-	  $ObjectID		  60
-	  $ClassName		  "Simulink.FunctionReferenceClass"
-	  Object {
-	    $PropName		    "FunctionClass"
-	    $ObjectID		    61
-	    $ClassName		    "Simulink.MapDataRef"
-	    UUID		    ""
-	  }
-	  Object {
-	    $PropName		    "MemorySection"
-	    $ObjectID		    62
-	    $ClassName		    "Simulink.MapDataRef"
-	    UUID		    ""
-	  }
-	}
-      }
       PropName		      "OutputFunctionMappings"
     }
     UpdateFunctionMappings  []
@@ -2402,7 +2366,7 @@ Model {
     SubsystemFunctions	    []
     Object {
       $PropName		      "DefaultsMapping"
-      $ObjectID		      63
+      $ObjectID		      59
       $ClassName	      "Simulink.CoderDictionary.DefaultsMapping"
       Object {
 	$PropName		"ParentMapping"
@@ -2410,7 +2374,7 @@ Model {
       }
       Object {
 	$PropName		"Inports"
-	$ObjectID		64
+	$ObjectID		60
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2420,7 +2384,7 @@ Model {
       }
       Object {
 	$PropName		"Outports"
-	$ObjectID		65
+	$ObjectID		61
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2430,7 +2394,7 @@ Model {
       }
       Object {
 	$PropName		"GlobalParameters"
-	$ObjectID		66
+	$ObjectID		62
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2440,7 +2404,7 @@ Model {
       }
       Object {
 	$PropName		"SharedParameters"
-	$ObjectID		67
+	$ObjectID		63
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2450,7 +2414,7 @@ Model {
       }
       Object {
 	$PropName		"PerInstanceParameters"
-	$ObjectID		68
+	$ObjectID		64
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2460,7 +2424,7 @@ Model {
       }
       Object {
 	$PropName		"SharedLocalDataStores"
-	$ObjectID		69
+	$ObjectID		65
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2470,7 +2434,7 @@ Model {
       }
       Object {
 	$PropName		"GlobalDataStores"
-	$ObjectID		70
+	$ObjectID		66
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2480,7 +2444,7 @@ Model {
       }
       Object {
 	$PropName		"InternalData"
-	$ObjectID		71
+	$ObjectID		67
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2490,7 +2454,7 @@ Model {
       }
       Object {
 	$PropName		"Constants"
-	$ObjectID		72
+	$ObjectID		68
 	$ClassName		"Simulink.DataReferenceClass"
 	MappedTo		"StorageClass"
 	StorageClass		[]
@@ -2500,21 +2464,21 @@ Model {
       }
       Object {
 	$PropName		"InitTermFunctions"
-	$ObjectID		73
+	$ObjectID		69
 	$ClassName		"Simulink.FunctionReferenceClass"
 	FunctionClass		[]
 	MemorySection		[]
       }
       Object {
 	$PropName		"ExecutionFunctions"
-	$ObjectID		74
+	$ObjectID		70
 	$ClassName		"Simulink.FunctionReferenceClass"
 	FunctionClass		[]
 	MemorySection		[]
       }
       Object {
 	$PropName		"SharedUtilityFunctions"
-	$ObjectID		75
+	$ObjectID		71
 	$ClassName		"Simulink.FunctionReferenceClass"
 	FunctionClass		[]
 	MemorySection		[]
@@ -2981,7 +2945,7 @@ Model {
   }
   System {
     Name		    "PI_UDP_Recieve"
-    Location		    [-7, -7, 1832, 1184]
+    Location		    [993, 27, 1920, 1080]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -2996,9 +2960,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "60"
+    ZoomFactor		    "80"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "179"
+    SIDHighWatermark	    "187"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Lookup_n-D
@@ -3078,11 +3042,59 @@ Model {
     }
     Block {
       BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "181"
+      Position		      [-85, 140, -55, 170]
+      ZOrder		      416
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      Constant
       Name		      "Constant2"
       SID		      "115"
       Position		      [650, 500, 680, 530]
       ZOrder		      389
       Value		      "65535"
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant3"
+      SID		      "183"
+      Position		      [-85, 180, -55, 210]
+      ZOrder		      418
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant4"
+      SID		      "184"
+      Position		      [-85, 215, -55, 245]
+      ZOrder		      419
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant5"
+      SID		      "185"
+      Position		      [-85, 250, -55, 280]
+      ZOrder		      420
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant6"
+      SID		      "186"
+      Position		      [-85, 285, -55, 315]
+      ZOrder		      421
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant7"
+      SID		      "187"
+      Position		      [-85, 365, -55, 395]
+      ZOrder		      422
       OutDataTypeStr	      "single"
     }
     Block {
@@ -3177,6 +3189,7 @@ Model {
       Ports		      [1]
       Position		      [-560, 357, -455, 383]
       ZOrder		      327
+      Commented		      "on"
       FontName		      "Arial"
       FontSize		      14
       Format		      "bank"
@@ -3343,14 +3356,14 @@ Model {
 	Annotation {
 	  SID			  "133"
 	  Name			  "input a -100 to 100 value for reverse and forwards. -100 is 100% speed backwards 100 is 100%speed forwards"
-	  Position		  [-151, -73, 341, -59]
+	  Position		  [-151, -73, 341, -58]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
 	Annotation {
 	  SID			  "151"
 	  Name			  "input a -100 to 100 value for left and right. -100 is 100% speed left 100 is 100%speed right"
-	  Position		  [-103, 139, 297, 153]
+	  Position		  [-103, 139, 297, 154]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
@@ -3441,7 +3454,7 @@ Model {
       }
       System {
 	Name			"GetRosMessage"
-	Location		[-7, -7, 1832, 1184]
+	Location		[67, 27, 1920, 1080]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -3456,7 +3469,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"150"
+	ZoomFactor		"128"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -3787,6 +3800,17 @@ Model {
       }
     }
     Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      SID		      "182"
+      Ports		      [6, 1]
+      Position		      [-15, 143, -10, 317]
+      ZOrder		      417
+      ShowName		      off
+      Inputs		      "6"
+      DisplayOption	      "bar"
+    }
+    Block {
       BlockType		      RateTransition
       Name		      "Rate Transition1"
       SID		      "12"
@@ -3843,7 +3867,7 @@ Model {
       Name		      "Subscribe"
       SID		      "153"
       Ports		      [0, 2]
-      Position		      [-1040, -179, -740, 39]
+      Position		      [-1065, -179, -765, 39]
       ZOrder		      404
       LibraryVersion	      "1.358"
       SourceBlock	      "robotlib/Subscribe"
@@ -3906,6 +3930,7 @@ Model {
       Ports		      [0, 2]
       Position		      [-740, 325, -620, 385]
       ZOrder		      330
+      Commented		      "on"
       LibraryVersion	      "1.369"
       FontName		      "arial"
       SourceBlock	      "embdlinuxlib/UDP Receive"
@@ -3932,12 +3957,11 @@ Model {
     }
     Line {
       Name		      "Axes"
-      ZOrder		      206
+      ZOrder		      601
       Labels		      [0, 0]
       SrcBlock		      "UDP Receive"
       SrcPort		      1
-      DstBlock		      "Demux1"
-      DstPort		      1
+      Points		      [-5, 0; 611, 0; 0, 0]
     }
     Line {
       Name		      "Forward_Back"
@@ -4182,7 +4206,7 @@ Model {
       ZOrder		      531
       SrcBlock		      "Subscribe"
       SrcPort		      1
-      Points		      [275, 0]
+      Points		      [300, 0]
       DstBlock		      "GetRosMessage"
       DstPort		      trigger
     }
@@ -4279,6 +4303,61 @@ Model {
       DstBlock		      "Display"
       DstPort		      1
     }
+    Line {
+      ZOrder		      597
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      598
+      SrcBlock		      "Constant3"
+      SrcPort		      1
+      Points		      [15, 0; 0, -10]
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      599
+      SrcBlock		      "Constant4"
+      SrcPort		      1
+      Points		      [15, 0; 0, -15]
+      DstBlock		      "Mux2"
+      DstPort		      3
+    }
+    Line {
+      ZOrder		      602
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Demux1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      604
+      SrcBlock		      "Constant5"
+      SrcPort		      1
+      Points		      [15, 0; 0, -20]
+      DstBlock		      "Mux2"
+      DstPort		      4
+    }
+    Line {
+      ZOrder		      605
+      SrcBlock		      "Constant6"
+      SrcPort		      1
+      Points		      [15, 0; 0, -25]
+      DstBlock		      "Mux2"
+      DstPort		      5
+    }
+    Line {
+      ZOrder		      606
+      SrcBlock		      "Constant7"
+      SrcPort		      1
+      Points		      [5, 0; 0, -75]
+      DstBlock		      "Mux2"
+      DstPort		      6
+    }
     Annotation {
       SID		      "101"
       Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -4298,14 +4377,14 @@ Model {
     Annotation {
       SID		      "100"
       Name		      "Limit the data rate"
-      Position		      [1084, 335, 1165, 349]
+      Position		      [1084, 335, 1165, 350]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -2
     }
     Annotation {
       SID		      "99"
       Name		      "Arduino is expecting data as int16"
-      Position		      [857, 335, 1008, 349]
+      Position		      [857, 335, 1008, 350]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -3
     }
@@ -4342,28 +4421,28 @@ Model {
     Annotation {
       SID		      "96"
       Name		      "Revice UDP data from a controller on a computer"
-      Position		      [-762, 398, -542, 412]
+      Position		      [-762, 398, -542, 413]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -6
     }
     Annotation {
       SID		      "95"
       Name		      "Counter to show Pi is functiuoning when runniong in external mode"
-      Position		      [-341, 420, -44, 434]
+      Position		      [-341, 420, -44, 435]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -7
     }
     Annotation {
       SID		      "30"
       Name		      "Left Joy"
-      Position		      [58, 130, 94, 144]
+      Position		      [58, 130, 94, 145]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -1
     }
     Annotation {
       SID		      "31"
       Name		      "Right Joy"
-      Position		      [55, 279, 98, 293]
+      Position		      [55, 279, 98, 294]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -1
     }

@@ -7,9 +7,9 @@
 //
 //  Code generation for model "PI_UDP_Recieve".
 //
-//  Model version              : 1.42
+//  Model version              : 1.43
 //  Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
-//  C++ source code generated on : Wed Feb  5 14:14:41 2020
+//  C++ source code generated on : Wed Feb  5 14:39:07 2020
 //
 //  Target selection: ert.tlc
 //  Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -65,9 +65,11 @@ static const char_T * rtDataTypeNames[] = {
 
 // data type transitions for block I/O structure
 static DataTypeTransition rtBTransitions[] = {
+  { (char_T *)(&PI_UDP_Recieve_B.In1), 15, 0, 1 },
+
   { (char_T *)(&PI_UDP_Recieve_B.Left_right), 1, 0, 13 },
 
-  { (char_T *)(&PI_UDP_Recieve_B.UDPReceive_o2), 5, 0, 8 },
+  { (char_T *)(&PI_UDP_Recieve_B.SPIMasterTransfer[0]), 5, 0, 7 },
 
   { (char_T *)(&PI_UDP_Recieve_B.Output), 3, 0, 1 }
   ,
@@ -76,18 +78,14 @@ static DataTypeTransition rtBTransitions[] = {
 
   { (char_T *)(&PI_UDP_Recieve_DW.obj_c), 17, 0, 1 },
 
-  { (char_T *)(&PI_UDP_Recieve_DW.UDPReceive_NetworkLib[0]), 0, 0, 137 },
-
-  { (char_T *)(&PI_UDP_Recieve_DW.RateTransition1_Buffer[0]), 5, 0, 7 },
-
   { (char_T *)(&PI_UDP_Recieve_DW.Output_DSTATE), 3, 0, 1 },
 
-  { (char_T *)(&PI_UDP_Recieve_DW.EnabledSubsystem_SubsysRanBC), 2, 0, 1 }
+  { (char_T *)(&PI_UDP_Recieve_DW.EnabledSubsystem_SubsysRanBC), 2, 0, 2 }
 };
 
 // data type transition table for block I/O structure
 static DataTypeTransitionTable rtBTransTable = {
-  9U,
+  8U,
   rtBTransitions
 };
 
@@ -99,16 +97,14 @@ static DataTypeTransition rtPTransitions[] = {
 
   { (char_T *)(&PI_UDP_Recieve_P.Constant_Value), 15, 0, 1 },
 
-  { (char_T *)(&PI_UDP_Recieve_P.UDPReceive_Port), 6, 0, 1 },
-
-  { (char_T *)(&PI_UDP_Recieve_P.Gain7_Gain), 1, 0, 59 },
+  { (char_T *)(&PI_UDP_Recieve_P.Lx_Y0), 1, 0, 69 },
 
   { (char_T *)(&PI_UDP_Recieve_P.Constant_Value_m), 3, 0, 3 }
 };
 
 // data type transition table for Parameters structure
 static DataTypeTransitionTable rtPTransTable = {
-  6U,
+  5U,
   rtPTransitions
 };
 

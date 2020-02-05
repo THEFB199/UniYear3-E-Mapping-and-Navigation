@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PI_UDP_Recieve'.
 //
-// Model version                  : 1.42
+// Model version                  : 1.43
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 14:14:41 2020
+// C/C++ source code generated on : Wed Feb  5 14:39:07 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -35,15 +35,15 @@ volatile boolean_T stopRequested = false;
 volatile boolean_T runModel = true;
 sem_t stopSem;
 sem_t baserateTaskSem;
-sem_t subrateTaskSem[2];
-int taskId[2];
+sem_t subrateTaskSem[1];
+int taskId[1];
 pthread_t schedulerThread;
 pthread_t baseRateThread;
 pthread_t backgroundThread;
 void *threadJoinStatus;
 int terminatingmodel = 0;
-pthread_t subRateThread[2];
-int subratePriority[2];
+pthread_t subRateThread[1];
+int subratePriority[1];
 void *subrateTask(void *arg)
 {
   int tid = *((int *) arg);
@@ -71,7 +71,6 @@ void *subrateTask(void *arg)
 
 void *baseRateTask(void *arg)
 {
-  int_T i;
   runModel = (rtmGetErrorStatus(PI_UDP_Recieve_M) == (NULL)) &&
     !rtmGetStopRequested(PI_UDP_Recieve_M);
   while (runModel) {
@@ -84,19 +83,15 @@ void *baseRateTask(void *arg)
 
 #endif
 
-    for (i = 1
-         ; i <= 2; i++) {
-      if (rtmStepTask(PI_UDP_Recieve_M, i)
-          ) {
-        sem_post(&subrateTaskSem[ i - 1
-                 ]);
-      }
+    if (rtmStepTask(PI_UDP_Recieve_M, 1)
+        ) {
+      sem_post(&subrateTaskSem[0]);
     }
 
     // External mode
     {
       boolean_T rtmStopReq = false;
-      rtExtModePauseIfNeeded(PI_UDP_Recieve_M->extModeInfo, 3, &rtmStopReq);
+      rtExtModePauseIfNeeded(PI_UDP_Recieve_M->extModeInfo, 2, &rtmStopReq);
       if (rtmStopReq) {
         rtmSetStopRequested(PI_UDP_Recieve_M, true);
       }
@@ -136,13 +131,13 @@ void *terminateTask(void *arg)
     int i;
 
     // Signal all periodic tasks to complete
-    for (i=0; i<2; i++) {
+    for (i=0; i<1; i++) {
       CHECK_STATUS(sem_post(&subrateTaskSem[i]), 0, "sem_post");
       CHECK_STATUS(sem_destroy(&subrateTaskSem[i]), 0, "sem_destroy");
     }
 
     // Wait for all periodic tasks to complete
-    for (i=0; i<2; i++) {
+    for (i=0; i<1; i++) {
       CHECK_STATUS(pthread_join(subRateThread[i], &threadJoinStatus), 0,
                    "pthread_join");
     }
@@ -158,7 +153,7 @@ void *terminateTask(void *arg)
 
   // Terminate model
   PI_UDP_Recieve_terminate();
-  rtExtModeShutdown(3);
+  rtExtModeShutdown(2);
   sem_post(&stopSem);
   return NULL;
 }
@@ -169,7 +164,7 @@ void *backgroundTask(void *arg)
     // External mode
     {
       boolean_T rtmStopReq = false;
-      rtExtModeOneStep(PI_UDP_Recieve_M->extModeInfo, 3, &rtmStopReq);
+      rtExtModeOneStep(PI_UDP_Recieve_M->extModeInfo, 2, &rtmStopReq);
       if (rtmStopReq) {
         rtmSetStopRequested(PI_UDP_Recieve_M, true);
       }
@@ -184,7 +179,6 @@ int main(int argc, char **argv)
   UNUSED(argc);
   UNUSED(argv);
   subratePriority[0] = 39;
-  subratePriority[1] = 38;
   void slros_node_init(int argc, char** argv);
   slros_node_init(argc, argv);
   rtmSetErrorStatus(PI_UDP_Recieve_M, 0);
@@ -195,11 +189,11 @@ int main(int argc, char **argv)
 
   // External mode
   rtSetTFinalForExtMode(&rtmGetTFinal(PI_UDP_Recieve_M));
-  rtExtModeCheckInit(3);
+  rtExtModeCheckInit(2);
 
   {
     boolean_T rtmStopReq = false;
-    rtExtModeWaitForStartPkt(PI_UDP_Recieve_M->extModeInfo, 3, &rtmStopReq);
+    rtExtModeWaitForStartPkt(PI_UDP_Recieve_M->extModeInfo, 2, &rtmStopReq);
     if (rtmStopReq) {
       rtmSetStopRequested(PI_UDP_Recieve_M, true);
     }
@@ -208,7 +202,7 @@ int main(int argc, char **argv)
   rtERTExtModeStartMsg();
 
   // Call RTOS Initialization function
-  myRTOSInit(0.01, 2);
+  myRTOSInit(0.1, 1);
 
   // Wait for stop semaphore
   sem_wait(&stopSem);
