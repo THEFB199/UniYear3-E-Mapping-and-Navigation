@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.6
+// Model version                  : 1.11
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 15:34:15 2020
+// C/C++ source code generated on : Wed Feb  5 17:15:48 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex

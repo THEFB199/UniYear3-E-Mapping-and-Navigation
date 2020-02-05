@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.6
+// Model version                  : 1.11
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 15:34:15 2020
+// C/C++ source code generated on : Wed Feb  5 17:15:48 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -57,6 +57,10 @@
 # define rtmSetErrorStatus(rtm, val)   ((rtm)->errorStatus = (val))
 #endif
 
+#ifndef rtmStepTask
+# define rtmStepTask(rtm, idx)         ((rtm)->Timing.TaskCounters.TID[(idx)] == 0)
+#endif
+
 #ifndef rtmGetStopRequested
 # define rtmGetStopRequested(rtm)      ((rtm)->Timing.stopRequestedFlag)
 #endif
@@ -79,6 +83,10 @@
 
 #ifndef rtmGetTPtr
 # define rtmGetTPtr(rtm)               (&(rtm)->Timing.taskTime0)
+#endif
+
+#ifndef rtmTaskCounter
+# define rtmTaskCounter(rtm, idx)      ((rtm)->Timing.TaskCounters.TID[(idx)])
 #endif
 
 // Block signals (default storage)
@@ -123,12 +131,6 @@ struct P_PIROSNavRec_T_ {
   SL_Bus_PIROSNavRec_geometry_msgs_Twist Constant_Value;// Computed Parameter: Constant_Value
                                                            //  Referenced by: '<S4>/Constant'
 
-  real32_T Constant6_Value;            // Computed Parameter: Constant6_Value
-                                          //  Referenced by: '<Root>/Constant6'
-
-  real32_T Gain7_Gain;                 // Computed Parameter: Gain7_Gain
-                                          //  Referenced by: '<Root>/Gain7'
-
   real32_T Gain8_Gain;                 // Computed Parameter: Gain8_Gain
                                           //  Referenced by: '<Root>/Gain8'
 
@@ -152,6 +154,9 @@ struct P_PIROSNavRec_T_ {
 
   real32_T Az_Y0;                      // Computed Parameter: Az_Y0
                                           //  Referenced by: '<S3>/Az '
+
+  real32_T Gain7_Gain;                 // Computed Parameter: Gain7_Gain
+                                          //  Referenced by: '<Root>/Gain7'
 
   real32_T uDLookupTable9_tableData[5];
                                  // Computed Parameter: uDLookupTable9_tableData
@@ -186,10 +191,6 @@ struct P_PIROSNavRec_T_ {
 
   uint8_T Constant_Value_i;            // Computed Parameter: Constant_Value_i
                                           //  Referenced by: '<S6>/Constant'
-
-  uint8_T ManualSwitch1_CurrentSetting;
-                             // Computed Parameter: ManualSwitch1_CurrentSetting
-                                //  Referenced by: '<Root>/Manual Switch1'
 
   uint8_T ManualSwitch_CurrentSetting;
                               // Computed Parameter: ManualSwitch_CurrentSetting
@@ -282,6 +283,20 @@ extern DW_PIROSNavRec_T PIROSNavRec_DW;
 // Zero-crossing (trigger) state
 extern PrevZCX_PIROSNavRec_T PIROSNavRec_PrevZCX;
 
+// External function called from main
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+  extern void PIROSNavRec_SetEventsForThisBaseStep(boolean_T *eventFlags);
+
+#ifdef __cplusplus
+
+}
+#endif
+
 #ifdef __cplusplus
 
 extern "C" {
@@ -289,8 +304,9 @@ extern "C" {
 #endif
 
   // Model entry point functions
+  extern void PIROSNavRec_SetEventsForThisBaseStep(boolean_T *eventFlags);
   extern void PIROSNavRec_initialize(void);
-  extern void PIROSNavRec_step(void);
+  extern void PIROSNavRec_step(int_T tid);
   extern void PIROSNavRec_terminate(void);
 
 #ifdef __cplusplus
@@ -318,6 +334,7 @@ extern "C" {
 //  Block '<S1>/Data Type Propagation' : Unused code path elimination
 //  Block '<S5>/FixPt Data Type Duplicate' : Unused code path elimination
 //  Block '<S6>/FixPt Data Type Duplicate1' : Unused code path elimination
+//  Block '<Root>/Rate Transition' : Eliminated since input and output rates are identical
 //  Block '<Root>/Rate Transition1' : Eliminated since input and output rates are identical
 
 

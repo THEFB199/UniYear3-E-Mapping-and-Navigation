@@ -1,32 +1,17 @@
 Model {
   Name			  "PIROSNavRec"
   Version		  10.0
-  SavedCharacterEncoding  "UTF-8"
+  SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.6"
+    ComputedModelVersion    "1.12"
     NumModelReferences	    0
-    NumTestPointedSignals   7
+    NumTestPointedSignals   5
     TestPointedSignal {
       SignalName	      ""
       FullBlockPath	      "PIROSNavRec/Counter Limited"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "Forward_Back"
-      FullBlockPath	      "PIROSNavRec/GetRosMessage"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "Left_right"
-      FullBlockPath	      "PIROSNavRec/GetRosMessage"
-      PortIndex		      6
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -94,11 +79,11 @@ Model {
   SuppressorTable	  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n<!DOCTYPE boost_serialization>\n<"
   "boost_serialization signature=\"serialization::archive\" version=\"15\">\n<DiagnosticSuppressor class_id=\"0\" track"
   "ing_level=\"0\" version=\"6\">\n	<Table class_id=\"1\" tracking_level=\"0\" version=\"0\">\n		<count>1</count>\n		<b"
-  "ucket_count>2</bucket_count>\n		<item_version>0</item_version>\n		<item class_id=\"2\" tracking_level=\"0\" version="
+  "ucket_count>8</bucket_count>\n		<item_version>0</item_version>\n		<item class_id=\"2\" tracking_level=\"0\" version="
   "\"0\">\n			<first class_id=\"3\" tracking_level=\"0\" version=\"6\">\n				<Source class_id=\"4\" tracking_level=\"0\""
   " version=\"0\">\n					<count>1</count>\n					<item_version>0</item_version>\n					<item>PIROSNavRec/Counter Limited<"
   "/item>\n				</Source>\n			</first>\n			<second class_id=\"5\" tracking_level=\"0\" version=\"6\">\n				<SuppressedDa"
-  "ta class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<count>2</count>\n					<bucket_count>5</bucket_count>\n	"
+  "ta class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<count>2</count>\n					<bucket_count>8</bucket_count>\n	"
   "				<item_version>0</item_version>\n					<item class_id=\"7\" tracking_level=\"0\" version=\"0\">\n						<first clas"
   "s_id=\"8\" tracking_level=\"0\" version=\"6\">\n							<ID>Simulink:DataType:WarningOverFlowDetected</ID>\n							<C"
   "ause>\n								<Source>\n									<count>0</count>\n									<item_version>0</item_version>\n								</Source>\n				"
@@ -118,13 +103,12 @@ Model {
   "					<time_duration_fractional_seconds>0</time_duration_fractional_seconds>\n								</ptime_time_duration>\n							"
   "</LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedData>\n"
   "			</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
-  AnimationPlugin	  "on"
   LogicAnalyzerPlugin	  "on"
   LogicAnalyzerSignalOrdering "05756065-db3f-4df3-b92b-4b7893301c68,af6bef99-8767-4027-895c-ece5892a47ed,0d8b97af-fcc9"
-  "-4ae2-a994-46d894f70c73,71bc3483-cf3b-469d-958a-a2603a56a55f,03a37c5f-3e1c-4afb-9ce9-2a0d05751fd4,b07d944a-0d40-45b1"
-  "-9495-e2296271bb99,bd67a88e-3c24-4961-9464-df372b02f3b7"
-  WebScopes_FoundationPlugin "on"
+  "-4ae2-a994-46d894f70c73,71bc3483-cf3b-469d-958a-a2603a56a55f,03a37c5f-3e1c-4afb-9ce9-2a0d05751fd4"
   SLCCPlugin		  "on"
+  AnimationPlugin	  "on"
+  WebScopes_FoundationPlugin "on"
   NotesPlugin		  "on"
   slprops.hdlmdlprops {
     $PropName		    "HDLParams"
@@ -147,7 +131,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
-  LastSavedArchitecture	  "glnxa64"
+  LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    2
@@ -157,7 +141,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [67.0, 27.0, 927.0, 1053.0]
+      Location		      [-7.0, -7.0, 1839.0, 1191.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -175,22 +159,36 @@ Model {
 	$ClassName		"Simulink.ExplorerBarInfo"
 	Visible			[1]
       }
-      Object {
-	$PropName		"EditorsInfo"
-	$ObjectID		6
-	$ClassName		"Simulink.EditorInfo"
-	IsActive		[1]
-	IsTabbed		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
-	Extents			[827.0, 821.0]
-	ZoomFactor		[0.6]
-	Offset			[302.14416644216465, -463.87356929899028]
-	SceneRectInView		[302.14416644216465, -463.87356929899028, 1378.3333333333335, 1368.3333333333335]
+      Array {
+	Type			"Simulink.EditorInfo"
+	Dimension		2
+	Object {
+	  $ObjectID		  6
+	  IsActive		  [1]
+	  IsTabbed		  [1]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [2606.0, 1444.0]
+	  ZoomFactor		  [1.2499999999999996]
+	  Offset		  [67.781346964096315, -51.598159021882736]
+	  SceneRectInView	  [67.781346964096315, -51.598159021882736, 1389.8666666666672, 770.13333333333355]
+	}
+	Object {
+	  $ObjectID		  7
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "2"
+	  Extents		  [2606.0, 1444.0]
+	  ZoomFactor		  [1.2799999999999998]
+	  Offset		  [-541.14583333333337, -340.04166666666669]
+	  SceneRectInView	  [-541.14583333333337, -340.04166666666669, 1357.291666666667, 752.08333333333348]
+	}
+	PropName		"EditorsInfo"
       }
       Object {
 	$PropName		"DockComponentsInfo"
-	$ObjectID		7
+	$ObjectID		8
 	$ClassName		"Simulink.DockComponentInfo"
 	Type			"GLUE2:PropertyInspector"
 	ID			"Property Inspector"
@@ -199,15 +197,15 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[640]
-	Height			[480]
+	Width			[426]
+	Height			[320]
 	Minimized		"On"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAAf//wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAAf//wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAANhAAADcgAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
+      "QBjAHQAbwByAAAAAAD/////AAAAUwD///8AAApmAAAF8AAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiA"
       "GwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA=="
@@ -225,11 +223,11 @@ Model {
   Creator		  "earth"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "earth"
+  LastModifiedBy	  "FRED-Surface"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Feb 05 15:33:30 2020"
-  RTWModifiedTimeStamp	  502817606
-  ModelVersionFormat	  "1.%<AutoIncrement:6>"
+  LastModifiedDate	  "Wed Feb 05 17:19:16 2020"
+  RTWModifiedTimeStamp	  502823723
+  ModelVersionFormat	  "1.%<AutoIncrement:12>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -289,10 +287,10 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    8
+    $ObjectID		    9
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "PIROSNavRec"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -308,11 +306,11 @@ Model {
   }
   Object {
     $PropName		    "InstrumentedSignals"
-    $ObjectID		    9
+    $ObjectID		    10
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      7
+      Dimension		      5
       MATStruct {
 	UUID			"05756065-db3f-4df3-b92b-4b7893301c68"
 	BlockPath_		"Mux"
@@ -428,52 +426,6 @@ Model {
 	}
 	VisualType_		""
       }
-      MATStruct {
-	UUID			"b07d944a-0d40-45b1-9495-e2296271bb99"
-	BlockPath_		"GetRosMessage"
-	SID_			"2"
-	SubPath_		""
-	OutputPortIndex_	[1.0]
-	LogicalPortIndex_	[0.0]
-	SignalName_		"Forward_Back"
-	SubSysPath_		""
-	Decimation_		[1.0]
-	MaxPoints_		[1024.0]
-	TargetBufferedStreaming_ [0.0]
-	IsFrameBased_		[0.0]
-	DomainType_		""
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	  }
-	  PropName		  "DomainParams_"
-	}
-	VisualType_		""
-      }
-      MATStruct {
-	UUID			"bd67a88e-3c24-4961-9464-df372b02f3b7"
-	BlockPath_		"GetRosMessage"
-	SID_			"2"
-	SubPath_		""
-	OutputPortIndex_	[6.0]
-	LogicalPortIndex_	[0.0]
-	SignalName_		"Left_right"
-	SubSysPath_		""
-	Decimation_		[1.0]
-	MaxPoints_		[1024.0]
-	TargetBufferedStreaming_ [0.0]
-	IsFrameBased_		[0.0]
-	DomainType_		""
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	  }
-	  PropName		  "DomainParams_"
-	}
-	VisualType_		""
-      }
       PropName		      "Persistence"
     }
   }
@@ -505,7 +457,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      10
+      $ObjectID		      11
       Version		      "19.1.1"
       DisabledProps	      []
       Description	      ""
@@ -513,7 +465,7 @@ Model {
 	Type			"Handle"
 	Dimension		11
 	Simulink.SolverCC {
-	  $ObjectID		  11
+	  $ObjectID		  12
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -534,10 +486,10 @@ Model {
 	  MinStep		  "auto"
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
-	  EnableMultiTasking	  off
+	  EnableMultiTasking	  on
 	  ConcurrentTasks	  off
-	  Solver		  "FixedStepAuto"
-	  SolverName		  "FixedStepAuto"
+	  Solver		  "ode1"
+	  SolverName		  "ode1"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
@@ -546,7 +498,7 @@ Model {
 	  SolverInfoToggleStatus  on
 	  IsAutoAppliedInSIP	  off
 	  SolverResetMethod	  "Fast"
-	  PositivePriorityOrder	  off
+	  PositivePriorityOrder	  on
 	  AutoInsertRateTranBlk	  off
 	  SampleTimeConstraint	  "Unconstrained"
 	  InsertRTBMode		  "Whenever possible"
@@ -556,7 +508,7 @@ Model {
 	  SolverOrder		  3
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  12
+	  $ObjectID		  13
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -598,7 +550,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -658,7 +610,7 @@ Model {
 	  EfficientTunableParamExpr on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -775,7 +727,7 @@ Model {
 	  ArithmeticOperatorsInVariantConditions "error"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  15
+	  $ObjectID		  16
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -825,7 +777,7 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  16
+	  $ObjectID		  17
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -845,7 +797,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  17
+	  $ObjectID		  18
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -872,7 +824,7 @@ Model {
 	  ModelFunctionsGlobalVisibility "on"
 	  CompileTimeRecursionLimit 50
 	  EnableRuntimeRecursion  on
-	  MATLABDynamicMemAlloc	  off
+	  MATLABDynamicMemAlloc	  on
 	  MATLABDynamicMemAllocThreshold 65536
 	  CustomCodeFunctionArrayLayout	[]
 	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
@@ -880,7 +832,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  18
+	  $ObjectID		  19
 	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
@@ -942,7 +894,7 @@ Model {
 	  CustomInitializer	  ""
 	  CustomTerminator	  ""
 	  Toolchain		  "Catkin"
-	  BuildConfiguration	  "Faster Builds"
+	  BuildConfiguration	  "Faster Runs"
 	  CustomToolchainOptions  []
 	  IncludeHyperlinkInReport on
 	  LaunchReport		  on
@@ -973,7 +925,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      19
+	      $ObjectID		      20
 	      Version		      "19.1.1"
 	      DisabledProps	      []
 	      Description	      ""
@@ -1031,7 +983,7 @@ Model {
 	    }
 	    Simulink.ERTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      20
+	      $ObjectID		      21
 	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
@@ -1080,7 +1032,7 @@ Model {
 	      SupportNonInlinedSFcns  off
 	      RemoveDisableFunc	      off
 	      RemoveResetFunc	      on
-	      SupportVariableSizeSignals off
+	      SupportVariableSizeSignals on
 	      ParenthesesLevel	      "Nominal"
 	      CastingMode	      "Nominal"
 	      PreserveStateflowLocalDataDimensions off
@@ -1206,7 +1158,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  21
+	  $ObjectID		  22
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1247,7 +1199,7 @@ Model {
 	  CovMcdcMode		  "Masking"
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  22
+	  $ObjectID		  23
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "HDL Coder custom configuration component"
@@ -1262,7 +1214,7 @@ Model {
 	  HDLCActiveTab		  "0"
 	}
 	CoderTarget.SettingsController {
-	  $ObjectID		  23
+	  $ObjectID		  24
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Coder Target"
@@ -1353,18 +1305,19 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Hardware Implementation"
-      ConfigPrmDlgPosition    [ 800, 162, 1790, 832 ]
-      ExtraOptions	      ""
+      ConfigPrmDlgPosition    [ 764, 128, 1754, 798 ]
+      ExtraOptions	      "-aBlockCommentType=\"BlockPathComment\" -aIgnoreTestpoints=0 -aInlineSetEventsForThisBaseRat"
+      "eFcn=TLC_FALSE -aSuppressMultiTaskScheduler=TLC_FALSE -aRateBasedStepFcn=0"
     }
     PropName		    "ConfigurationSets"
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    10
+    $ObjectID		    11
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    24
+    $ObjectID		    25
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1830,7 +1783,7 @@ Model {
   }
   System {
     Name		    "PIROSNavRec"
-    Location		    [67, 27, 994, 1080]
+    Location		    [-7, -7, 1832, 1184]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1845,9 +1798,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "60"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "55"
+    SIDHighWatermark	    "57"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Constant
@@ -1900,15 +1853,6 @@ Model {
       SID		      "42"
       Position		      [1500, 412, 1565, 448]
       ZOrder		      431
-      Value		      "0"
-      OutDataTypeStr	      "single"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant6"
-      SID		      "53"
-      Position		      [1095, 422, 1125, 458]
-      ZOrder		      440
       Value		      "0"
       OutDataTypeStr	      "single"
     }
@@ -1994,7 +1938,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"ForwardBack_LeftRight"
-	Location		[67, 27, 994, 1080]
+	Location		[-7, -7, 1832, 1184]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2120,14 +2064,14 @@ Model {
 	Annotation {
 	  SID			  "34"
 	  Name			  "input a -100 to 100 value for reverse and forwards. -100 is 100% speed backwards 100 is 100%speed forwards"
-	  Position		  [-151, -73, 341, -58]
+	  Position		  [-151, -73, 341, -59]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
 	Annotation {
 	  SID			  "33"
 	  Name			  "input a -100 to 100 value for left and right. -100 is 100% speed left 100 is 100%speed right"
-	  Position		  [-103, 139, 297, 154]
+	  Position		  [-103, 139, 297, 153]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	}
@@ -2160,7 +2104,7 @@ Model {
       Name		      "GetRosMessage"
       SID		      "2"
       Ports		      [1, 6, 0, 1]
-      Position		      [535, 167, 830, 318]
+      Position		      [465, 167, 760, 318]
       ZOrder		      416
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
@@ -2174,7 +2118,7 @@ Model {
       }
       System {
 	Name			"GetRosMessage"
-	Location		[67, 27, 1920, 1080]
+	Location		[-7, -7, 1832, 1184]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2249,7 +2193,7 @@ Model {
 	  BlockType		  DataTypeConversion
 	  Name			  "Data Type Conversion1"
 	  SID			  "6"
-	  Position		  [130, -152, 205, -118]
+	  Position		  [15, -152, 90, -118]
 	  ZOrder		  416
 	  OutDataTypeStr	  "single"
 	  RndMeth		  "Floor"
@@ -2269,7 +2213,7 @@ Model {
 	  BlockType		  DataTypeConversion
 	  Name			  "Data Type Conversion3"
 	  SID			  "8"
-	  Position		  [130, -82, 205, -48]
+	  Position		  [15, -82, 90, -48]
 	  ZOrder		  418
 	  OutDataTypeStr	  "single"
 	  RndMeth		  "Floor"
@@ -2471,7 +2415,7 @@ Model {
 	  "\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-ind"
 	  "ent:0; text-indent:0px;\"><span style=\" font-size:14px; font-weight:600; text-decoration: underline;\">Linear Comm"
 	  "ands</span></p></body></html>"
-	  Position		  [147, -178, 271, -160]
+	  Position		  [46, -206, 170, -188]
 	  InternalMargins	  [0, 0, 0, 0]
 	  Interpreter		  "rich"
 	  ZOrder		  -1
@@ -2484,7 +2428,7 @@ Model {
 	  "\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-ind"
 	  "ent:0; text-indent:0px;\"><span style=\" font-size:14px; font-weight:600; text-decoration: underline;\">AngularComm"
 	  "ands</span></p></body></html>"
-	  Position		  [144, 31, 275, 49]
+	  Position		  [158, 31, 289, 49]
 	  InternalMargins	  [0, 0, 0, 0]
 	  Interpreter		  "rich"
 	  ZOrder		  -2
@@ -2500,14 +2444,6 @@ Model {
       CurrentSetting	      "0"
     }
     Block {
-      BlockType		      ManualSwitch
-      Name		      "Manual Switch1"
-      SID		      "54"
-      Position		      [1155, 412, 1185, 448]
-      ZOrder		      441
-      CurrentSetting	      "0"
-    }
-    Block {
       BlockType		      Mux
       Name		      "Mux"
       SID		      "38"
@@ -2519,7 +2455,6 @@ Model {
       DisplayOption	      "bar"
       Port {
 	PortNumber		1
-	DataLogging		on
       }
     }
     Block {
@@ -2535,6 +2470,14 @@ Model {
       Port {
 	PortNumber		1
       }
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition"
+      SID		      "57"
+      Position		      [975, 349, 1015, 391]
+      ZOrder		      444
+      OutPortSampleTime	      "0.1"
     }
     Block {
       BlockType		      RateTransition
@@ -2592,6 +2535,7 @@ Model {
       messageQueueLength      "1"
       Port {
 	PortNumber		1
+	DataLogging		on
       }
     }
     Block {
@@ -2626,7 +2570,7 @@ Model {
       ZOrder		      3
       SrcBlock		      "GetRosMessage"
       SrcPort		      4
-      Points		      [30, 0]
+      Points		      [100, 0]
       Branch {
 	ZOrder			2
 	Points			[0, -185]
@@ -2652,7 +2596,7 @@ Model {
       }
       Branch {
 	ZOrder			58
-	Points			[76, 0]
+	Points			[1, 0]
 	DstBlock		"GetRosMessage"
 	DstPort			trigger
       }
@@ -2661,7 +2605,7 @@ Model {
       ZOrder		      10
       SrcBlock		      "GetRosMessage"
       SrcPort		      3
-      Points		      [24, 0]
+      Points		      [94, 0]
       Branch {
 	ZOrder			9
 	Points			[0, -190]
@@ -2678,7 +2622,7 @@ Model {
       ZOrder		      13
       SrcBlock		      "GetRosMessage"
       SrcPort		      2
-      Points		      [18, 0]
+      Points		      [88, 0]
       Branch {
 	ZOrder			12
 	Points			[0, -195]
@@ -2702,7 +2646,7 @@ Model {
       ZOrder		      20
       SrcBlock		      "GetRosMessage"
       SrcPort		      5
-      Points		      [34, 0]
+      Points		      [104, 0]
       Branch {
 	ZOrder			19
 	Points			[0, -180]
@@ -2728,12 +2672,12 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "GetRosMessage"
       SrcPort		      1
-      Points		      [8, 0]
+      Points		      [78, 0]
       Branch {
 	ZOrder			27
 	Labels			[2, 0]
 	Points			[0, 190]
-	DstBlock		"Gain7"
+	DstBlock		"Rate Transition"
 	DstPort			1
       }
       Branch {
@@ -2757,7 +2701,7 @@ Model {
       Labels		      [0, 0]
       SrcBlock		      "GetRosMessage"
       SrcPort		      6
-      Points		      [40, 0]
+      Points		      [110, 0]
       Branch {
 	ZOrder			31
 	Points			[0, -175]
@@ -2771,14 +2715,6 @@ Model {
 	DstBlock		"Gain8"
 	DstPort			1
       }
-    }
-    Line {
-      ZOrder		      53
-      SrcBlock		      "Gain7"
-      SrcPort		      1
-      Points		      [10, 0]
-      DstBlock		      "Manual Switch1"
-      DstPort		      1
     }
     Line {
       ZOrder		      32
@@ -2880,24 +2816,23 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      54
-      SrcBlock		      "Constant6"
+      ZOrder		      100
+      SrcBlock		      "Gain7"
       SrcPort		      1
-      DstBlock		      "Manual Switch1"
+      DstBlock		      "ForwardBack_LeftRight"
       DstPort		      2
     }
     Line {
-      ZOrder		      55
-      SrcBlock		      "Manual Switch1"
+      ZOrder		      99
+      SrcBlock		      "Rate Transition"
       SrcPort		      1
-      Points		      [20, 0; 0, -60]
-      DstBlock		      "ForwardBack_LeftRight"
-      DstPort		      2
+      DstBlock		      "Gain7"
+      DstPort		      1
     }
     Annotation {
       SID		      "49"
       Name		      "Counter to show Pi is functiuoning when runniong in external mode"
-      Position		      [1474, 80, 1771, 95]
+      Position		      [1474, 80, 1771, 94]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -1
     }

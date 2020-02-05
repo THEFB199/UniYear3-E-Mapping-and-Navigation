@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.6
+// Model version                  : 1.11
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 15:34:15 2020
+// C/C++ source code generated on : Wed Feb  5 17:15:48 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -60,16 +60,6 @@ P_PIROSNavRec_T PIROSNavRec_P = {
     }                                  // Angular
   },
 
-  // Computed Parameter: Constant6_Value
-  //  Referenced by: '<Root>/Constant6'
-
-  0.0F,
-
-  // Computed Parameter: Gain7_Gain
-  //  Referenced by: '<Root>/Gain7'
-
-  100.0F,
-
   // Computed Parameter: Gain8_Gain
   //  Referenced by: '<Root>/Gain8'
 
@@ -109,6 +99,11 @@ P_PIROSNavRec_T PIROSNavRec_P = {
   //  Referenced by: '<S3>/Az '
 
   0.0F,
+
+  // Computed Parameter: Gain7_Gain
+  //  Referenced by: '<Root>/Gain7'
+
+  100.0F,
 
   // Computed Parameter: uDLookupTable9_tableData
   //  Referenced by: '<S2>/1-D Lookup Table9'
@@ -157,11 +152,6 @@ P_PIROSNavRec_T PIROSNavRec_P = {
 
   // Computed Parameter: Constant_Value_i
   //  Referenced by: '<S6>/Constant'
-
-  0U,
-
-  // Computed Parameter: ManualSwitch1_CurrentSetting
-  //  Referenced by: '<Root>/Manual Switch1'
 
   0U,
 

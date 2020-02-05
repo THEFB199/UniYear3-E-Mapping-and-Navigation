@@ -7,9 +7,9 @@
 //
 //  Code generation for model "PIROSNavRec".
 //
-//  Model version              : 1.6
+//  Model version              : 1.11
 //  Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
-//  C++ source code generated on : Wed Feb  5 15:34:15 2020
+//  C++ source code generated on : Wed Feb  5 17:15:48 2020
 //
 //  Target selection: ert.tlc
 //  Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -99,9 +99,9 @@ static DataTypeTransition rtPTransitions[] = {
 
   { (char_T *)(&PIROSNavRec_P.Constant_Value), 15, 0, 1 },
 
-  { (char_T *)(&PIROSNavRec_P.Constant6_Value), 1, 0, 35 },
+  { (char_T *)(&PIROSNavRec_P.Gain8_Gain), 1, 0, 34 },
 
-  { (char_T *)(&PIROSNavRec_P.Constant_Value_i), 3, 0, 5 }
+  { (char_T *)(&PIROSNavRec_P.Constant_Value_i), 3, 0, 4 }
 };
 
 // data type transition table for Parameters structure

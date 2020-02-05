@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.6
+// Model version                  : 1.11
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 15:34:15 2020
+// C/C++ source code generated on : Wed Feb  5 17:15:48 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -40,7 +40,7 @@ static void PIROSNavRec_SystemCore_release(const codertarget_raspi_internal_SP_T
 static void PIROSNavRec_SystemCore_delete(const codertarget_raspi_internal_SP_T *
   obj);
 static void matlabCodegenHandle_matlabCodeg(codertarget_raspi_internal_SP_T *obj);
-static void rate_scheduler(void);
+static void rate_monotonic_scheduler(void);
 real32_T look1_iflf_binlcpw(real32_T u0, const real32_T bp0[], const real32_T
   table[], uint32_T maxIndex)
 {
@@ -97,11 +97,26 @@ real32_T look1_iflf_binlcpw(real32_T u0, const real32_T bp0[], const real32_T
 }
 
 //
-//   This function updates active task flag for each subrate.
-// The function is called at model base rate, hence the
-// generated code self-manages all its subrates.
+// Set which subrates need to run this base step (base rate always runs).
+// This function must be called prior to calling the model step function
+// in order to "remember" which rates need to run this base step.  The
+// buffering of events allows for overlapping preemption.
 //
-static void rate_scheduler(void)
+void PIROSNavRec_SetEventsForThisBaseStep(boolean_T *eventFlags)
+{
+  // Task runs when its counter is zero, computed via rtmStepTask macro
+  eventFlags[1] = ((boolean_T)rtmStepTask(PIROSNavRec_M, 1));
+}
+
+//
+//   This function updates active task flag for each subrate
+// and rate transition flags for tasks that exchange data.
+// The function assumes rate-monotonic multitasking scheduler.
+// The function must be called at model base rate so that
+// the generated code self-manages all its subrates and rate
+// transition flags.
+//
+static void rate_monotonic_scheduler(void)
 {
   // Compute which subrates run during the next base time step.  Subrates
   //  are an integer multiple of the base rate counter.  Therefore, the subtask
@@ -169,8 +184,8 @@ static void matlabCodegenHandle_matlabCodeg(codertarget_raspi_internal_SP_T *obj
   }
 }
 
-// Model step function
-void PIROSNavRec_step(void)
+// Model step function for TID0
+void PIROSNavRec_step0(void)           // Sample time: [0.1s, 0.0s]
 {
   uint32_T PinNameLoc;
   uint8_T status;
@@ -183,6 +198,10 @@ void PIROSNavRec_step(void)
   uint16_T y_0;
   real32_T tmp;
   uint16_T b_x_1;
+
+  {                                    // Sample time: [0.1s, 0.0s]
+    rate_monotonic_scheduler();
+  }
 
   // Reset subsysRan breadcrumbs
   srClearBC(PIROSNavRec_DW.GetRosMessage_SubsysRanBC);
@@ -244,23 +263,12 @@ void PIROSNavRec_step(void)
 
   // End of Outputs for SubSystem: '<Root>/GetRosMessage'
 
-  // ManualSwitch: '<Root>/Manual Switch1' incorporates:
-  //   Constant: '<Root>/Constant6'
-  //   Gain: '<Root>/Gain7'
-
-  if (PIROSNavRec_P.ManualSwitch1_CurrentSetting == 1) {
-    tmp = PIROSNavRec_P.Gain7_Gain * PIROSNavRec_B.DataTypeConversion1;
-  } else {
-    tmp = PIROSNavRec_P.Constant6_Value;
-  }
-
-  // End of ManualSwitch: '<Root>/Manual Switch1'
-
   // DataTypeConversion: '<Root>/Data Type Conversion' incorporates:
+  //   Gain: '<Root>/Gain7'
   //   Lookup_n-D: '<S2>/1-D Lookup Table9'
 
-  tmp = rt_roundf_snf(look1_iflf_binlcpw(tmp,
-    PIROSNavRec_P.uDLookupTable9_bp01Data,
+  tmp = rt_roundf_snf(look1_iflf_binlcpw(PIROSNavRec_P.Gain7_Gain *
+    PIROSNavRec_B.DataTypeConversion1, PIROSNavRec_P.uDLookupTable9_bp01Data,
     PIROSNavRec_P.uDLookupTable9_tableData, 4U));
   if (tmp < 65536.0F) {
     if (tmp >= 0.0F) {
@@ -417,37 +425,9 @@ void PIROSNavRec_step(void)
     PIROSNavRec_B.SPIMasterTransfer[b_k] = y_0;
   }
 
-  if (PIROSNavRec_M->Timing.TaskCounters.TID[1] == 0) {
-    // UnitDelay: '<S1>/Output'
-    PIROSNavRec_B.Output = PIROSNavRec_DW.Output_DSTATE;
-
-    // Sum: '<S5>/FixPt Sum1' incorporates:
-    //   Constant: '<S5>/FixPt Constant'
-
-    PIROSNavRec_DW.Output_DSTATE = static_cast<uint8_T>((static_cast<uint32_T>
-      (PIROSNavRec_B.Output) + PIROSNavRec_P.FixPtConstant_Value));
-
-    // Switch: '<S6>/FixPt Switch' incorporates:
-    //   Constant: '<S6>/Constant'
-    //   UnitDelay: '<S1>/Output'
-
-    if (PIROSNavRec_DW.Output_DSTATE > PIROSNavRec_P.CounterLimited_uplimit) {
-      PIROSNavRec_DW.Output_DSTATE = PIROSNavRec_P.Constant_Value_i;
-    }
-
-    // End of Switch: '<S6>/FixPt Switch'
-  }
-
   // External mode
   rtExtModeUploadCheckTrigger(2);
-
-  {                                    // Sample time: [0.1s, 0.0s]
-    rtExtModeUpload(0, (real_T)PIROSNavRec_M->Timing.taskTime0);
-  }
-
-  if (PIROSNavRec_M->Timing.TaskCounters.TID[1] == 0) {// Sample time: [1.0s, 0.0s] 
-    rtExtModeUpload(1, (real_T)((PIROSNavRec_M->Timing.clockTick1) * 1.0));
-  }
+  rtExtModeUpload(0, (real_T)PIROSNavRec_M->Timing.taskTime0);
 
   // signal main to stop simulation
   {                                    // Sample time: [0.1s, 0.0s]
@@ -462,7 +442,7 @@ void PIROSNavRec_step(void)
     }
   }
 
-  // Update absolute time for base rate
+  // Update absolute time
   // The "clockTick0" counts the number of times the code of this task has
   //  been executed. The absolute time is the multiplication of "clockTick0"
   //  and "Timing.stepSize0". Size of "clockTick0" ensures timer will not
@@ -470,17 +450,55 @@ void PIROSNavRec_step(void)
 
   PIROSNavRec_M->Timing.taskTime0 =
     (++PIROSNavRec_M->Timing.clockTick0) * PIROSNavRec_M->Timing.stepSize0;
-  if (PIROSNavRec_M->Timing.TaskCounters.TID[1] == 0) {
-    // Update absolute timer for sample time: [1.0s, 0.0s]
-    // The "clockTick1" counts the number of times the code of this task has
-    //  been executed. The resolution of this integer timer is 1.0, which is the step size
-    //  of the task. Size of "clockTick1" ensures timer will not overflow during the
-    //  application lifespan selected.
+}
 
-    PIROSNavRec_M->Timing.clockTick1++;
+// Model step function for TID1
+void PIROSNavRec_step1(void)           // Sample time: [1.0s, 0.0s]
+{
+  // UnitDelay: '<S1>/Output'
+  PIROSNavRec_B.Output = PIROSNavRec_DW.Output_DSTATE;
+
+  // Sum: '<S5>/FixPt Sum1' incorporates:
+  //   Constant: '<S5>/FixPt Constant'
+
+  PIROSNavRec_DW.Output_DSTATE = static_cast<uint8_T>((static_cast<uint32_T>
+    (PIROSNavRec_B.Output) + PIROSNavRec_P.FixPtConstant_Value));
+
+  // Switch: '<S6>/FixPt Switch' incorporates:
+  //   Constant: '<S6>/Constant'
+  //   UnitDelay: '<S1>/Output'
+
+  if (PIROSNavRec_DW.Output_DSTATE > PIROSNavRec_P.CounterLimited_uplimit) {
+    PIROSNavRec_DW.Output_DSTATE = PIROSNavRec_P.Constant_Value_i;
   }
 
-  rate_scheduler();
+  // End of Switch: '<S6>/FixPt Switch'
+  rtExtModeUpload(1, (real_T)((PIROSNavRec_M->Timing.clockTick1) * 1.0));
+
+  // Update absolute time
+  // The "clockTick1" counts the number of times the code of this task has
+  //  been executed. The resolution of this integer timer is 1.0, which is the step size
+  //  of the task. Size of "clockTick1" ensures timer will not overflow during the
+  //  application lifespan selected.
+
+  PIROSNavRec_M->Timing.clockTick1++;
+}
+
+// Model step wrapper function for compatibility with a static main program
+void PIROSNavRec_step(int_T tid)
+{
+  switch (tid) {
+   case 0 :
+    PIROSNavRec_step0();
+    break;
+
+   case 1 :
+    PIROSNavRec_step1();
+    break;
+
+   default :
+    break;
+  }
 }
 
 // Model initialize function
@@ -491,15 +509,15 @@ void PIROSNavRec_initialize(void)
   PIROSNavRec_M->Timing.stepSize0 = 0.1;
 
   // External mode info
-  PIROSNavRec_M->Sizes.checksums[0] = (3824279447U);
-  PIROSNavRec_M->Sizes.checksums[1] = (803712296U);
-  PIROSNavRec_M->Sizes.checksums[2] = (1380924021U);
-  PIROSNavRec_M->Sizes.checksums[3] = (3581574213U);
+  PIROSNavRec_M->Sizes.checksums[0] = (1443270732U);
+  PIROSNavRec_M->Sizes.checksums[1] = (1408371606U);
+  PIROSNavRec_M->Sizes.checksums[2] = (2369941699U);
+  PIROSNavRec_M->Sizes.checksums[3] = (295741023U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
     static RTWExtModeInfo rt_ExtModeInfo;
-    static const sysRanDType *systemRan[11];
+    static const sysRanDType *systemRan[9];
     PIROSNavRec_M->extModeInfo = (&rt_ExtModeInfo);
     rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
     systemRan[0] = &rtAlwaysEnabled;
@@ -507,12 +525,10 @@ void PIROSNavRec_initialize(void)
     systemRan[2] = &rtAlwaysEnabled;
     systemRan[3] = &rtAlwaysEnabled;
     systemRan[4] = &rtAlwaysEnabled;
-    systemRan[5] = &rtAlwaysEnabled;
+    systemRan[5] = (sysRanDType *)&PIROSNavRec_DW.GetRosMessage_SubsysRanBC;
     systemRan[6] = &rtAlwaysEnabled;
-    systemRan[7] = (sysRanDType *)&PIROSNavRec_DW.GetRosMessage_SubsysRanBC;
+    systemRan[7] = (sysRanDType *)&PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC;
     systemRan[8] = &rtAlwaysEnabled;
-    systemRan[9] = (sysRanDType *)&PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC;
-    systemRan[10] = &rtAlwaysEnabled;
     rteiSetModelMappingInfoPtr(PIROSNavRec_M->extModeInfo,
       &PIROSNavRec_M->SpecialInfo.mappingInfo);
     rteiSetChecksumsPtr(PIROSNavRec_M->extModeInfo,
@@ -581,14 +597,6 @@ void PIROSNavRec_initialize(void)
     // InitializeConditions for UnitDelay: '<S1>/Output'
     PIROSNavRec_DW.Output_DSTATE = PIROSNavRec_P.Output_InitialCondition;
 
-    // SystemInitialize for Atomic SubSystem: '<Root>/Subscribe'
-    // SystemInitialize for Enabled SubSystem: '<S4>/Enabled Subsystem'
-    // SystemInitialize for Outport: '<S7>/Out1'
-    PIROSNavRec_B.In1 = PIROSNavRec_P.Out1_Y0;
-
-    // End of SystemInitialize for SubSystem: '<S4>/Enabled Subsystem'
-    // End of SystemInitialize for SubSystem: '<Root>/Subscribe'
-
     // SystemInitialize for Triggered SubSystem: '<Root>/GetRosMessage'
     // SystemInitialize for Outport: '<S3>/Lx'
     PIROSNavRec_B.DataTypeConversion1 = PIROSNavRec_P.Lx_Y0;
@@ -609,6 +617,14 @@ void PIROSNavRec_initialize(void)
     PIROSNavRec_B.DataTypeConversion2 = PIROSNavRec_P.Az_Y0;
 
     // End of SystemInitialize for SubSystem: '<Root>/GetRosMessage'
+
+    // SystemInitialize for Atomic SubSystem: '<Root>/Subscribe'
+    // SystemInitialize for Enabled SubSystem: '<S4>/Enabled Subsystem'
+    // SystemInitialize for Outport: '<S7>/Out1'
+    PIROSNavRec_B.In1 = PIROSNavRec_P.Out1_Y0;
+
+    // End of SystemInitialize for SubSystem: '<S4>/Enabled Subsystem'
+    // End of SystemInitialize for SubSystem: '<Root>/Subscribe'
   }
 }
 
