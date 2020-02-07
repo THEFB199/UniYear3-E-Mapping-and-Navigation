@@ -1,0 +1,909 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript">function rtwTableShrink(o) {var t = o.nextSibling;if (t.nodeType != 1) {t = t.nextSibling;}if (t.style.display == "none") {t.style.display = "";o.innerHTML = "[-]"} else {t.style.display = "none";o.innerHTML = "[+] ... "}}</script><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+Code Interface Report for ROSPiNav2
+</title>
+
+</head>
+<body ONLOAD="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdCodeInterface'); else local_onload();}} catch(err) {};">
+<h1>
+Code Interface Report for ROSPiNav2
+</h1>
+<h3>
+Table of Contents
+</h3>
+<ul>
+<li>
+<a href="#sec_Entry-Point_Functions">
+Entry-Point Functions
+</a>
+
+</li>
+<li>
+<a href="#sec_Inports">
+Inports
+</a>
+
+</li>
+<li>
+<a href="#sec_Outports">
+Outports
+</a>
+
+</li>
+<li>
+<a href="#sec_Interface_Parameters">
+Interface Parameters
+</a>
+
+</li>
+<li>
+<a href="#sec_Data_Stores">
+Data Stores
+</a>
+
+</li>
+
+</ul>
+<h3>
+<a name="sec_Entry-Point_Functions">
+Entry-Point Functions
+</a>
+
+</h3>
+<p>
+Function: <a href="ROSPiNav2_cpp.html#fcn_ROSPiNav2_initialize">ROSPiNav2_initialize</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void ROSPiNav2_initialize(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Initialization entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called exactly once
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="ROSPiNav2_h.html">ROSPiNav2.h</a>
+</td>
+
+</tr>
+
+</table>
+<p>
+Function: <a href="ROSPiNav2_cpp.html#fcn_ROSPiNav2_step">ROSPiNav2_step</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void ROSPiNav2_step(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Output entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called periodically, every 0.1 seconds
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="ROSPiNav2_h.html">ROSPiNav2.h</a>
+</td>
+
+</tr>
+
+</table>
+<p>
+Function: <a href="ROSPiNav2_cpp.html#fcn_ROSPiNav2_terminate">ROSPiNav2_terminate</a>
+</p>
+<table width="100%" class="AltRow" cellspacing="0">
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Prototype
+</td>
+<td width="75%" align="left" valign="top">
+<b>
+void ROSPiNav2_terminate(void)
+</b>
+
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Description
+</td>
+<td width="75%" align="left" valign="top">
+Termination entry point of generated code
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Timing
+</td>
+<td width="75%" align="left" valign="top">
+Must be called exactly once
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Arguments
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="even">
+<td width="25%" align="left" valign="top">
+Return value
+</td>
+<td width="75%" align="left" valign="top">
+None
+</td>
+
+</tr>
+<tr class="odd">
+<td width="25%" align="left" valign="top">
+Header file
+</td>
+<td width="75%" align="left" valign="top">
+<a href="ROSPiNav2_h.html">ROSPiNav2.h</a>
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Inports">
+Inports
+</a>
+
+</h3>
+<p>
+No Inports in model.
+</p>
+<h3>
+<a name="sec_Outports">
+Outports
+</a>
+
+</h3>
+<p>
+No Outports in model.
+</p>
+<h3>
+<a name="sec_Interface_Parameters">
+Interface Parameters
+</a>
+
+</h3>
+<span title="Click to shrink or expand table" onclick="rtwTableShrink(this)">[-]</span><table width="100%" class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th width="42%" align="left" valign="top">
+<b>
+Parameter Source
+</b>
+
+</th>
+<th width="26%" align="left" valign="top">
+<b>
+Code Identifier
+</b>
+
+</th>
+<th width="21%" align="left" valign="top">
+<b>
+Data Type
+</b>
+
+</th>
+<th width="10%" align="right" valign="top">
+<b>
+Dimension
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:32')" name="code2model" class="code2model">&lt;Root&gt;/Counter Limited</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.CounterLimited_uplimit
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:137:55')" name="code2model" class="code2model">&lt;S15&gt;/Out1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Out1_Y0
+</td>
+<td width="21%" align="left" valign="top">
+SL_Bus_ROSPiNav2_sensor_msgs_Joy
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:137:51')" name="code2model" class="code2model">&lt;S7&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant_Value
+</td>
+<td width="21%" align="left" valign="top">
+SL_Bus_ROSPiNav2_sensor_msgs_Joy
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:136:55')" name="code2model" class="code2model">&lt;S14&gt;/Out1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Out1_Y0_d
+</td>
+<td width="21%" align="left" valign="top">
+SL_Bus_ROSPiNav2_geometry_msgs_Twist
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:136:51')" name="code2model" class="code2model">&lt;S6&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant_Value_j
+</td>
+<td width="21%" align="left" valign="top">
+SL_Bus_ROSPiNav2_geometry_msgs_Twist
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:26')" name="code2model" class="code2model">&lt;Root&gt;/Constant2</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant2_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:24')" name="code2model" class="code2model">&lt;Root&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant_Value_f
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:65')" name="code2model" class="code2model">&lt;S4&gt;/Lx</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Lx_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:66')" name="code2model" class="code2model">&lt;S4&gt;/Ly </a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Ly_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:67')" name="code2model" class="code2model">&lt;S4&gt;/Lz</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Lz_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:68')" name="code2model" class="code2model">&lt;S4&gt;/Ax</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Ax_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:69')" name="code2model" class="code2model">&lt;S4&gt;/Ay </a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Ay_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:70')" name="code2model" class="code2model">&lt;S4&gt;/Az </a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Az_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:96')" name="code2model" class="code2model">&lt;S5&gt;/LeftRightL</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.LeftRightL_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:97')" name="code2model" class="code2model">&lt;S5&gt;/UpDownL</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.UpDownL_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:98')" name="code2model" class="code2model">&lt;S5&gt;/LeftTrigger</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.LeftTrigger_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:99')" name="code2model" class="code2model">&lt;S5&gt;/LeftRightR</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.LeftRightR_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:100')" name="code2model" class="code2model">&lt;S5&gt;/UpDownR</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.UpDownR_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:101')" name="code2model" class="code2model">&lt;S5&gt;/RightTrigger</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.RightTrigger_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:102')" name="code2model" class="code2model">&lt;S5&gt;/LeftRightDpad</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.LeftRightDpad_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:103')" name="code2model" class="code2model">&lt;S5&gt;/UpDownDpad</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.UpDownDpad_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:104')" name="code2model" class="code2model">&lt;S5&gt;/Buttons </a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Buttons_Y0
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:85')" name="code2model" class="code2model">&lt;S13&gt;/Dead Zone</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.DeadZone_Start
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:85')" name="code2model" class="code2model">&lt;S13&gt;/Dead Zone</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.DeadZone_End
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:84')" name="code2model" class="code2model">&lt;S13&gt;/1-D Lookup Table1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.uDLookupTable1_tableData
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  3]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:84')" name="code2model" class="code2model">&lt;S13&gt;/1-D Lookup Table1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.uDLookupTable1_bp01Data
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  3]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:11')" name="code2model" class="code2model">&lt;S1&gt;/Gain1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Gain1_Gain
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:44')" name="code2model" class="code2model">&lt;S3&gt;/1-D Lookup Table9</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.uDLookupTable9_tableData
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[5  1]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:44')" name="code2model" class="code2model">&lt;S3&gt;/1-D Lookup Table9</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.uDLookupTable9_bp01Data
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  5]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:43')" name="code2model" class="code2model">&lt;S3&gt;/1-D Lookup Table1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.uDLookupTable1_tableData_b
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[5  1]
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:43')" name="code2model" class="code2model">&lt;S3&gt;/1-D Lookup Table1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.uDLookupTable1_bp01Data_g
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+[1  5]
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:29')" name="code2model" class="code2model">&lt;Root&gt;/Constant5</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant5_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:28')" name="code2model" class="code2model">&lt;Root&gt;/Constant4</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant4_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:27')" name="code2model" class="code2model">&lt;Root&gt;/Constant3</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant3_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:25')" name="code2model" class="code2model">&lt;Root&gt;/Constant1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant1_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:146')" name="code2model" class="code2model">&lt;S8&gt;/EndofData</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.EndofData_Value
+</td>
+<td width="21%" align="left" valign="top">
+real32_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:32:5:4')" name="code2model" class="code2model">&lt;S10&gt;/Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Constant_Value_a
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:112')" name="code2model" class="code2model">&lt;Root&gt;/Manual Switch1</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.ManualSwitch1_CurrentSetting
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="even">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:32:4')" name="code2model" class="code2model">&lt;S2&gt;/Output</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.Output_InitialCondition
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+<tr class="odd">
+<td width="42%" align="left" valign="top">
+<a href="matlab:coder.internal.code2model('ROSPiNav2:32:3:2')" name="code2model" class="code2model">&lt;S9&gt;/FixPt Constant</a>
+</td>
+<td width="26%" align="left" valign="top">
+ROSPiNav2_P.FixPtConstant_Value
+</td>
+<td width="21%" align="left" valign="top">
+uint8_T
+</td>
+<td width="10%" align="right" valign="top">
+1
+</td>
+
+</tr>
+
+</table>
+<h3>
+<a name="sec_Data_Stores">
+Data Stores
+</a>
+
+</h3>
+<p>
+No data stores in the model; note that this report lists only data stores with non-auto storage class and global data stores
+</p>
+
+</body>
+
+</html>

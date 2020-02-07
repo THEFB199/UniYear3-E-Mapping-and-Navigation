@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.61
+// Model version                  : 1.62
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Fri Feb  7 10:22:12 2020
+// C/C++ source code generated on : Fri Feb  7 11:18:09 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -55,38 +55,33 @@ static void PIROSN_quaternioncg_parenAssign(real_T rhs_a, real_T rhs_b, real_T
 static void PIROSNa_AHRSFilterBase_stepImpl(c_fusion_internal_coder_ahrsf_T *obj,
   const real_T accelIn[3], const real_T gyroIn[3], const real_T magIn[3], real_T
   *orientOut_a, real_T *orientOut_b, real_T *orientOut_c, real_T *orientOut_d);
-static void matlabCodegenHandle_matl_aa2lbo(ros_slros_internal_block_Subs_T *obj);
-static void PIROS_SystemCore_release_aa2lbo(const
+static void matlabCodegenHandle_matla_aa2lb(ros_slros_internal_block_Subs_T *obj);
+static void PIROSN_SystemCore_release_aa2lb(const
   codertarget_raspi_internal_SP_T *obj);
-static void PIRO_SystemCore_delete_aa2lbowt(const
+static void PIROS_SystemCore_delete_aa2lbow(const
   codertarget_raspi_internal_SP_T *obj);
-static void matlabCodegenHandle_ma_aa2lbowt(codertarget_raspi_internal_SP_T *obj);
-static void PIROSNav_SystemCore_release_aa2(const
-  raspi_internal_lsm9ds1Block_P_T *obj);
-static void PIROSNavR_SystemCore_delete_aa2(const
-  raspi_internal_lsm9ds1Block_P_T *obj);
-static void matlabCodegenHandle_matlabC_aa2(raspi_internal_lsm9ds1Block_P_T *obj);
-static void PIROSN_SystemCore_release_aa2lb(g_codertarget_raspi_internal__T *obj);
-static void PIROSNa_SystemCore_delete_aa2lb(g_codertarget_raspi_internal__T *obj);
-static void matlabCodegenHandle_matla_aa2lb(g_codertarget_raspi_internal__T *obj);
-static void PIROSNa_SystemCore_release_aa2l(f_codertarget_raspi_internal__T *obj);
-static void PIROSNav_SystemCore_delete_aa2l(f_codertarget_raspi_internal__T *obj);
-static void matlabCodegenHandle_matlab_aa2l(f_codertarget_raspi_internal__T *obj);
+static void matlabCodegenHandle_mat_aa2lbow(codertarget_raspi_internal_SP_T *obj);
 static void PIROSNavR_SystemCore_release_aa(const
-  raspi_internal_lps25hBlock_PI_T *obj);
+  raspi_internal_lsm9ds1Block_P_T *obj);
 static void PIROSNavRe_SystemCore_delete_aa(const
-  raspi_internal_lps25hBlock_PI_T *obj);
-static void matlabCodegenHandle_matlabCo_aa(raspi_internal_lps25hBlock_PI_T *obj);
+  raspi_internal_lsm9ds1Block_P_T *obj);
+static void matlabCodegenHandle_matlabCo_aa(raspi_internal_lsm9ds1Block_P_T *obj);
+static void PIROSNa_SystemCore_release_aa2l(g_codertarget_raspi_internal__T *obj);
+static void PIROSNav_SystemCore_delete_aa2l(g_codertarget_raspi_internal__T *obj);
+static void matlabCodegenHandle_matlab_aa2l(g_codertarget_raspi_internal__T *obj);
+static void PIROSNav_SystemCore_release_aa2(f_codertarget_raspi_internal__T *obj);
+static void PIROSNavR_SystemCore_delete_aa2(f_codertarget_raspi_internal__T *obj);
+static void matlabCodegenHandle_matlabC_aa2(f_codertarget_raspi_internal__T *obj);
 static void PIROSNavRe_SystemCore_release_a(const
-  raspi_internal_hts221Block_PI_T *obj);
+  raspi_internal_lps25hBlock_PI_T *obj);
 static void PIROSNavRec_SystemCore_delete_a(const
-  raspi_internal_hts221Block_PI_T *obj);
-static void matlabCodegenHandle_matlabCod_a(raspi_internal_hts221Block_PI_T *obj);
-static void PIROSNavRec_SystemCore_release(const raspi_internal_JoystickBlock__T
+  raspi_internal_lps25hBlock_PI_T *obj);
+static void matlabCodegenHandle_matlabCod_a(raspi_internal_lps25hBlock_PI_T *obj);
+static void PIROSNavRec_SystemCore_release(const raspi_internal_hts221Block_PI_T
   *obj);
-static void PIROSNavRec_SystemCore_delete(const raspi_internal_JoystickBlock__T *
+static void PIROSNavRec_SystemCore_delete(const raspi_internal_hts221Block_PI_T *
   obj);
-static void matlabCodegenHandle_matlabCodeg(raspi_internal_JoystickBlock__T *obj);
+static void matlabCodegenHandle_matlabCodeg(raspi_internal_hts221Block_PI_T *obj);
 static raspi_internal_lsm9ds1Block_P_T *PIROS_lsm9ds1Block_lsm9ds1Block
   (raspi_internal_lsm9ds1Block_P_T *obj);
 static void PIROSNav_lsm9ds1Block_setupImpl(raspi_internal_lsm9ds1Block_P_T *obj);
@@ -1258,14 +1253,14 @@ static void PIROSNa_AHRSFilterBase_stepImpl(c_fusion_internal_coder_ahrsf_T *obj
     orientOut_c, orientOut_d);
 }
 
-static void matlabCodegenHandle_matl_aa2lbo(ros_slros_internal_block_Subs_T *obj)
+static void matlabCodegenHandle_matla_aa2lb(ros_slros_internal_block_Subs_T *obj)
 {
   if (!obj->matlabCodegenIsDeleted) {
     obj->matlabCodegenIsDeleted = true;
   }
 }
 
-static void PIROS_SystemCore_release_aa2lbo(const
+static void PIROSN_SystemCore_release_aa2lb(const
   codertarget_raspi_internal_SP_T *obj)
 {
   uint32_T PinNameLoc;
@@ -1282,21 +1277,21 @@ static void PIROS_SystemCore_release_aa2lbo(const
   }
 }
 
-static void PIRO_SystemCore_delete_aa2lbowt(const
+static void PIROS_SystemCore_delete_aa2lbow(const
   codertarget_raspi_internal_SP_T *obj)
 {
-  PIROS_SystemCore_release_aa2lbo(obj);
+  PIROSN_SystemCore_release_aa2lb(obj);
 }
 
-static void matlabCodegenHandle_ma_aa2lbowt(codertarget_raspi_internal_SP_T *obj)
+static void matlabCodegenHandle_mat_aa2lbow(codertarget_raspi_internal_SP_T *obj)
 {
   if (!obj->matlabCodegenIsDeleted) {
     obj->matlabCodegenIsDeleted = true;
-    PIRO_SystemCore_delete_aa2lbowt(obj);
+    PIROS_SystemCore_delete_aa2lbow(obj);
   }
 }
 
-static void PIROSNav_SystemCore_release_aa2(const
+static void PIROSNavR_SystemCore_release_aa(const
   raspi_internal_lsm9ds1Block_P_T *obj)
 {
   if ((obj->isInitialized == 1) && obj->isSetupComplete) {
@@ -1305,75 +1300,13 @@ static void PIROSNav_SystemCore_release_aa2(const
   }
 }
 
-static void PIROSNavR_SystemCore_delete_aa2(const
-  raspi_internal_lsm9ds1Block_P_T *obj)
-{
-  PIROSNav_SystemCore_release_aa2(obj);
-}
-
-static void matlabCodegenHandle_matlabC_aa2(raspi_internal_lsm9ds1Block_P_T *obj)
-{
-  if (!obj->matlabCodegenIsDeleted) {
-    obj->matlabCodegenIsDeleted = true;
-    PIROSNavR_SystemCore_delete_aa2(obj);
-  }
-}
-
-static void PIROSN_SystemCore_release_aa2lb(g_codertarget_raspi_internal__T *obj)
-{
-  if (obj->isInitialized == 1) {
-    obj->isInitialized = 2;
-  }
-}
-
-static void PIROSNa_SystemCore_delete_aa2lb(g_codertarget_raspi_internal__T *obj)
-{
-  PIROSN_SystemCore_release_aa2lb(obj);
-}
-
-static void matlabCodegenHandle_matla_aa2lb(g_codertarget_raspi_internal__T *obj)
-{
-  if (!obj->matlabCodegenIsDeleted) {
-    obj->matlabCodegenIsDeleted = true;
-    PIROSNa_SystemCore_delete_aa2lb(obj);
-  }
-}
-
-static void PIROSNa_SystemCore_release_aa2l(f_codertarget_raspi_internal__T *obj)
-{
-  if (obj->isInitialized == 1) {
-    obj->isInitialized = 2;
-  }
-}
-
-static void PIROSNav_SystemCore_delete_aa2l(f_codertarget_raspi_internal__T *obj)
-{
-  PIROSNa_SystemCore_release_aa2l(obj);
-}
-
-static void matlabCodegenHandle_matlab_aa2l(f_codertarget_raspi_internal__T *obj)
-{
-  if (!obj->matlabCodegenIsDeleted) {
-    obj->matlabCodegenIsDeleted = true;
-    PIROSNav_SystemCore_delete_aa2l(obj);
-  }
-}
-
-static void PIROSNavR_SystemCore_release_aa(const
-  raspi_internal_lps25hBlock_PI_T *obj)
-{
-  if ((obj->isInitialized == 1) && obj->isSetupComplete) {
-    MW_I2C_Close(obj->MW_I2C_HANDLE);
-  }
-}
-
 static void PIROSNavRe_SystemCore_delete_aa(const
-  raspi_internal_lps25hBlock_PI_T *obj)
+  raspi_internal_lsm9ds1Block_P_T *obj)
 {
   PIROSNavR_SystemCore_release_aa(obj);
 }
 
-static void matlabCodegenHandle_matlabCo_aa(raspi_internal_lps25hBlock_PI_T *obj)
+static void matlabCodegenHandle_matlabCo_aa(raspi_internal_lsm9ds1Block_P_T *obj)
 {
   if (!obj->matlabCodegenIsDeleted) {
     obj->matlabCodegenIsDeleted = true;
@@ -1381,8 +1314,48 @@ static void matlabCodegenHandle_matlabCo_aa(raspi_internal_lps25hBlock_PI_T *obj
   }
 }
 
+static void PIROSNa_SystemCore_release_aa2l(g_codertarget_raspi_internal__T *obj)
+{
+  if (obj->isInitialized == 1) {
+    obj->isInitialized = 2;
+  }
+}
+
+static void PIROSNav_SystemCore_delete_aa2l(g_codertarget_raspi_internal__T *obj)
+{
+  PIROSNa_SystemCore_release_aa2l(obj);
+}
+
+static void matlabCodegenHandle_matlab_aa2l(g_codertarget_raspi_internal__T *obj)
+{
+  if (!obj->matlabCodegenIsDeleted) {
+    obj->matlabCodegenIsDeleted = true;
+    PIROSNav_SystemCore_delete_aa2l(obj);
+  }
+}
+
+static void PIROSNav_SystemCore_release_aa2(f_codertarget_raspi_internal__T *obj)
+{
+  if (obj->isInitialized == 1) {
+    obj->isInitialized = 2;
+  }
+}
+
+static void PIROSNavR_SystemCore_delete_aa2(f_codertarget_raspi_internal__T *obj)
+{
+  PIROSNav_SystemCore_release_aa2(obj);
+}
+
+static void matlabCodegenHandle_matlabC_aa2(f_codertarget_raspi_internal__T *obj)
+{
+  if (!obj->matlabCodegenIsDeleted) {
+    obj->matlabCodegenIsDeleted = true;
+    PIROSNavR_SystemCore_delete_aa2(obj);
+  }
+}
+
 static void PIROSNavRe_SystemCore_release_a(const
-  raspi_internal_hts221Block_PI_T *obj)
+  raspi_internal_lps25hBlock_PI_T *obj)
 {
   if ((obj->isInitialized == 1) && obj->isSetupComplete) {
     MW_I2C_Close(obj->MW_I2C_HANDLE);
@@ -1390,12 +1363,12 @@ static void PIROSNavRe_SystemCore_release_a(const
 }
 
 static void PIROSNavRec_SystemCore_delete_a(const
-  raspi_internal_hts221Block_PI_T *obj)
+  raspi_internal_lps25hBlock_PI_T *obj)
 {
   PIROSNavRe_SystemCore_release_a(obj);
 }
 
-static void matlabCodegenHandle_matlabCod_a(raspi_internal_hts221Block_PI_T *obj)
+static void matlabCodegenHandle_matlabCod_a(raspi_internal_lps25hBlock_PI_T *obj)
 {
   if (!obj->matlabCodegenIsDeleted) {
     obj->matlabCodegenIsDeleted = true;
@@ -1403,21 +1376,21 @@ static void matlabCodegenHandle_matlabCod_a(raspi_internal_hts221Block_PI_T *obj
   }
 }
 
-static void PIROSNavRec_SystemCore_release(const raspi_internal_JoystickBlock__T
+static void PIROSNavRec_SystemCore_release(const raspi_internal_hts221Block_PI_T
   *obj)
 {
   if ((obj->isInitialized == 1) && obj->isSetupComplete) {
-    JOYSTICK_BLOCK_TERMINATE(obj->fd);
+    MW_I2C_Close(obj->MW_I2C_HANDLE);
   }
 }
 
-static void PIROSNavRec_SystemCore_delete(const raspi_internal_JoystickBlock__T *
+static void PIROSNavRec_SystemCore_delete(const raspi_internal_hts221Block_PI_T *
   obj)
 {
   PIROSNavRec_SystemCore_release(obj);
 }
 
-static void matlabCodegenHandle_matlabCodeg(raspi_internal_JoystickBlock__T *obj)
+static void matlabCodegenHandle_matlabCodeg(raspi_internal_hts221Block_PI_T *obj)
 {
   if (!obj->matlabCodegenIsDeleted) {
     obj->matlabCodegenIsDeleted = true;
@@ -2409,9 +2382,6 @@ void PIROSNavRec_step0(void)           // Sample time: [0.1s, 0.0s]
 
   // End of MATLABSystem: '<S6>/HTS221 Humidity Sensor'
 
-  // MATLABSystem: '<S6>/Joystick'
-  PIROSNavRec_B.Joystick = JOYSTICK_BLOCK_READ(PIROSNavRec_DW.obj_p.fd);
-
   // External mode
   rtExtModeUploadCheckTrigger(2);
   rtExtModeUpload(0, (real_T)PIROSNavRec_M->Timing.taskTime0);
@@ -2499,15 +2469,15 @@ void PIROSNavRec_initialize(void)
   PIROSNavRec_M->Timing.stepSize0 = 0.1;
 
   // External mode info
-  PIROSNavRec_M->Sizes.checksums[0] = (1866349165U);
-  PIROSNavRec_M->Sizes.checksums[1] = (3066572454U);
-  PIROSNavRec_M->Sizes.checksums[2] = (3114614805U);
-  PIROSNavRec_M->Sizes.checksums[3] = (755360725U);
+  PIROSNavRec_M->Sizes.checksums[0] = (1556514730U);
+  PIROSNavRec_M->Sizes.checksums[1] = (668326146U);
+  PIROSNavRec_M->Sizes.checksums[2] = (1789694462U);
+  PIROSNavRec_M->Sizes.checksums[3] = (1061529718U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
     static RTWExtModeInfo rt_ExtModeInfo;
-    static const sysRanDType *systemRan[25];
+    static const sysRanDType *systemRan[24];
     PIROSNavRec_M->extModeInfo = (&rt_ExtModeInfo);
     rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
     systemRan[0] = &rtAlwaysEnabled;
@@ -2528,14 +2498,13 @@ void PIROSNavRec_initialize(void)
     systemRan[15] = &rtAlwaysEnabled;
     systemRan[16] = &rtAlwaysEnabled;
     systemRan[17] = &rtAlwaysEnabled;
-    systemRan[18] = &rtAlwaysEnabled;
-    systemRan[19] = (sysRanDType *)
+    systemRan[18] = (sysRanDType *)
       &PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC_b;
+    systemRan[19] = &rtAlwaysEnabled;
     systemRan[20] = &rtAlwaysEnabled;
-    systemRan[21] = &rtAlwaysEnabled;
-    systemRan[22] = (sysRanDType *)&PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC;
+    systemRan[21] = (sysRanDType *)&PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC;
+    systemRan[22] = &rtAlwaysEnabled;
     systemRan[23] = &rtAlwaysEnabled;
-    systemRan[24] = &rtAlwaysEnabled;
     rteiSetModelMappingInfoPtr(PIROSNavRec_M->extModeInfo,
       &PIROSNavRec_M->SpecialInfo.mappingInfo);
     rteiSetChecksumsPtr(PIROSNavRec_M->extModeInfo,
@@ -2547,7 +2516,7 @@ void PIROSNavRec_initialize(void)
   {
     static DataTypeTransInfo dtInfo;
     PIROSNavRec_M->SpecialInfo.mappingInfo = (&dtInfo);
-    dtInfo.numDataTypes = 26;
+    dtInfo.numDataTypes = 25;
     dtInfo.dataTypeSizes = &rtDataTypeSizes[0];
     dtInfo.dataTypeNames = &rtDataTypeNames[0];
 
@@ -2560,10 +2529,10 @@ void PIROSNavRec_initialize(void)
 
   {
     codertarget_raspi_internal_SP_T *obj;
+    uint32_T SSPinNameLoc;
     uint32_T MOSIPinLoc;
     uint32_T MISOPinLoc;
     uint32_T SCKPinLoc;
-    raspi_internal_JoystickBlock__T *obj_0;
     int32_T i;
     static const char_T tmp[15] = { '/', 'X', 'b', 'o', 'x', 'C', 'o', 'n', 't',
       'r', 'o', 'l', 'l', 'e', 'r' };
@@ -2608,12 +2577,12 @@ void PIROSNavRec_initialize(void)
     obj = &PIROSNavRec_DW.obj_n;
     PIROSNavRec_DW.obj_n.isSetupComplete = false;
     PIROSNavRec_DW.obj_n.isInitialized = 1;
-    PIROSNavRec_B.SSPinNameLoc = SPI0_CE0;
+    SSPinNameLoc = SPI0_CE0;
     MOSIPinLoc = MW_UNDEFINED_VALUE;
     MISOPinLoc = MW_UNDEFINED_VALUE;
     SCKPinLoc = MW_UNDEFINED_VALUE;
     obj->MW_SPI_HANDLE = MW_SPI_Open(0U, MOSIPinLoc, MISOPinLoc, SCKPinLoc,
-      PIROSNavRec_B.SSPinNameLoc, true, 0);
+      SSPinNameLoc, true, 0);
     MW_SPI_SetBusSpeed(PIROSNavRec_DW.obj_n.MW_SPI_HANDLE, 500000U);
     PIROSNavRec_DW.obj_n.isSetupComplete = true;
 
@@ -2637,17 +2606,6 @@ void PIROSNavRec_initialize(void)
     PIROSNavRec_DW.obj_d.isInitialized = 0;
     PIROSNavRec_DW.obj_d.matlabCodegenIsDeleted = false;
     PIROSNavRec_SystemCore_setup(&PIROSNavRec_DW.obj_d);
-
-    // Start for MATLABSystem: '<S6>/Joystick'
-    PIROSNavRec_DW.obj_p.matlabCodegenIsDeleted = true;
-    PIROSNavRec_DW.obj_p.isInitialized = 0;
-    PIROSNavRec_DW.obj_p.matlabCodegenIsDeleted = false;
-    obj_0 = &PIROSNavRec_DW.obj_p;
-    PIROSNavRec_DW.obj_p.isSetupComplete = false;
-    PIROSNavRec_DW.obj_p.isInitialized = 1;
-    PIROSNavRec_DW.obj_p.fd = 0U;
-    obj_0->fd = JOYSTICK_BLOCK_INIT();
-    PIROSNavRec_DW.obj_p.isSetupComplete = true;
 
     // InitializeConditions for UnitDelay: '<S2>/Output'
     PIROSNavRec_DW.Output_DSTATE = PIROSNavRec_P.Output_InitialCondition;
@@ -2705,32 +2663,29 @@ void PIROSNavRec_terminate(void)
 {
   // Terminate for Atomic SubSystem: '<Root>/Subscribe1'
   // Terminate for MATLABSystem: '<S8>/SourceBlock'
-  matlabCodegenHandle_matl_aa2lbo(&PIROSNavRec_DW.obj_j);
+  matlabCodegenHandle_matla_aa2lb(&PIROSNavRec_DW.obj_j);
 
   // End of Terminate for SubSystem: '<Root>/Subscribe1'
 
   // Terminate for Atomic SubSystem: '<Root>/Subscribe'
   // Terminate for MATLABSystem: '<S7>/SourceBlock'
-  matlabCodegenHandle_matl_aa2lbo(&PIROSNavRec_DW.obj_no);
+  matlabCodegenHandle_matla_aa2lb(&PIROSNavRec_DW.obj_no);
 
   // End of Terminate for SubSystem: '<Root>/Subscribe'
 
   // Terminate for MATLABSystem: '<S9>/SPI Master Transfer'
-  matlabCodegenHandle_ma_aa2lbowt(&PIROSNavRec_DW.obj_n);
+  matlabCodegenHandle_mat_aa2lbow(&PIROSNavRec_DW.obj_n);
 
   // Terminate for MATLABSystem: '<S6>/LSM9DS1 IMU Sensor'
-  matlabCodegenHandle_matlabC_aa2(&PIROSNavRec_DW.obj);
-  matlabCodegenHandle_matla_aa2lb(&PIROSNavRec_DW.obj.i2cobj_MAG);
-  matlabCodegenHandle_matlab_aa2l(&PIROSNavRec_DW.obj.i2cobj_A_G);
+  matlabCodegenHandle_matlabCo_aa(&PIROSNavRec_DW.obj);
+  matlabCodegenHandle_matlab_aa2l(&PIROSNavRec_DW.obj.i2cobj_MAG);
+  matlabCodegenHandle_matlabC_aa2(&PIROSNavRec_DW.obj.i2cobj_A_G);
 
   // Terminate for MATLABSystem: '<S6>/LPS25H Pressure Sensor'
-  matlabCodegenHandle_matlabCo_aa(&PIROSNavRec_DW.obj_do);
+  matlabCodegenHandle_matlabCod_a(&PIROSNavRec_DW.obj_do);
 
   // Terminate for MATLABSystem: '<S6>/HTS221 Humidity Sensor'
-  matlabCodegenHandle_matlabCod_a(&PIROSNavRec_DW.obj_d);
-
-  // Terminate for MATLABSystem: '<S6>/Joystick'
-  matlabCodegenHandle_matlabCodeg(&PIROSNavRec_DW.obj_p);
+  matlabCodegenHandle_matlabCodeg(&PIROSNavRec_DW.obj_d);
 }
 
 //

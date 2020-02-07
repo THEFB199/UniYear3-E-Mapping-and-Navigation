@@ -50,9 +50,8 @@ file(GLOB ${PROJECT_NAME}_CPP_SOURCES RELATIVE ${PROJECT_SOURCE_DIR} ${PROJECT_S
 
 ## Declare executable
 add_executable(${PROJECT_NAME}_node
-   devices.c
-   MW_joystickBlock.c
    MW_I2C.c
+   devices.c
    MW_SPI.c
    ert_main.cpp
    PIROSNavRec.cpp

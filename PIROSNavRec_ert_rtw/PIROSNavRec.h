@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.61
+// Model version                  : 1.62
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Fri Feb  7 10:22:12 2020
+// C/C++ source code generated on : Fri Feb  7 11:18:09 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -29,7 +29,6 @@
 #include "sysran_types.h"
 #include "dt_info.h"
 #include "ext_work.h"
-#include "MW_joystickBlock.h"
 #include "MW_I2C.h"
 #include "slros_initialize.h"
 #include "MW_SPI.h"
@@ -146,7 +145,6 @@ typedef struct {
   uint64m_T r5;
   uint64m_T r6;
   uint64m_T r7;
-  uint32_T SSPinNameLoc;
   real_T out;                          // '<S6>/MATLAB Function2'
   real_T out_p;                        // '<S6>/MATLAB Function1'
   real_T orientation2;                 // '<S6>/MATLAB Function'
@@ -199,7 +197,6 @@ typedef struct {
   int32_T j;
   fusion_internal_frames_NED_PI_T lobj_1;
   uint8_T Output;                      // '<S2>/Output'
-  uint8_T Joystick;                    // '<S6>/Joystick'
   boolean_T SourceBlock_o1;            // '<S8>/SourceBlock'
   boolean_T SourceBlock_o1_a;          // '<S7>/SourceBlock'
 } B_PIROSNavRec_T;
@@ -210,7 +207,6 @@ typedef struct {
   raspi_internal_hts221Block_PI_T obj_d;// '<S6>/HTS221 Humidity Sensor'
   raspi_internal_lps25hBlock_PI_T obj_do;// '<S6>/LPS25H Pressure Sensor'
   codertarget_raspi_internal_SP_T obj_n;// '<S9>/SPI Master Transfer'
-  raspi_internal_JoystickBlock__T obj_p;// '<S6>/Joystick'
   ros_slros_internal_block_Subs_T obj_j;// '<S8>/SourceBlock'
   ros_slros_internal_block_Subs_T obj_no;// '<S7>/SourceBlock'
   uint8_T Output_DSTATE;               // '<S2>/Output'

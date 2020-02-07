@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.61
+// Model version                  : 1.62
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Fri Feb  7 10:22:12 2020
+// C/C++ source code generated on : Fri Feb  7 11:18:09 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -108,18 +108,6 @@ typedef struct {
 } SL_Bus_PIROSNavRec_sensor_msgs_Joy;
 
 #endif
-
-#ifndef typedef_raspi_internal_JoystickBlock__T
-#define typedef_raspi_internal_JoystickBlock__T
-
-typedef struct {
-  boolean_T matlabCodegenIsDeleted;
-  int32_T isInitialized;
-  boolean_T isSetupComplete;
-  uint8_T fd;
-} raspi_internal_JoystickBlock__T;
-
-#endif                                 //typedef_raspi_internal_JoystickBlock__T
 
 // Custom Type definition for MATLABSystem: '<S9>/SPI Master Transfer'
 #include "MW_SVD.h"

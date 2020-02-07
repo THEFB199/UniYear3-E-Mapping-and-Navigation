@@ -416,16 +416,12 @@
       sigMap.sections(5) = section;
       clear section
       
-      section.nData     = 2;
-      section.data(2)  = dumData; %prealloc
+      section.nData     = 1;
+      section.data(1)  = dumData; %prealloc
       
 	  ;% PIROSNavRec_B.Output
 	  section.data(1).logicalSrcIdx = 20;
 	  section.data(1).dtTransOffset = 0;
-	
-	  ;% PIROSNavRec_B.Joystick
-	  section.data(2).logicalSrcIdx = 21;
-	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
       sigMap.sections(6) = section;
@@ -435,11 +431,11 @@
       section.data(2)  = dumData; %prealloc
       
 	  ;% PIROSNavRec_B.SourceBlock_o1
-	  section.data(1).logicalSrcIdx = 22;
+	  section.data(1).logicalSrcIdx = 21;
 	  section.data(1).dtTransOffset = 0;
 	
 	  ;% PIROSNavRec_B.SourceBlock_o1_a
-	  section.data(2).logicalSrcIdx = 23;
+	  section.data(2).logicalSrcIdx = 22;
 	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
@@ -464,7 +460,7 @@
   ;%*******************
       
     nTotData      = 0; %add to this count as we go
-    nTotSects     = 8;
+    nTotSects     = 7;
     sectIdxOffset = 7;
     
     ;%
@@ -531,64 +527,53 @@
       dworkMap.sections(4) = section;
       clear section
       
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
-      
-	  ;% PIROSNavRec_DW.obj_p
-	  section.data(1).logicalSrcIdx = 4;
-	  section.data(1).dtTransOffset = 0;
-	
-      nTotData = nTotData + section.nData;
-      dworkMap.sections(5) = section;
-      clear section
-      
       section.nData     = 2;
       section.data(2)  = dumData; %prealloc
       
 	  ;% PIROSNavRec_DW.obj_j
-	  section.data(1).logicalSrcIdx = 5;
+	  section.data(1).logicalSrcIdx = 4;
 	  section.data(1).dtTransOffset = 0;
 	
 	  ;% PIROSNavRec_DW.obj_no
-	  section.data(2).logicalSrcIdx = 6;
+	  section.data(2).logicalSrcIdx = 5;
 	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
-      dworkMap.sections(6) = section;
+      dworkMap.sections(5) = section;
       clear section
       
       section.nData     = 1;
       section.data(1)  = dumData; %prealloc
       
 	  ;% PIROSNavRec_DW.Output_DSTATE
-	  section.data(1).logicalSrcIdx = 7;
+	  section.data(1).logicalSrcIdx = 6;
 	  section.data(1).dtTransOffset = 0;
 	
       nTotData = nTotData + section.nData;
-      dworkMap.sections(7) = section;
+      dworkMap.sections(6) = section;
       clear section
       
       section.nData     = 4;
       section.data(4)  = dumData; %prealloc
       
 	  ;% PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC
-	  section.data(1).logicalSrcIdx = 8;
+	  section.data(1).logicalSrcIdx = 7;
 	  section.data(1).dtTransOffset = 0;
 	
 	  ;% PIROSNavRec_DW.EnabledSubsystem_SubsysRanBC_b
-	  section.data(2).logicalSrcIdx = 9;
+	  section.data(2).logicalSrcIdx = 8;
 	  section.data(2).dtTransOffset = 1;
 	
 	  ;% PIROSNavRec_DW.GetRosMessage1_SubsysRanBC
-	  section.data(3).logicalSrcIdx = 10;
+	  section.data(3).logicalSrcIdx = 9;
 	  section.data(3).dtTransOffset = 2;
 	
 	  ;% PIROSNavRec_DW.GetRosMessage_SubsysRanBC
-	  section.data(4).logicalSrcIdx = 11;
+	  section.data(4).logicalSrcIdx = 10;
 	  section.data(4).dtTransOffset = 3;
 	
       nTotData = nTotData + section.nData;
-      dworkMap.sections(8) = section;
+      dworkMap.sections(7) = section;
       clear section
       
     
@@ -617,8 +602,8 @@
   ;%
 
 
-  targMap.checksum0 = 1866349165;
-  targMap.checksum1 = 3066572454;
-  targMap.checksum2 = 3114614805;
-  targMap.checksum3 = 755360725;
+  targMap.checksum0 = 1556514730;
+  targMap.checksum1 = 668326146;
+  targMap.checksum2 = 1789694462;
+  targMap.checksum3 = 1061529718;
 

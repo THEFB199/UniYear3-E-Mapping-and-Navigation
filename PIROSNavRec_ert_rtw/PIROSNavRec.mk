@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'PIROSNavRec'. 
 ## 
 ## Makefile     : PIROSNavRec.mk
-## Generated on : Fri Feb 07 10:22:19 2020
+## Generated on : Fri Feb 07 11:18:29 2020
 ## MATLAB Coder version: 4.3 (R2019b)
 ## 
 ## Build Info:
@@ -27,7 +27,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2019b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2019b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = D:/Documents/GitHub/E-Mapping-and-Navigation
+START_DIR                 = C:/Users/FRED-Surface/Documents/GitHub/E-Mapping
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -154,7 +154,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/realtime/targets/raspi/server -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/RASPBE~1/include -I$(START_DIR)/PIROSNavRec_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
+INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/realtime/targets/raspi/server -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/RASPBE~1/include -I$(START_DIR)/PIROSNavRec_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -176,7 +176,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_IMPLIED)
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server/devices.c C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server/MW_joystickBlock.c C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_I2C.c C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/PIROSNavRec_ert_rtw/PIROSNavRec.cpp $(START_DIR)/PIROSNavRec_ert_rtw/PIROSNavRec_data.cpp $(START_DIR)/PIROSNavRec_ert_rtw/rtGetInf.cpp $(START_DIR)/PIROSNavRec_ert_rtw/rtGetNaN.cpp $(START_DIR)/PIROSNavRec_ert_rtw/rt_nonfinite.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/PIROSNavRec_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/PIROSNavRec_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_I2C.c C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server/devices.c C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/PIROSNavRec_ert_rtw/PIROSNavRec.cpp $(START_DIR)/PIROSNavRec_ert_rtw/PIROSNavRec_data.cpp $(START_DIR)/PIROSNavRec_ert_rtw/rtGetInf.cpp $(START_DIR)/PIROSNavRec_ert_rtw/rtGetNaN.cpp $(START_DIR)/PIROSNavRec_ert_rtw/rt_nonfinite.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/PIROSNavRec_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/PIROSNavRec_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
 
 MAIN_SRC = $(START_DIR)/PIROSNavRec_ert_rtw/ert_main.cpp
 
@@ -186,7 +186,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = devices.c.o MW_joystickBlock.c.o MW_I2C.c.o MW_SPI.c.o PIROSNavRec.cpp.o PIROSNavRec_data.cpp.o rtGetInf.cpp.o rtGetNaN.cpp.o rt_nonfinite.cpp.o ext_svr.c.o updown.c.o ext_work.c.o rtiostream_utils.c.o rtiostream_interface.c.o rtiostream_tcpip.c.o linuxinitialize.cpp.o slros_busmsg_conversion.cpp.o slros_initialize.cpp.o slros_generic_param.cpp.o
+OBJS = MW_I2C.c.o devices.c.o MW_SPI.c.o PIROSNavRec.cpp.o PIROSNavRec_data.cpp.o rtGetInf.cpp.o rtGetNaN.cpp.o rt_nonfinite.cpp.o ext_svr.c.o updown.c.o ext_work.c.o rtiostream_utils.c.o rtiostream_interface.c.o rtiostream_tcpip.c.o linuxinitialize.cpp.o slros_busmsg_conversion.cpp.o slros_initialize.cpp.o slros_generic_param.cpp.o
 
 MAIN_OBJ = ert_main.cpp.o
 
@@ -445,15 +445,11 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-devices.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server/devices.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
-MW_joystickBlock.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server/MW_joystickBlock.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-
 MW_I2C.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_I2C.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+
+devices.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server/devices.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 

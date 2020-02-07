@@ -7,9 +7,9 @@
 //
 //  Code generation for model "PIROSNavRec".
 //
-//  Model version              : 1.61
+//  Model version              : 1.62
 //  Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
-//  C++ source code generated on : Fri Feb  7 10:22:12 2020
+//  C++ source code generated on : Fri Feb  7 11:18:09 2020
 //
 //  Target selection: ert.tlc
 //  Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -42,7 +42,6 @@ static uint_T rtDataTypeSizes[] = {
   sizeof(SL_Bus_PIROSNavRec_std_msgs_Header),
   sizeof(SL_Bus_PIROSNavRec_sensor_msgs_Joy),
   sizeof(raspi_internal_hts221Block_PI_T),
-  sizeof(raspi_internal_JoystickBlock__T),
   sizeof(raspi_internal_lps25hBlock_PI_T),
   sizeof(raspi_internal_lsm9ds1Block_P_T),
   sizeof(ros_slros_internal_block_Subs_T),
@@ -72,7 +71,6 @@ static const char_T * rtDataTypeNames[] = {
   "SL_Bus_PIROSNavRec_std_msgs_Header",
   "SL_Bus_PIROSNavRec_sensor_msgs_Joy",
   "raspi_internal_hts221Block_PI_T",
-  "raspi_internal_JoystickBlock__T",
   "raspi_internal_lps25hBlock_PI_T",
   "raspi_internal_lsm9ds1Block_P_T",
   "ros_slros_internal_block_Subs_T",
@@ -91,22 +89,20 @@ static DataTypeTransition rtBTransitions[] = {
 
   { (char_T *)(&PIROSNavRec_B.SPIMasterTransfer[0]), 5, 0, 7 },
 
-  { (char_T *)(&PIROSNavRec_B.Output), 3, 0, 2 },
+  { (char_T *)(&PIROSNavRec_B.Output), 3, 0, 1 },
 
   { (char_T *)(&PIROSNavRec_B.SourceBlock_o1), 8, 0, 2 }
   ,
 
-  { (char_T *)(&PIROSNavRec_DW.obj), 23, 0, 1 },
+  { (char_T *)(&PIROSNavRec_DW.obj), 22, 0, 1 },
 
   { (char_T *)(&PIROSNavRec_DW.obj_d), 20, 0, 1 },
 
-  { (char_T *)(&PIROSNavRec_DW.obj_do), 22, 0, 1 },
+  { (char_T *)(&PIROSNavRec_DW.obj_do), 21, 0, 1 },
 
-  { (char_T *)(&PIROSNavRec_DW.obj_n), 25, 0, 1 },
+  { (char_T *)(&PIROSNavRec_DW.obj_n), 24, 0, 1 },
 
-  { (char_T *)(&PIROSNavRec_DW.obj_p), 21, 0, 1 },
-
-  { (char_T *)(&PIROSNavRec_DW.obj_j), 24, 0, 2 },
+  { (char_T *)(&PIROSNavRec_DW.obj_j), 23, 0, 2 },
 
   { (char_T *)(&PIROSNavRec_DW.Output_DSTATE), 3, 0, 1 },
 
@@ -115,7 +111,7 @@ static DataTypeTransition rtBTransitions[] = {
 
 // data type transition table for block I/O structure
 static DataTypeTransitionTable rtBTransTable = {
-  15U,
+  14U,
   rtBTransitions
 };
 
