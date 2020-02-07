@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'PIROSNavRec'.
 //
-// Model version                  : 1.11
+// Model version                  : 1.61
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Wed Feb  5 17:15:48 2020
+// C/C++ source code generated on : Fri Feb  7 10:22:12 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -25,6 +25,30 @@
 //  Definitions supporting external data access
 typedef int32_T chunk_T;
 typedef uint32_T uchunk_T;
+
+//
+//  MultiWord supporting definitions
+typedef long int long_T;
+
+//
+//  MultiWord types
+typedef struct {
+  uint32_T chunks[2];
+} int64m_T;
+
+typedef struct {
+  int64m_T re;
+  int64m_T im;
+} cint64m_T;
+
+typedef struct {
+  uint32_T chunks[2];
+} uint64m_T;
+
+typedef struct {
+  uint64m_T re;
+  uint64m_T im;
+} cuint64m_T;
 
 #endif                                 // MULTIWORD_TYPES_H
 

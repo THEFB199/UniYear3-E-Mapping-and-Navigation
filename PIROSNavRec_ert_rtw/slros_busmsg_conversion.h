@@ -4,6 +4,9 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/Vector3.h>
+#include <ros/time.h>
+#include <sensor_msgs/Joy.h>
+#include <std_msgs/Header.h>
 #include "PIROSNavRec_types.h"
 #include "slros_msgconvert_utils.h"
 
@@ -13,6 +16,15 @@ void convertToBus(SL_Bus_PIROSNavRec_geometry_msgs_Twist* busPtr, geometry_msgs:
 
 void convertFromBus(geometry_msgs::Vector3* msgPtr, SL_Bus_PIROSNavRec_geometry_msgs_Vector3 const* busPtr);
 void convertToBus(SL_Bus_PIROSNavRec_geometry_msgs_Vector3* busPtr, geometry_msgs::Vector3 const* msgPtr);
+
+void convertFromBus(ros::Time* msgPtr, SL_Bus_PIROSNavRec_ros_time_Time const* busPtr);
+void convertToBus(SL_Bus_PIROSNavRec_ros_time_Time* busPtr, ros::Time const* msgPtr);
+
+void convertFromBus(sensor_msgs::Joy* msgPtr, SL_Bus_PIROSNavRec_sensor_msgs_Joy const* busPtr);
+void convertToBus(SL_Bus_PIROSNavRec_sensor_msgs_Joy* busPtr, sensor_msgs::Joy const* msgPtr);
+
+void convertFromBus(std_msgs::Header* msgPtr, SL_Bus_PIROSNavRec_std_msgs_Header const* busPtr);
+void convertToBus(SL_Bus_PIROSNavRec_std_msgs_Header* busPtr, std_msgs::Header const* msgPtr);
 
 
 #endif

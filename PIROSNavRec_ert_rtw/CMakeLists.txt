@@ -12,6 +12,7 @@ set(MW_TOP_LEVEL_PROJECT_NAME ${PROJECT_NAME})
 find_package(catkin REQUIRED COMPONENTS
 geometry_msgs
 roscpp
+sensor_msgs
 std_msgs
 )
 
@@ -25,7 +26,7 @@ add_definitions(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-   CATKIN_DEPENDS geometry_msgs roscpp std_msgs 
+   CATKIN_DEPENDS geometry_msgs roscpp sensor_msgs std_msgs 
 )
 
 ###########
@@ -49,10 +50,16 @@ file(GLOB ${PROJECT_NAME}_CPP_SOURCES RELATIVE ${PROJECT_SOURCE_DIR} ${PROJECT_S
 
 ## Declare executable
 add_executable(${PROJECT_NAME}_node
+   devices.c
+   MW_joystickBlock.c
+   MW_I2C.c
    MW_SPI.c
    ert_main.cpp
    PIROSNavRec.cpp
    PIROSNavRec_data.cpp
+   rtGetInf.cpp
+   rtGetNaN.cpp
+   rt_nonfinite.cpp
    ext_svr.c
    updown.c
    ext_work.c
