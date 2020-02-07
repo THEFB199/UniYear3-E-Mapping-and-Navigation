@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.43"
+    ComputedModelVersion    "1.46"
     NumModelReferences	    0
     NumTestPointedSignals   5
     TestPointedSignal {
@@ -128,8 +128,6 @@ Model {
   "</LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedData>\n"
   "			</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "03a37c5f-3e1c-4afb-9ce9-2a0d05751fd4,8fd522ce-9f83-42c1-bdff-7a864e210840,05756065-db3f"
-  "-4df3-b92b-4b7893301c68,af6bef99-8767-4027-895c-ece5892a47ed,0d8b97af-fcc9-4ae2-a994-46d894f70c73"
   SLCCPlugin		  "on"
   AnimationPlugin	  "on"
   WebScopes_FoundationPlugin "on"
@@ -190,48 +188,26 @@ Model {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  IsTabbed		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "151"
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
 	  Extents		  [1618.0, 1205.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-151.19032511976309, -37.804610834048553]
-	  SceneRectInView	  [-151.19032511976309, -37.804610834048553, 1294.4, 964.0]
+	  ZoomFactor		  [0.49999999999999994]
+	  Offset		  [-641.44321616135, -529.64209804902748]
+	  SceneRectInView	  [-641.44321616135, -529.64209804902748, 3236.0000000000005, 2410.0000000000005]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
-	  IsTabbed		  [1]
+	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "61"
 	  Extents		  [1618.0, 1205.0]
-	  ZoomFactor		  [0.79999999999999993]
-	  Offset		  [-708.3902761449956, -454.99003149884811]
-	  SceneRectInView	  [-708.3902761449956, -454.99003149884811, 2022.5000000000002, 1506.2500000000002]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-532.72360947832919, -355.40669816551491]
+	  SceneRectInView	  [-532.72360947832919, -355.40669816551491, 1618.0, 1205.0]
 	}
 	Object {
 	  $ObjectID		  8
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "140"
-	  Extents		  [1618.0, 1205.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-222.62138630314894, -470.83333333333314]
-	  SceneRectInView	  [-222.62138630314894, -470.83333333333314, 2022.5, 1506.25]
-	}
-	Object {
-	  $ObjectID		  9
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1618.0, 1205.0]
-	  ZoomFactor		  [0.79999999999999993]
-	  Offset		  [505.86753701297795, 491.64828377995497]
-	  SceneRectInView	  [505.86753701297795, 491.64828377995497, 2022.5000000000002, 1506.2500000000002]
-	}
-	Object {
-	  $ObjectID		  10
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -242,7 +218,7 @@ Model {
 	  SceneRectInView	  [-357.14687500000014, -269.69946435929131, 1148.6666666666667, 855.46559538524934]
 	}
 	Object {
-	  $ObjectID		  11
+	  $ObjectID		  9
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -253,26 +229,48 @@ Model {
 	  SceneRectInView	  [-545.23950649806818, -472.46792665647229, 1365.4790129961366, 1016.9358533129447]
 	}
 	Object {
-	  $ObjectID		  12
+	  $ObjectID		  10
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "151"
+	  Extents		  [1618.0, 1205.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-319.79032511976311, -210.78341084411403]
+	  SceneRectInView	  [-319.79032511976311, -210.78341084411403, 1618.0, 1205.0]
+	}
+	Object {
+	  $ObjectID		  11
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "92"
 	  Extents		  [1618.0, 1205.0]
-	  ZoomFactor		  [1.1738247243180497]
-	  Offset		  [-527.92960841319473, -460.14464519935791]
-	  SceneRectInView	  [-527.92960841319473, -460.14464519935791, 1378.4, 1026.5587144622993]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-797.47868134273733, -686.86788376548884]
+	  SceneRectInView	  [-797.47868134273733, -686.86788376548884, 2022.5, 1506.25]
+	}
+	Object {
+	  $ObjectID		  12
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "80"
+	  Extents		  [1618.0, 1205.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [97.26171875, -367.0]
+	  SceneRectInView	  [97.26171875, -367.0, 1618.0, 1205.0]
 	}
 	Object {
 	  $ObjectID		  13
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "80"
-	  Extents		  [1723.0, 949.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [78.092633546664047, -74.7597474057169]
-	  SceneRectInView	  [78.092633546664047, -74.7597474057169, 1723.0, 949.0]
+	  LoadSaveID		  "140"
+	  Extents		  [1618.0, 1205.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-222.62138630314894, -470.83333333333314]
+	  SceneRectInView	  [-222.62138630314894, -470.83333333333314, 2022.5, 1506.25]
 	}
 	PropName		"EditorsInfo"
       }
@@ -315,9 +313,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "fredd"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Feb 06 22:53:03 2020"
-  RTWModifiedTimeStamp	  502930346
-  ModelVersionFormat	  "1.%<AutoIncrement:43>"
+  LastModifiedDate	  "Fri Feb 07 09:35:26 2020"
+  RTWModifiedTimeStamp	  502968775
+  ModelVersionFormat	  "1.%<AutoIncrement:46>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1523,6 +1521,20 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+      DisallowConstTsAndPrmTs off
+      PortDimensions	      "1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "double"
+      Interpolate	      on
+    }
+    Block {
       BlockType		      From
       GotoTag		      "A"
       IconDisplay	      "Tag"
@@ -1927,34 +1939,11 @@ Model {
     Block {
       BlockType		      Terminator
     }
-    Block {
-      BlockType		      TriggerPort
-      TriggerType	      "rising"
-      IsSimulinkFunction      off
-      FunctionVisibility      "global"
-      Variant		      off
-      GeneratePreprocessorConditionals off
-      StatesWhenEnabling      "inherit"
-      PropagateVarSize	      "During execution"
-      ShowOutputPort	      off
-      OutputDataType	      "auto"
-      SampleTimeType	      "triggered"
-      SampleTime	      "1"
-      ZeroCross		      on
-      DisallowConstTsAndPrmTs off
-      InitialTriggerSignalState	"compatibility (no trigger on first evaluation)"
-      PortDimensions	      "-1"
-      TriggerSignalSampleTime "-1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      Interpolate	      on
-    }
   }
   System {
     Name		    "PIROSNavRec"
     Location		    [1713, 0, 3447, 1447]
-    Open		    off
+    Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
     ExecutionDomainType	    "Deduce"
@@ -1968,9 +1957,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "80"
+    ZoomFactor		    "50"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "216"
+    SIDHighWatermark	    "218"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
@@ -1984,7 +1973,7 @@ Model {
       System {
 	Name			"Arbitration"
 	Location		[1713, 0, 3447, 1447]
-	Open			on
+	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
 	ExecutionDomainType	"Deduce"
@@ -1998,7 +1987,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -2337,6 +2326,7 @@ Model {
 	  Name			  "Possibility here to switch from the commands to a fixed velocity"
 	  Position		  [-113, -84, 167, -70]
 	  InternalMargins	  [0, 0, 0, 0]
+	  ZOrder		  -1
 	}
 	Annotation {
 	  SID			  "78"
@@ -2705,7 +2695,7 @@ Model {
       BlockType		      SubSystem
       Name		      "GetRosMessage"
       SID		      "2"
-      Ports		      [1, 6, 0, 1]
+      Ports		      [1, 6, 1]
       Position		      [-130, 167, 165, 318]
       ZOrder		      416
       RequestExecContextInheritance off
@@ -2746,15 +2736,12 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Block {
-	  BlockType		  TriggerPort
-	  Name			  "Trigger"
-	  SID			  "4"
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  SID			  "217"
 	  Ports			  []
-	  Position		  [-195, -48, -175, -28]
-	  ZOrder		  409
-	  VariantControl	  "Variant"
-	  StatesWhenEnabling	  "held"
-	  PortDimensions	  "1"
+	  Position		  [-195, -260, -175, -240]
+	  ZOrder		  422
 	}
 	Block {
 	  BlockType		  BusSelector
@@ -3041,7 +3028,7 @@ Model {
       BlockType		      SubSystem
       Name		      "GetRosMessage1"
       SID		      "92"
-      Ports		      [1, 9, 0, 1]
+      Ports		      [1, 9, 1]
       Position		      [-130, 892, 165, 1048]
       ZOrder		      455
       RequestExecContextInheritance off
@@ -3063,7 +3050,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"117"
+	ZoomFactor		"80"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -3074,15 +3061,12 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Block {
-	  BlockType		  TriggerPort
-	  Name			  "Trigger"
-	  SID			  "94"
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  SID			  "218"
 	  Ports			  []
-	  Position		  [-210, -313, -190, -293]
-	  ZOrder		  409
-	  VariantControl	  "Variant"
-	  StatesWhenEnabling	  "held"
-	  PortDimensions	  "1"
+	  Position		  [-300, -290, -280, -270]
+	  ZOrder		  483
 	}
 	Block {
 	  BlockType		  BusSelector
@@ -3449,7 +3433,7 @@ Model {
 	      Name		      "Demux3"
 	      SID		      "132"
 	      Ports		      [1, 4]
-	      Position		      [570, -106, 575, 186]
+	      Position		      [570, -104, 575, 189]
 	      ZOrder		      478
 	      ShowName		      off
 	      DisplayOption	      "bar"
@@ -3669,6 +3653,7 @@ Model {
 	      Name		      "add a dead zone"
 	      Position		      [47, 92, 123, 106]
 	      InternalMargins	      [0, 0, 0, 0]
+	      ZOrder		      -1
 	    }
 	    Annotation {
 	      SID		      "139"
@@ -4009,7 +3994,7 @@ Model {
       System {
 	Name			"PiSenseHat"
 	Location		[1713, 0, 3447, 1447]
-	Open			on
+	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
 	ExecutionDomainType	"Deduce"
@@ -4023,7 +4008,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Reference
@@ -4621,6 +4606,7 @@ Model {
 	  "ata we care about is fine"
 	  Position		  [-87, -90, 505, -76]
 	  InternalMargins	  [0, 0, 0, 0]
+	  ZOrder		  -1
 	}
       }
     }
@@ -5018,14 +5004,14 @@ Model {
       SrcPort		      1
       Points		      [230, 0]
       Branch {
+	ZOrder			306
+	DstBlock		"GetRosMessage"
+	DstPort			enable
+      }
+      Branch {
 	ZOrder			59
 	DstBlock		"Display1"
 	DstPort			1
-      }
-      Branch {
-	ZOrder			58
-	DstBlock		"GetRosMessage"
-	DstPort			trigger
       }
     }
     Line {
@@ -5244,14 +5230,14 @@ Model {
       SrcPort		      1
       Points		      [230, 0]
       Branch {
+	ZOrder			307
+	DstBlock		"GetRosMessage1"
+	DstPort			enable
+      }
+      Branch {
 	ZOrder			190
 	DstBlock		"Display2"
 	DstPort			1
-      }
-      Branch {
-	ZOrder			132
-	DstBlock		"GetRosMessage1"
-	DstPort			trigger
       }
     }
     Line {
@@ -5355,7 +5341,7 @@ Model {
       }
       Branch {
 	ZOrder			246
-	Points			[608, 0; 0, -260]
+	Points			[580, 0; 0, -260]
 	DstBlock		"Arbitration"
 	DstPort			4
       }
@@ -5476,18 +5462,21 @@ Model {
       Position		      [1625, -399, 1849, -372]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
+      ZOrder		      -1
     }
     Annotation {
       SID		      "212"
       Name		      "Xbox"
       Position		      [1819, -149, 1843, -135]
       InternalMargins	      [0, 0, 0, 0]
+      ZOrder		      -2
     }
     Annotation {
       SID		      "211"
       Name		      "AutoNav"
       Position		      [1811, -192, 1851, -178]
       InternalMargins	      [0, 0, 0, 0]
+      ZOrder		      -3
     }
     Annotation {
       SID		      "210"
@@ -5500,6 +5489,7 @@ Model {
       Position		      [1056, 1061, 1298, 1088]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
+      ZOrder		      -4
     }
     Annotation {
       SID		      "173"
@@ -5512,6 +5502,7 @@ Model {
       Position		      [1854, -248, 2110, -221]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
+      ZOrder		      -5
     }
     Annotation {
       SID		      "119"
@@ -5608,9 +5599,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 3 0 0]
     viewObj		    2
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -5734,9 +5722,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 10 0 0]
     viewObj		    9
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -5889,7 +5874,7 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function out = fcn(a)\nx = a(:,1);\ny = a(:,2);\nz = a(:,3);\nout = atan(y,x) * (180/pi);\n\n"
+      script		      "function out = fcn(a)\nx = a(:,1);\ny = a(:,2);\nz = a(:,3);\nout = atan(y/x) * (180/pi);\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -5986,8 +5971,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 24 0 0]
     viewObj		    23
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -6112,8 +6095,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 31 0 0]
     viewObj		    30
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
