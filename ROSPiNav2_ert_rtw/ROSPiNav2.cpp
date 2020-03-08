@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ROSPiNav2'.
 //
-// Model version                  : 1.4
+// Model version                  : 1.9
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Tue Feb 25 11:49:18 2020
+// C/C++ source code generated on : Sun Mar  8 15:54:33 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -232,9 +232,9 @@ void ROSPiNav2_step(void)
   uint8_T y[2];
   uint8_T b_x_0[2];
   uint16_T y_0;
-  real32_T rtb_ManualSwitch1;
   int32_T i;
-  real32_T rtb_ManualSwitch1_0;
+  real32_T rtb_Gain1_idx_0;
+  real32_T rtb_Gain1_idx_1;
   uint16_T b_x_1;
 
   // Reset subsysRan breadcrumbs
@@ -292,21 +292,21 @@ void ROSPiNav2_step(void)
     // Lookup_n-D: '<S13>/1-D Lookup Table1' incorporates:
     //   SignalConversion generated from: '<S13>/1-D Lookup Table1'
 
-    ROSPiNav2_B.uDLookupTable1_j[0] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[0],
+    ROSPiNav2_B.uDLookupTable1[0] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[0],
       ROSPiNav2_P.uDLookupTable1_bp01Data, ROSPiNav2_P.uDLookupTable1_tableData,
       2U);
-    ROSPiNav2_B.uDLookupTable1_j[1] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[1],
+    ROSPiNav2_B.uDLookupTable1[1] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[1],
       ROSPiNav2_P.uDLookupTable1_bp01Data, ROSPiNav2_P.uDLookupTable1_tableData,
       2U);
-    ROSPiNav2_B.uDLookupTable1_j[2] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[3],
+    ROSPiNav2_B.uDLookupTable1[2] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[3],
       ROSPiNav2_P.uDLookupTable1_bp01Data, ROSPiNav2_P.uDLookupTable1_tableData,
       2U);
-    ROSPiNav2_B.uDLookupTable1_j[3] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[4],
+    ROSPiNav2_B.uDLookupTable1[3] = look1_iflf_binlxpw(ROSPiNav2_B.DeadZone[4],
       ROSPiNav2_P.uDLookupTable1_bp01Data, ROSPiNav2_P.uDLookupTable1_tableData,
       2U);
 
-    // SignalConversion generated from: '<S5>/UpDownL'
-    ROSPiNav2_B.OutportBufferForUpDownL = ROSPiNav2_B.uDLookupTable1_j[1];
+    // Gain: '<S5>/Gain'
+    ROSPiNav2_B.Gain = ROSPiNav2_P.Gain_Gain_h * ROSPiNav2_B.uDLookupTable1[0];
     srUpdateBC(ROSPiNav2_DW.GetRosMessage1_SubsysRanBC);
   }
 
@@ -339,8 +339,10 @@ void ROSPiNav2_step(void)
     ROSPiNav2_B.DataTypeConversion1 = static_cast<real32_T>
       (ROSPiNav2_B.In1_l.Linear.X);
 
-    // DataTypeConversion: '<S4>/Data Type Conversion2'
-    ROSPiNav2_B.DataTypeConversion2 = static_cast<real32_T>
+    // Gain: '<S4>/Gain' incorporates:
+    //   DataTypeConversion: '<S4>/Data Type Conversion2'
+
+    ROSPiNav2_B.Gain_b = ROSPiNav2_P.Gain_Gain * static_cast<real32_T>
       (ROSPiNav2_B.In1_l.Angular.Z);
 
     // DataTypeConversion: '<S4>/Data Type Conversion3'
@@ -368,37 +370,76 @@ void ROSPiNav2_step(void)
   //   Constant: '<Root>/Constant2'
 
   if (ROSPiNav2_P.ManualSwitch1_CurrentSetting == 1) {
-    rtb_ManualSwitch1 = ROSPiNav2_P.Constant_Value_f;
+    rtb_Gain1_idx_1 = ROSPiNav2_P.Constant_Value_f;
   } else {
-    rtb_ManualSwitch1 = ROSPiNav2_P.Constant2_Value;
+    rtb_Gain1_idx_1 = ROSPiNav2_P.Constant2_Value;
   }
 
   // End of ManualSwitch: '<Root>/Manual Switch1'
 
   // Switch: '<S1>/Switch'
-  if (rtb_ManualSwitch1 != 0.0F) {
-    rtb_ManualSwitch1_0 = ROSPiNav2_B.DataTypeConversion1;
-    rtb_ManualSwitch1 = ROSPiNav2_B.DataTypeConversion2;
+  if (rtb_Gain1_idx_1 != 0.0F) {
+    // Switch: '<S1>/Switch1' incorporates:
+    //   Constant: '<Root>/FullNav '
+    //   Sum: '<S1>/Add'
+
+    if (ROSPiNav2_P.FullNav_Value != 0.0F) {
+      rtb_Gain1_idx_0 = ROSPiNav2_B.DataTypeConversion1;
+      rtb_Gain1_idx_1 = ROSPiNav2_B.Gain_b;
+    } else {
+      rtb_Gain1_idx_0 = ROSPiNav2_B.DataTypeConversion1 +
+        ROSPiNav2_B.uDLookupTable1[1];
+      rtb_Gain1_idx_1 = ROSPiNav2_B.Gain_b + ROSPiNav2_B.Gain;
+    }
+
+    // End of Switch: '<S1>/Switch1'
   } else {
-    rtb_ManualSwitch1_0 = ROSPiNav2_B.OutportBufferForUpDownL;
-    rtb_ManualSwitch1 = ROSPiNav2_B.uDLookupTable1_j[0];
+    rtb_Gain1_idx_0 = ROSPiNav2_B.uDLookupTable1[1];
+    rtb_Gain1_idx_1 = ROSPiNav2_B.Gain;
   }
 
   // End of Switch: '<S1>/Switch'
 
-  // Lookup_n-D: '<S3>/1-D Lookup Table9' incorporates:
-  //   Gain: '<S1>/Gain1'
+  // Gain: '<S1>/Gain1'
+  rtb_Gain1_idx_0 *= ROSPiNav2_P.Gain1_Gain;
 
-  ROSPiNav2_B.uDLookupTable9 = look1_iflf_binlcpw(ROSPiNav2_P.Gain1_Gain *
-    rtb_ManualSwitch1_0, ROSPiNav2_P.uDLookupTable9_bp01Data,
-    ROSPiNav2_P.uDLookupTable9_tableData, 4U);
+  // Lookup_n-D: '<S3>/1-D Lookup Table9'
+  ROSPiNav2_B.Saturation = look1_iflf_binlcpw(rtb_Gain1_idx_0,
+    ROSPiNav2_P.uDLookupTable9_bp01Data, ROSPiNav2_P.uDLookupTable9_tableData,
+    4U);
+
+  // Saturate: '<S3>/Saturation'
+  if (ROSPiNav2_B.Saturation > ROSPiNav2_P.Saturation_UpperSat) {
+    // Lookup_n-D: '<S3>/1-D Lookup Table9'
+    ROSPiNav2_B.Saturation = ROSPiNav2_P.Saturation_UpperSat;
+  } else {
+    if (ROSPiNav2_B.Saturation < ROSPiNav2_P.Saturation_LowerSat) {
+      // Lookup_n-D: '<S3>/1-D Lookup Table9'
+      ROSPiNav2_B.Saturation = ROSPiNav2_P.Saturation_LowerSat;
+    }
+  }
+
+  // End of Saturate: '<S3>/Saturation'
 
   // Lookup_n-D: '<S3>/1-D Lookup Table1' incorporates:
   //   Gain: '<S1>/Gain1'
 
-  ROSPiNav2_B.uDLookupTable1 = look1_iflf_binlcpw(ROSPiNav2_P.Gain1_Gain *
-    rtb_ManualSwitch1, ROSPiNav2_P.uDLookupTable1_bp01Data_g,
+  ROSPiNav2_B.Saturation1 = look1_iflf_binlcpw(ROSPiNav2_P.Gain1_Gain *
+    rtb_Gain1_idx_1, ROSPiNav2_P.uDLookupTable1_bp01Data_g,
     ROSPiNav2_P.uDLookupTable1_tableData_b, 4U);
+
+  // Saturate: '<S3>/Saturation1'
+  if (ROSPiNav2_B.Saturation1 > ROSPiNav2_P.Saturation1_UpperSat) {
+    // Lookup_n-D: '<S3>/1-D Lookup Table1'
+    ROSPiNav2_B.Saturation1 = ROSPiNav2_P.Saturation1_UpperSat;
+  } else {
+    if (ROSPiNav2_B.Saturation1 < ROSPiNav2_P.Saturation1_LowerSat) {
+      // Lookup_n-D: '<S3>/1-D Lookup Table1'
+      ROSPiNav2_B.Saturation1 = ROSPiNav2_P.Saturation1_LowerSat;
+    }
+  }
+
+  // End of Saturate: '<S3>/Saturation1'
 
   // DataTypeConversion: '<S8>/Data Type Conversion' incorporates:
   //   Constant: '<Root>/Constant1'
@@ -407,11 +448,11 @@ void ROSPiNav2_step(void)
   //   Constant: '<Root>/Constant5'
   //   Constant: '<S8>/EndofData'
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_B.uDLookupTable9);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_B.Saturation);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[0] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[0] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[0] = 0U;
@@ -421,11 +462,11 @@ void ROSPiNav2_step(void)
     b_x[0] = MAX_uint16_T;
   }
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_B.uDLookupTable1);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_B.Saturation1);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[1] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[1] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[1] = 0U;
@@ -435,11 +476,11 @@ void ROSPiNav2_step(void)
     b_x[1] = MAX_uint16_T;
   }
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_P.Constant5_Value);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_P.Constant5_Value);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[2] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[2] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[2] = 0U;
@@ -449,11 +490,11 @@ void ROSPiNav2_step(void)
     b_x[2] = MAX_uint16_T;
   }
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_P.Constant4_Value);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_P.Constant4_Value);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[3] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[3] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[3] = 0U;
@@ -463,11 +504,11 @@ void ROSPiNav2_step(void)
     b_x[3] = MAX_uint16_T;
   }
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_P.Constant3_Value);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_P.Constant3_Value);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[4] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[4] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[4] = 0U;
@@ -477,11 +518,11 @@ void ROSPiNav2_step(void)
     b_x[4] = MAX_uint16_T;
   }
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_P.Constant1_Value);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_P.Constant1_Value);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[5] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[5] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[5] = 0U;
@@ -491,11 +532,11 @@ void ROSPiNav2_step(void)
     b_x[5] = MAX_uint16_T;
   }
 
-  rtb_ManualSwitch1 = rt_roundf_snf(ROSPiNav2_P.EndofData_Value);
-  if (rtb_ManualSwitch1 < 65536.0F) {
-    if (rtb_ManualSwitch1 >= 0.0F) {
+  rtb_Gain1_idx_1 = rt_roundf_snf(ROSPiNav2_P.EndofData_Value);
+  if (rtb_Gain1_idx_1 < 65536.0F) {
+    if (rtb_Gain1_idx_1 >= 0.0F) {
       // MATLABSystem: '<S8>/SPI Master Transfer'
-      b_x[6] = static_cast<uint16_T>(rtb_ManualSwitch1);
+      b_x[6] = static_cast<uint16_T>(rtb_Gain1_idx_1);
     } else {
       // MATLABSystem: '<S8>/SPI Master Transfer'
       b_x[6] = 0U;
@@ -617,32 +658,34 @@ void ROSPiNav2_initialize(void)
   ROSPiNav2_M->Timing.stepSize0 = 0.1;
 
   // External mode info
-  ROSPiNav2_M->Sizes.checksums[0] = (1707139660U);
-  ROSPiNav2_M->Sizes.checksums[1] = (647649131U);
-  ROSPiNav2_M->Sizes.checksums[2] = (1106900136U);
-  ROSPiNav2_M->Sizes.checksums[3] = (1223125444U);
+  ROSPiNav2_M->Sizes.checksums[0] = (54968763U);
+  ROSPiNav2_M->Sizes.checksums[1] = (4225996166U);
+  ROSPiNav2_M->Sizes.checksums[2] = (3651411929U);
+  ROSPiNav2_M->Sizes.checksums[3] = (26614725U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
     static RTWExtModeInfo rt_ExtModeInfo;
-    static const sysRanDType *systemRan[15];
+    static const sysRanDType *systemRan[17];
     ROSPiNav2_M->extModeInfo = (&rt_ExtModeInfo);
     rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
     systemRan[0] = &rtAlwaysEnabled;
     systemRan[1] = &rtAlwaysEnabled;
     systemRan[2] = &rtAlwaysEnabled;
     systemRan[3] = &rtAlwaysEnabled;
-    systemRan[4] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage_SubsysRanBC;
-    systemRan[5] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage1_SubsysRanBC;
-    systemRan[6] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage1_SubsysRanBC;
+    systemRan[4] = &rtAlwaysEnabled;
+    systemRan[5] = &rtAlwaysEnabled;
+    systemRan[6] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage_SubsysRanBC;
     systemRan[7] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage1_SubsysRanBC;
-    systemRan[8] = &rtAlwaysEnabled;
-    systemRan[9] = (sysRanDType *)&ROSPiNav2_DW.EnabledSubsystem_SubsysRanBC_j;
+    systemRan[8] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage1_SubsysRanBC;
+    systemRan[9] = (sysRanDType *)&ROSPiNav2_DW.GetRosMessage1_SubsysRanBC;
     systemRan[10] = &rtAlwaysEnabled;
-    systemRan[11] = &rtAlwaysEnabled;
-    systemRan[12] = (sysRanDType *)&ROSPiNav2_DW.EnabledSubsystem_SubsysRanBC;
+    systemRan[11] = (sysRanDType *)&ROSPiNav2_DW.EnabledSubsystem_SubsysRanBC_j;
+    systemRan[12] = &rtAlwaysEnabled;
     systemRan[13] = &rtAlwaysEnabled;
-    systemRan[14] = &rtAlwaysEnabled;
+    systemRan[14] = (sysRanDType *)&ROSPiNav2_DW.EnabledSubsystem_SubsysRanBC;
+    systemRan[15] = &rtAlwaysEnabled;
+    systemRan[16] = &rtAlwaysEnabled;
     rteiSetModelMappingInfoPtr(ROSPiNav2_M->extModeInfo,
       &ROSPiNav2_M->SpecialInfo.mappingInfo);
     rteiSetChecksumsPtr(ROSPiNav2_M->extModeInfo, ROSPiNav2_M->Sizes.checksums);
@@ -733,10 +776,10 @@ void ROSPiNav2_initialize(void)
 
     // SystemInitialize for Enabled SubSystem: '<Root>/GetRosMessage1'
     // SystemInitialize for Outport: '<S5>/LeftRightL'
-    ROSPiNav2_B.uDLookupTable1_j[0] = ROSPiNav2_P.LeftRightL_Y0;
+    ROSPiNav2_B.Gain = ROSPiNav2_P.LeftRightL_Y0;
 
     // SystemInitialize for Outport: '<S5>/UpDownL'
-    ROSPiNav2_B.OutportBufferForUpDownL = ROSPiNav2_P.UpDownL_Y0;
+    ROSPiNav2_B.uDLookupTable1[1] = ROSPiNav2_P.UpDownL_Y0;
 
     // End of SystemInitialize for SubSystem: '<Root>/GetRosMessage1'
 
@@ -765,7 +808,7 @@ void ROSPiNav2_initialize(void)
     ROSPiNav2_B.DataTypeConversion6 = ROSPiNav2_P.Ay_Y0;
 
     // SystemInitialize for Outport: '<S4>/Az '
-    ROSPiNav2_B.DataTypeConversion2 = ROSPiNav2_P.Az_Y0;
+    ROSPiNav2_B.Gain_b = ROSPiNav2_P.Az_Y0;
 
     // End of SystemInitialize for SubSystem: '<Root>/GetRosMessage'
   }

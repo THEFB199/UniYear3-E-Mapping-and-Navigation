@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ROSPiNav2'.
 //
-// Model version                  : 1.4
+// Model version                  : 1.9
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Tue Feb 25 11:49:18 2020
+// C/C++ source code generated on : Sun Mar  8 15:54:33 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -90,12 +90,12 @@ typedef struct {
   char_T cv[17];
   uint8_T rdDataRaw[14];
   uint8_T wrDataRaw[14];
-  real32_T uDLookupTable9;             // '<S3>/1-D Lookup Table9'
-  real32_T uDLookupTable1;             // '<S3>/1-D Lookup Table1'
-  real32_T uDLookupTable1_j[4];        // '<S13>/1-D Lookup Table1'
-  real32_T OutportBufferForUpDownL;
+  real32_T Saturation;                 // '<S3>/Saturation'
+  real32_T Saturation1;                // '<S3>/Saturation1'
+  real32_T uDLookupTable1[4];          // '<S13>/1-D Lookup Table1'
+  real32_T Gain;                       // '<S5>/Gain'
   real32_T DataTypeConversion1;        // '<S4>/Data Type Conversion1'
-  real32_T DataTypeConversion2;        // '<S4>/Data Type Conversion2'
+  real32_T Gain_b;                     // '<S4>/Gain'
   real32_T DataTypeConversion3;        // '<S4>/Data Type Conversion3'
   real32_T DataTypeConversion4;        // '<S4>/Data Type Conversion4'
   real32_T DataTypeConversion5;        // '<S4>/Data Type Conversion5'
@@ -141,6 +141,9 @@ struct P_ROSPiNav2_T_ {
   real32_T Constant_Value_f;           // Computed Parameter: Constant_Value_f
                                           //  Referenced by: '<Root>/Constant'
 
+  real32_T FullNav_Value;              // Computed Parameter: FullNav_Value
+                                          //  Referenced by: '<Root>/FullNav '
+
   real32_T Lx_Y0;                      // Computed Parameter: Lx_Y0
                                           //  Referenced by: '<S4>/Lx'
 
@@ -158,6 +161,9 @@ struct P_ROSPiNav2_T_ {
 
   real32_T Az_Y0;                      // Computed Parameter: Az_Y0
                                           //  Referenced by: '<S4>/Az '
+
+  real32_T Gain_Gain;                  // Computed Parameter: Gain_Gain
+                                          //  Referenced by: '<S4>/Gain'
 
   real32_T LeftRightL_Y0;              // Computed Parameter: LeftRightL_Y0
                                           //  Referenced by: '<S5>/LeftRightL'
@@ -200,6 +206,9 @@ struct P_ROSPiNav2_T_ {
                                   // Computed Parameter: uDLookupTable1_bp01Data
                                      //  Referenced by: '<S13>/1-D Lookup Table1'
 
+  real32_T Gain_Gain_h;                // Computed Parameter: Gain_Gain_h
+                                          //  Referenced by: '<S5>/Gain'
+
   real32_T Gain1_Gain;                 // Computed Parameter: Gain1_Gain
                                           //  Referenced by: '<S1>/Gain1'
 
@@ -211,6 +220,12 @@ struct P_ROSPiNav2_T_ {
                                   // Computed Parameter: uDLookupTable9_bp01Data
                                      //  Referenced by: '<S3>/1-D Lookup Table9'
 
+  real32_T Saturation_UpperSat;       // Computed Parameter: Saturation_UpperSat
+                                         //  Referenced by: '<S3>/Saturation'
+
+  real32_T Saturation_LowerSat;       // Computed Parameter: Saturation_LowerSat
+                                         //  Referenced by: '<S3>/Saturation'
+
   real32_T uDLookupTable1_tableData_b[5];
                                // Computed Parameter: uDLookupTable1_tableData_b
                                   //  Referenced by: '<S3>/1-D Lookup Table1'
@@ -218,6 +233,12 @@ struct P_ROSPiNav2_T_ {
   real32_T uDLookupTable1_bp01Data_g[5];
                                 // Computed Parameter: uDLookupTable1_bp01Data_g
                                    //  Referenced by: '<S3>/1-D Lookup Table1'
+
+  real32_T Saturation1_UpperSat;     // Computed Parameter: Saturation1_UpperSat
+                                        //  Referenced by: '<S3>/Saturation1'
+
+  real32_T Saturation1_LowerSat;     // Computed Parameter: Saturation1_LowerSat
+                                        //  Referenced by: '<S3>/Saturation1'
 
   real32_T Constant5_Value;            // Computed Parameter: Constant5_Value
                                           //  Referenced by: '<Root>/Constant5'

@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ROSPiNav2'.
 //
-// Model version                  : 1.4
+// Model version                  : 1.9
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Tue Feb 25 11:49:18 2020
+// C/C++ source code generated on : Sun Mar  8 15:54:33 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -196,6 +196,11 @@ P_ROSPiNav2_T ROSPiNav2_P = {
 
   1.0F,
 
+  // Computed Parameter: FullNav_Value
+  //  Referenced by: '<Root>/FullNav '
+
+  0.0F,
+
   // Computed Parameter: Lx_Y0
   //  Referenced by: '<S4>/Lx'
 
@@ -225,6 +230,11 @@ P_ROSPiNav2_T ROSPiNav2_P = {
   //  Referenced by: '<S4>/Az '
 
   0.0F,
+
+  // Computed Parameter: Gain_Gain
+  //  Referenced by: '<S4>/Gain'
+
+  -1.0F,
 
   // Computed Parameter: LeftRightL_Y0
   //  Referenced by: '<S5>/LeftRightL'
@@ -291,6 +301,11 @@ P_ROSPiNav2_T ROSPiNav2_P = {
 
   { -0.9F, 0.0F, 0.9F },
 
+  // Computed Parameter: Gain_Gain_h
+  //  Referenced by: '<S5>/Gain'
+
+  -1.0F,
+
   // Computed Parameter: Gain1_Gain
   //  Referenced by: '<S1>/Gain1'
 
@@ -306,6 +321,16 @@ P_ROSPiNav2_T ROSPiNav2_P = {
 
   { -100.0F, -50.0F, 0.0F, 50.0F, 100.0F },
 
+  // Computed Parameter: Saturation_UpperSat
+  //  Referenced by: '<S3>/Saturation'
+
+  2000.0F,
+
+  // Computed Parameter: Saturation_LowerSat
+  //  Referenced by: '<S3>/Saturation'
+
+  1000.0F,
+
   // Computed Parameter: uDLookupTable1_tableData_b
   //  Referenced by: '<S3>/1-D Lookup Table1'
 
@@ -315,6 +340,16 @@ P_ROSPiNav2_T ROSPiNav2_P = {
   //  Referenced by: '<S3>/1-D Lookup Table1'
 
   { -100.0F, -50.0F, 0.0F, 50.0F, 100.0F },
+
+  // Computed Parameter: Saturation1_UpperSat
+  //  Referenced by: '<S3>/Saturation1'
+
+  2000.0F,
+
+  // Computed Parameter: Saturation1_LowerSat
+  //  Referenced by: '<S3>/Saturation1'
+
+  1000.0F,
 
   // Computed Parameter: Constant5_Value
   //  Referenced by: '<Root>/Constant5'

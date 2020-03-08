@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'ROSPiNav2'. 
 ## 
 ## Makefile     : ROSPiNav2.mk
-## Generated on : Fri Feb 21 13:43:09 2020
+## Generated on : Sun Mar 08 14:41:08 2020
 ## MATLAB Coder version: 4.3 (R2019b)
 ## 
 ## Build Info:
@@ -23,11 +23,11 @@
 
 PRODUCT_NAME              = ROSPiNav2
 MAKEFILE                  = ROSPiNav2.mk
-MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2019b
-MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2019b/bin
-MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
+MATLAB_ROOT               = /usr/local/MATLAB/R2019b
+MATLAB_BIN                = /usr/local/MATLAB/R2019b/bin
+MATLAB_ARCH_BIN           = $(MATLAB_BIN)/glnxa64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/FRED-Surface/Documents/GitHub/E-Mapping
+START_DIR                 = /home/earth/GitHub/E-Mapping-and-Navigation
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -51,7 +51,6 @@ CPP_STANDARD_OPTS         =
 # MACROS
 #-----------
 
-SHELL        = %SystemRoot%/system32/cmd.exe
 CCOUTPUTFLAG = --output_file=
 LDOUTPUTFLAG = --output_file=
 
@@ -112,9 +111,9 @@ OUTPUT_FLAG         = -o
 ARDEBUG             =
 STATICLIB_OUTPUT_FLAG =
 MEX_DEBUG           = -g
-RM                  = @del /F
+RM                  = @rm -f
 ECHO                = @echo
-MV                  = @move
+MV                  = @mv
 RUN                 =
 
 #----------------------------------------
@@ -154,7 +153,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/realtime/targets/raspi/server -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/RASPBE~1/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include -I$(START_DIR)/ROSPiNav2_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
+INCLUDES_BUILDINFO = -I$(START_DIR) -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/include -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/shared/svd/include -I$(START_DIR)/ROSPiNav2_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -162,13 +161,13 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMODEL=ROSPiNav2 -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=0 -DROS_PROJECT -DMW_SCHED_OTHER -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT=RT
+DEFINES_ = -DMODEL=ROSPiNav2 -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DUNIX -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=0 -DROS_PROJECT -DMW_SCHED_OTHER -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT=RT
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
 DEFINES_IMPLIED = -DTID01EQ=0
 DEFINES_OPTS = -DON_TARGET_WAIT_FOR_START=1
 DEFINES_SKIPFORSIL = -DROS_PROJECT -DMW_SCHED_OTHER -DSTACK_SIZE=64
-DEFINES_STANDARD = -DMODEL=ROSPiNav2 -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_STANDARD = -DMODEL=ROSPiNav2 -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DUNIX
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_IMPLIED) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
 
@@ -176,7 +175,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_IMPLIED)
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2.cpp $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2_data.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
+SRCS = /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2.cpp $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2_data.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
 
 MAIN_SRC = $(START_DIR)/ROSPiNav2_ert_rtw/ert_main.cpp
 
@@ -361,15 +360,15 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-%.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.c
+%.c.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
-%.s.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.s
+%.s.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
 
-%.cpp.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.cpp
+%.cpp.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
@@ -433,7 +432,7 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-MW_SPI.c.o : C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c
+MW_SPI.c.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
@@ -531,8 +530,8 @@ info :
 
 clean : 
 	$(ECHO) "### Deleting all derived files..."
-	$(RM) $(subst /,\,$(PRODUCT))
-	$(RM) $(subst /,\,$(ALL_OBJS))
+	$(RM) $(PRODUCT)
+	$(RM) $(ALL_OBJS)
 	$(RM) *Object
 	$(ECHO) "### Deleted all derived files."
 

@@ -7,9 +7,9 @@
 //
 //  Code generation for model "ROSPiNav2".
 //
-//  Model version              : 1.4
+//  Model version              : 1.9
 //  Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
-//  C++ source code generated on : Tue Feb 25 11:49:18 2020
+//  C++ source code generated on : Sun Mar  8 15:54:33 2020
 //
 //  Target selection: ert.tlc
 //  Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -77,7 +77,7 @@ static DataTypeTransition rtBTransitions[] = {
 
   { (char_T *)(&ROSPiNav2_B.In1_l), 15, 0, 1 },
 
-  { (char_T *)(&ROSPiNav2_B.uDLookupTable9), 1, 0, 13 },
+  { (char_T *)(&ROSPiNav2_B.Saturation), 1, 0, 13 },
 
   { (char_T *)(&ROSPiNav2_B.SPIMasterTransfer[0]), 5, 0, 7 },
 
@@ -113,7 +113,7 @@ static DataTypeTransition rtPTransitions[] = {
 
   { (char_T *)(&ROSPiNav2_P.Constant_Value_j), 15, 0, 1 },
 
-  { (char_T *)(&ROSPiNav2_P.Constant2_Value), 1, 0, 51 },
+  { (char_T *)(&ROSPiNav2_P.Constant2_Value), 1, 0, 58 },
 
   { (char_T *)(&ROSPiNav2_P.Constant_Value_a), 3, 0, 4 }
 };
