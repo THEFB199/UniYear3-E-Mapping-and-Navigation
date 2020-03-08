@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ROSPiNav2'.
 //
-// Model version                  : 1.2
+// Model version                  : 1.4
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Fri Feb  7 14:00:01 2020
+// C/C++ source code generated on : Tue Feb 25 11:49:18 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -617,10 +617,10 @@ void ROSPiNav2_initialize(void)
   ROSPiNav2_M->Timing.stepSize0 = 0.1;
 
   // External mode info
-  ROSPiNav2_M->Sizes.checksums[0] = (1052148240U);
-  ROSPiNav2_M->Sizes.checksums[1] = (4179354302U);
-  ROSPiNav2_M->Sizes.checksums[2] = (120682002U);
-  ROSPiNav2_M->Sizes.checksums[3] = (1417211507U);
+  ROSPiNav2_M->Sizes.checksums[0] = (1707139660U);
+  ROSPiNav2_M->Sizes.checksums[1] = (647649131U);
+  ROSPiNav2_M->Sizes.checksums[2] = (1106900136U);
+  ROSPiNav2_M->Sizes.checksums[3] = (1223125444U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

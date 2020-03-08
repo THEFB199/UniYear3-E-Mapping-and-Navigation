@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ROSPiNav2'.
 //
-// Model version                  : 1.2
+// Model version                  : 1.4
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Fri Feb  7 14:00:01 2020
+// C/C++ source code generated on : Tue Feb 25 11:49:18 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -356,12 +356,6 @@ extern "C" {
 //-
 //  These blocks were eliminated from the model due to optimizations:
 //
-//  Block '<S1>/Constant1' : Unused code path elimination
-//  Block '<S1>/Constant2' : Unused code path elimination
-//  Block '<S1>/Magnitude Squared' : Unused code path elimination
-//  Block '<S1>/Square Root' : Unused code path elimination
-//  Block '<S1>/Switch1' : Unused code path elimination
-//  Block '<S1>/Switch2' : Unused code path elimination
 //  Block '<S2>/Data Type Propagation' : Unused code path elimination
 //  Block '<S9>/FixPt Data Type Duplicate' : Unused code path elimination
 //  Block '<S10>/FixPt Data Type Duplicate1' : Unused code path elimination

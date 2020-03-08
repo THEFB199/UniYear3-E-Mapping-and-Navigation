@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'ROSPiNav2'. 
 ## 
 ## Makefile     : ROSPiNav2.mk
-## Generated on : Fri Feb 07 14:55:37 2020
+## Generated on : Fri Feb 21 13:43:09 2020
 ## MATLAB Coder version: 4.3 (R2019b)
 ## 
 ## Build Info:
@@ -218,7 +218,7 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
-CFLAGS_SKIPFORSIL =   -fpermissive -fpermissive -fpermissive
+CFLAGS_SKIPFORSIL =   -fpermissive
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
@@ -227,7 +227,7 @@ CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 # C++ Compiler
 #-----------------
 
-CPPFLAGS_SKIPFORSIL =   -fpermissive -fpermissive -fpermissive
+CPPFLAGS_SKIPFORSIL =   -fpermissive
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
