@@ -1,11 +1,11 @@
 global_frame: odom
-robot_base_frame: camera_link #base_footprint
+robot_base_frame: camera_link
 update_frequency: 2
 publish_frequency: 1
 rolling_window: true
-width: 3.0
-height: 3.0
-resolution: 0.025
+width: 3.0 # size of the map in meteres
+height: 3.0 # size of the map in meteres
+resolution: 0.01
 origin_x: 0
 origin_y: 0
 

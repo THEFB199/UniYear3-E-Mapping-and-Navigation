@@ -1,11 +1,11 @@
 global_frame: odom
-robot_base_frame: camera_link #base_footprint
+robot_base_frame: camera_link 
 update_frequency: 2.0
-publish_frequency: 2.0
-rolling_window: true
+publish_frequency: 2.0 # update of the costmap 
+rolling_window: true # we are making the map as we go along so this is true
 width: 4.0
 height: 4.0
-resolution: 0.025
+resolution: 0.01
 origin_x: -2.0
 origin_y: -2.0
 
@@ -19,15 +19,7 @@ obstacle_layer:
   max_obstacle_height: 0.4
   track_unknown_space: true
  
-  observation_sources: laser_scan_sensor point_cloud_sensorA point_cloud_sensorB
-
-  laser_scan_sensor: {
-    data_type: LaserScan, 
-    topic: base_scan, 
-    expected_update_rate: 0.2, 
-    marking: true, 
-    clearing: true
-  }
+  observation_sources: point_cloud_sensorA point_cloud_sensorB
 
   point_cloud_sensorA: {
     sensor_frame: camera_link, #base_footprint,

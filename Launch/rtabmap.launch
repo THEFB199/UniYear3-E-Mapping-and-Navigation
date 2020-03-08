@@ -207,6 +207,7 @@
           <param name="guess_frame_id"              type="string" value="$(arg odom_guess_frame_id)"/>
           <param name="guess_min_translation"       type="double" value="$(arg odom_guess_min_translation)"/>
           <param name="guess_min_rotation"          type="double" value="$(arg odom_guess_min_rotation)"/>
+          <param name="Odom/ResetCountdown"              value="1" /> <!-- auto reset odom - FH -->
         </node>
 
         <!-- Stereo Odometry -->
@@ -325,9 +326,9 @@
 	  <param name="GridGlobal/MinSize"           type="string" value="20"/>
 
 
-          <!-- use actionlib to send goals to move_base --> 
+          <!-- use actionlib to send goals to move_base 
 	  <param name="use_action_for_goal" type="bool" value="true"/>
-          <!-- <remap from="move_base"            to="/move_base"/> -->
+           <remap from="move_base"            to="/move_base"/> -->
 
 
 
@@ -476,7 +477,6 @@
  <!-- this planner has been taken from the az3 demo nav_kinect_odom.launch -->
 
 <group ns="planner">
-     <remap from="scan" to="/base_scan"/>
      <remap from="obstacles_cloud" to="/obstacles_cloud"/>
      <remap from="ground_cloud" to="/ground_cloud"/>
      <remap from="map" to="/map"/>

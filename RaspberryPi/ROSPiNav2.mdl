@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.4"
+    ComputedModelVersion    "1.8"
     NumModelReferences	    0
     NumTestPointedSignals   5
     TestPointedSignal {
@@ -110,8 +110,8 @@ Model {
   "/LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedData>\n	"
   "		</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "0b4ee2b6-c9ba-4ba2-86b4-30ad931c7907,c8c877dd-a2d7-4449-817a-3d091eaa01f0,b65482df-6083"
-  "-4df0-8804-932ee4a1c904,d5d3a0d7-9de6-498d-bd3e-b3a3d3b67ba2,3bc10de9-2fa7-4451-9b63-790e2e79518c"
+  LogicAnalyzerSignalOrdering "c8c877dd-a2d7-4449-817a-3d091eaa01f0,b65482df-6083-4df0-8804-932ee4a1c904,d5d3a0d7-9de6"
+  "-498d-bd3e-b3a3d3b67ba2,3bc10de9-2fa7-4451-9b63-790e2e79518c,0b4ee2b6-c9ba-4ba2-86b4-30ad931c7907"
   SLCCPlugin		  "on"
   AnimationPlugin	  "on"
   WebScopes_FoundationPlugin "on"
@@ -147,7 +147,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, -7.0, 1839.0, 1191.0]
+      Location		      [8.0, 8.0, 1839.0, 1191.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -167,45 +167,67 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		3
+	Dimension		5
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [1151.1296698940878, 746.10155624887409]
-	  SceneRectInView	  [1151.1296698940878, 746.10155624887409, 2171.6666666666665, 1203.3333333333333]
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [0.49999999999999994]
+	  Offset		  [424.365490038311, 248.13249045537316]
+	  SceneRectInView	  [424.365490038311, 248.13249045537316, 3446.0000000000005, 1898.0000000000002]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-1180.7858918618231, -333.51528273597717]
-	  SceneRectInView	  [-1180.7858918618231, -333.51528273597717, 2895.5555555555557, 1604.4444444444446]
+	  LoadSaveID		  "40"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [1.3899826869806089]
+	  Offset		  [-538.33876742377845, -239.87115839243512]
+	  SceneRectInView	  [-538.33876742377845, -239.87115839243512, 1239.5837848475569, 682.74231678487024]
 	}
 	Object {
 	  $ObjectID		  8
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "40"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [1.4099999999999995]
-	  Offset		  [-534.6225251182035, -239.87115839243512]
-	  SceneRectInView	  [-534.6225251182035, -239.87115839243512, 1232.151300236407, 682.74231678487024]
+	  LoadSaveID		  "1"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-1429.1215400796641, -333.95487913653164]
+	  SceneRectInView	  [-1429.1215400796641, -333.95487913653164, 2153.75, 1186.25]
+	}
+	Object {
+	  $ObjectID		  9
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "138"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [45.26171875, -238.5]
+	  SceneRectInView	  [45.26171875, -238.5, 1723.0, 949.0]
+	}
+	Object {
+	  $ObjectID		  10
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "117"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-528.4609375, 22.165995839792764]
+	  SceneRectInView	  [-528.4609375, 22.165995839792764, 1723.0, 949.0]
 	}
 	PropName		"EditorsInfo"
       }
       Object {
 	$PropName		"DockComponentsInfo"
-	$ObjectID		9
+	$ObjectID		11
 	$ClassName		"Simulink.DockComponentInfo"
 	Type			"GLUE2:PropertyInspector"
 	ID			"Property Inspector"
@@ -214,15 +236,15 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[426]
-	Height			[320]
+	Width			[300]
+	Height			[29]
 	Minimized		"On"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAAf//wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAAf//wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAUwD///8AAApmAAAF8AAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
+      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAAbhAAAD8gAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiA"
       "GwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA=="
@@ -240,11 +262,11 @@ Model {
   Creator		  "FRED-Surface"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "FRED-Surface"
+  LastModifiedBy	  "fredd"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Feb 07 15:15:11 2020"
-  RTWModifiedTimeStamp	  502989293
-  ModelVersionFormat	  "1.%<AutoIncrement:4>"
+  LastModifiedDate	  "Fri Feb 14 13:27:50 2020"
+  RTWModifiedTimeStamp	  503587590
+  ModelVersionFormat	  "1.%<AutoIncrement:8>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -304,10 +326,10 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    10
+    $ObjectID		    12
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "ROSPiNav2"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -323,7 +345,7 @@ Model {
   }
   Object {
     $PropName		    "InstrumentedSignals"
-    $ObjectID		    11
+    $ObjectID		    13
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
@@ -474,7 +496,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      12
+      $ObjectID		      14
       Version		      "19.1.1"
       DisabledProps	      []
       Description	      ""
@@ -482,7 +504,7 @@ Model {
 	Type			"Handle"
 	Dimension		11
 	Simulink.SolverCC {
-	  $ObjectID		  13
+	  $ObjectID		  15
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -525,7 +547,7 @@ Model {
 	  SolverOrder		  3
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  14
+	  $ObjectID		  16
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -567,7 +589,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  15
+	  $ObjectID		  17
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -627,7 +649,7 @@ Model {
 	  EfficientTunableParamExpr on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  16
+	  $ObjectID		  18
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -744,7 +766,7 @@ Model {
 	  ArithmeticOperatorsInVariantConditions "error"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  17
+	  $ObjectID		  19
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -794,7 +816,7 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  18
+	  $ObjectID		  20
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -814,7 +836,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  19
+	  $ObjectID		  21
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -849,7 +871,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  20
+	  $ObjectID		  22
 	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
@@ -942,7 +964,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      21
+	      $ObjectID		      23
 	      Version		      "19.1.1"
 	      DisabledProps	      []
 	      Description	      ""
@@ -1000,7 +1022,7 @@ Model {
 	    }
 	    Simulink.ERTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      22
+	      $ObjectID		      24
 	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
@@ -1175,7 +1197,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  23
+	  $ObjectID		  25
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1216,7 +1238,7 @@ Model {
 	  CovMcdcMode		  "Masking"
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  24
+	  $ObjectID		  26
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "HDL Coder custom configuration component"
@@ -1231,7 +1253,7 @@ Model {
 	  HDLCActiveTab		  "0"
 	}
 	CoderTarget.SettingsController {
-	  $ObjectID		  25
+	  $ObjectID		  27
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Coder Target"
@@ -1241,7 +1263,7 @@ Model {
 	    Type		    "Struct"
 	    Dimension		    1
 	    MATStruct {
-	      UseCoderTarget	      [1]
+	      UseCoderTarget	      [1.0]
 	      TargetHardware	      "Robot Operating System (ROS)"
 	      Array {
 		Type			"Struct"
@@ -1253,8 +1275,8 @@ Model {
 		    MATStruct {
 		    IPAddress		    "ros.codertarget.internal.DeviceParameters.getDeviceAddress"
 		    Port		    "17725"
-		    Verbose		    [0]
-		    RunInBackground	    [1]
+		    Verbose		    [0.0]
+		    RunInBackground	    [1.0]
 		    }
 		    PropName		    "TCPIP"
 		  }
@@ -1329,11 +1351,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    12
+    $ObjectID		    14
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    26
+    $ObjectID		    28
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1400,6 +1422,14 @@ Model {
   BlockParameterDefaults {
     Block {
       BlockType		      BusSelector
+    }
+    Block {
+      BlockType		      CircularGaugeBlock
+      LabelPosition	      "Top"
+      ShowInitialText	      on
+      ScaleMin		      "0"
+      ScaleMax		      "100"
+      TickInterval	      "auto"
     }
     Block {
       BlockType		      Constant
@@ -1779,6 +1809,29 @@ Model {
       MultiThreadCoSim	      "auto"
     }
     Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SemiCircularGaugeBlock
+      LabelPosition	      "Top"
+      ShowInitialText	      on
+      ScaleMin		      "0"
+      ScaleMax		      "100"
+      TickInterval	      "auto"
+    }
+    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
@@ -1819,6 +1872,22 @@ Model {
       IsWebBlockPanel	      off
     }
     Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      Switch
       Criteria		      "u2 >= Threshold"
       Threshold		      "0"
@@ -1836,10 +1905,15 @@ Model {
     Block {
       BlockType		      Terminator
     }
+    Block {
+      BlockType		      ToggleSwitchBlock
+      LabelPosition	      "Top"
+      ShowInitialText	      on
+    }
   }
   System {
     Name		    "ROSPiNav2"
-    Location		    [-7, -7, 1832, 1184]
+    Location		    [8, 8, 1847, 1199]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1854,22 +1928,30 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "80"
+    ZoomFactor		    "50"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "173"
+    SIDHighWatermark	    "186"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
       Name		      "Arbitration"
       SID		      "1"
-      Ports		      [5, 2]
-      Position		      [2080, 1089, 2305, 1291]
+      Ports		      [6, 2]
+      Position		      [2080, 1091, 2305, 1294]
       ZOrder		      529
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
+      Port {
+	PortNumber		1
+	Name			"ForwardsBackOut"
+      }
+      Port {
+	PortNumber		2
+	Name			"LeftyRightyOut"
+      }
       System {
 	Name			"Arbitration"
-	Location		[-7, -7, 1832, 1184]
+	Location		[8, 8, 1847, 1199]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -1884,13 +1966,13 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"60"
+	ZoomFactor		"80"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
 	  Name			  "ForwardBackIn"
 	  SID			  "2"
-	  Position		  [-430, 33, -400, 47]
+	  Position		  [-735, 33, -705, 47]
 	  ZOrder		  447
 	  IconDisplay		  "Port number"
 	}
@@ -1898,7 +1980,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "LeftyRightyIn"
 	  SID			  "3"
-	  Position		  [-430, 258, -400, 272]
+	  Position		  [-735, 258, -705, 272]
 	  ZOrder		  448
 	  Port			  "2"
 	  IconDisplay		  "Port number"
@@ -1907,7 +1989,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "ControllerUpDown\n"
 	  SID			  "4"
-	  Position		  [-430, 498, -400, 512]
+	  Position		  [-735, 498, -705, 512]
 	  ZOrder		  465
 	  Port			  "3"
 	  IconDisplay		  "Port number"
@@ -1916,7 +1998,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "ControllerLeftRight"
 	  SID			  "5"
-	  Position		  [-430, 598, -400, 612]
+	  Position		  [-735, 598, -705, 612]
 	  ZOrder		  466
 	  Port			  "4"
 	  IconDisplay		  "Port number"
@@ -1925,10 +2007,30 @@ Model {
 	  BlockType		  Inport
 	  Name			  "Switch\n"
 	  SID			  "6"
-	  Position		  [260, 348, 290, 362]
+	  Position		  [265, 348, 295, 362]
 	  ZOrder		  472
 	  Port			  "5"
 	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FullNav"
+	  SID			  "181"
+	  Position		  [125, 148, 155, 162]
+	  ZOrder		  477
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  SID			  "179"
+	  Ports			  [2, 1]
+	  Position		  [40, 202, 70, 233]
+	  ZOrder		  475
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
 	}
 	Block {
 	  BlockType		  Demux
@@ -1957,7 +2059,7 @@ Model {
 	  Name			  "Mux1"
 	  SID			  "15"
 	  Ports			  [2, 1]
-	  Position		  [190, 457, 195, 653]
+	  Position		  [-115, 457, -110, 653]
 	  ZOrder		  471
 	  ShowName		  off
 	  Inputs		  "2"
@@ -1968,7 +2070,7 @@ Model {
 	  Name			  "Mux2"
 	  SID			  "173"
 	  Ports			  [2, 1]
-	  Position		  [190, -72, 195, 377]
+	  Position		  [-115, -72, -110, 377]
 	  ZOrder		  474
 	  ShowName		  off
 	  Inputs		  "2"
@@ -1980,6 +2082,16 @@ Model {
 	  SID			  "17"
 	  Position		  [395, 54, 625, 656]
 	  ZOrder		  468
+	  Criteria		  "u2 ~= 0"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch1"
+	  SID			  "180"
+	  Position		  [200, 125, 250, 185]
+	  ZOrder		  476
 	  Criteria		  "u2 ~= 0"
 	  InputSameDT		  off
 	  SaturateOnIntegerOverflow off
@@ -2037,7 +2149,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  19
+	  ZOrder		  43
 	  SrcBlock		  "ControllerLeftRight"
 	  SrcPort		  1
 	  DstBlock		  "Mux1"
@@ -2047,8 +2159,18 @@ Model {
 	  ZOrder		  20
 	  SrcBlock		  "Mux1"
 	  SrcPort		  1
-	  DstBlock		  "Switch"
-	  DstPort		  3
+	  Points		  [81, 0]
+	  Branch {
+	    ZOrder		    45
+	    Points		    [0, -330]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    44
+	    DstBlock		    "Switch"
+	    DstPort		    3
+	  }
 	}
 	Line {
 	  ZOrder		  21
@@ -2068,8 +2190,19 @@ Model {
 	  ZOrder		  39
 	  SrcBlock		  "Mux2"
 	  SrcPort		  1
-	  DstBlock		  "Switch"
-	  DstPort		  1
+	  Points		  [79, 0]
+	  Branch {
+	    ZOrder		    47
+	    Points		    [0, 55]
+	    DstBlock		    "Add"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    46
+	    Points		    [0, -20]
+	    DstBlock		    "Switch1"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  ZOrder		  41
@@ -2078,10 +2211,41 @@ Model {
 	  DstBlock		  "Mux2"
 	  DstPort		  1
 	}
+	Line {
+	  ZOrder		  49
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  Points		  [102, 0; 0, -45]
+	  DstBlock		  "Switch1"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  52
+	  SrcBlock		  "FullNav"
+	  SrcPort		  1
+	  DstBlock		  "Switch1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  53
+	  SrcBlock		  "Switch1"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "182"
+	  Name			  "This allows to only have navigation or this will add the xbox controller and the navigation data together"
+	  " to give control even when autonav is on"
+	  Position		  [-41, 64, 359, 108]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	}
 	Annotation {
 	  SID			  "23"
 	  Name			  "Possibility here to switch from the commands to a fixed velocity"
-	  Position		  [-113, -84, 167, -70]
+	  Position		  [-418, -84, -138, -70]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
@@ -2090,7 +2254,7 @@ Model {
 	  Name			  "Looking here to see if we are on the stright and narrow if not, pause and rotate before moving forwards.\n"
 	  "The data coming from the Navigation node gives forward velocity and twist velocity. this ranges from -0.5 to 0.5 on"
 	  " both sides.\n\n"
-	  Position		  [-203, -155, 352, -105]
+	  Position		  [-508, -155, 47, -105]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	}
@@ -2269,7 +2433,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"ForwardBack_LeftRight"
-	Location		[-7, -7, 1832, 1184]
+	Location		[8, 8, 1847, 1199]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2284,7 +2448,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"141"
+	ZoomFactor		"139"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -2338,6 +2502,28 @@ Model {
 	  RndMeth		  "Simplest"
 	}
 	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  SID			  "174"
+	  Ports			  [1, 1]
+	  Position		  [260, 25, 290, 55]
+	  ZOrder		  407
+	  InputPortMap		  "u0"
+	  UpperLimit		  "2000"
+	  LowerLimit		  "1000"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation1"
+	  SID			  "175"
+	  Ports			  [1, 1]
+	  Position		  [255, 205, 285, 235]
+	  ZOrder		  408
+	  InputPortMap		  "u0"
+	  UpperLimit		  "2000"
+	  LowerLimit		  "1000"
+	}
+	Block {
 	  BlockType		  Outport
 	  Name			  "ForwardsBack"
 	  SID			  "45"
@@ -2367,14 +2553,14 @@ Model {
 	  ZOrder		  2
 	  SrcBlock		  "1-D Lookup\nTable1"
 	  SrcPort		  1
-	  DstBlock		  "LeftRight"
+	  DstBlock		  "Saturation1"
 	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  3
 	  SrcBlock		  "1-D Lookup\nTable9"
 	  SrcPort		  1
-	  DstBlock		  "ForwardsBack"
+	  DstBlock		  "Saturation"
 	  DstPort		  1
 	}
 	Line {
@@ -2382,6 +2568,20 @@ Model {
 	  SrcBlock		  "In2"
 	  SrcPort		  1
 	  DstBlock		  "1-D Lookup\nTable1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  5
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "ForwardsBack"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "Saturation1"
+	  SrcPort		  1
+	  DstBlock		  "LeftRight"
 	  DstPort		  1
 	}
 	Annotation {
@@ -2412,7 +2612,7 @@ Model {
       BlockType		      From
       Name		      "From1"
       SID		      "50"
-      Position		      [1960, 1260, 2060, 1280]
+      Position		      [1955, 1235, 2055, 1255]
       ZOrder		      548
       GotoTag		      "InputCmd"
     }
@@ -2448,6 +2648,26 @@ Model {
       Position		      [2225, 705, 2325, 725]
       ZOrder		      565
       GotoTag		      "DataSent"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "FullNav\n"
+      SID		      "186"
+      Position		      [1980, 1262, 2010, 1298]
+      ZOrder		      573
+      Value		      "0"
+      OutDataTypeStr	      "single"
+    }
+    Block {
+      BlockType		      CircularGaugeBlock
+      Name		      "Gauge"
+      SID		      "177"
+      Position		      [3185, 564, 3310, 704]
+      ZOrder		      568
+      ShowName		      off
+      BindingPersistence      "DataTag0"
+      ScaleMin		      "-100"
+      ScaleColors	      "DataTag1"
     }
     Block {
       BlockType		      SubSystem
@@ -3691,6 +3911,17 @@ Model {
       GotoTag		      "DataSent"
     }
     Block {
+      BlockType		      SemiCircularGaugeBlock
+      Name		      "Half Gauge"
+      SID		      "178"
+      Position		      [2985, 579, 3141, 687]
+      ZOrder		      569
+      ShowName		      off
+      BindingPersistence      "DataTag2"
+      ScaleMin		      "-100"
+      ScaleColors	      "DataTag3"
+    }
+    Block {
       BlockType		      ManualSwitch
       Name		      "Manual Switch1"
       SID		      "112"
@@ -3754,7 +3985,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"PiSenseHat"
-	Location		[-7, 0, 1727, 1233]
+	Location		[8, 8, 1847, 1199]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4494,7 +4725,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"Subsystem"
-	Location		[1713, 0, 3447, 1447]
+	Location		[8, 8, 1847, 1199]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4594,7 +4825,6 @@ Model {
 	  DisplayOption		  "bar"
 	  Port {
 	    PortNumber		    1
-	    DataLogging		    on
 	  }
 	}
 	Block {
@@ -4797,6 +5027,16 @@ Model {
       Position		      [1255, 1570, 1275, 1590]
       ZOrder		      542
     }
+    Block {
+      BlockType		      ToggleSwitchBlock
+      Name		      "Toggle Switch"
+      SID		      "185"
+      Position		      [2875, 565, 2965, 705]
+      ZOrder		      572
+      ShowName		      off
+      BindingPersistence      "DataTag4"
+      Values		      "DataTag5"
+    }
     Line {
       ZOrder		      3
       SrcBlock		      "GetRosMessage1"
@@ -4810,7 +5050,7 @@ Model {
       }
       Branch {
 	ZOrder			1
-	Points			[581, 0; 0, -315]
+	Points			[581, 0; 0, -330]
 	DstBlock		"Arbitration"
 	DstPort			3
       }
@@ -4920,10 +5160,12 @@ Model {
       DstPort		      1
     }
     Line {
+      Name		      "ForwardsBackOut"
       ZOrder		      20
+      Labels		      [3, 1]
       SrcBlock		      "Arbitration"
       SrcPort		      1
-      Points		      [127, 0; 0, -20]
+      Points		      [127, 0; 0, -25]
       DstBlock		      "ForwardBack_LeftRight"
       DstPort		      1
     }
@@ -5113,7 +5355,7 @@ Model {
       Points		      [60, 0; 0, 15]
       Branch {
 	ZOrder			51
-	Points			[0, 250]
+	Points			[0, 240]
 	DstBlock		"Arbitration"
 	DstPort			2
       }
@@ -5178,7 +5420,7 @@ Model {
       }
       Branch {
 	ZOrder			59
-	Points			[580, 0; 0, -260]
+	Points			[580, 0; 0, -280]
 	DstBlock		"Arbitration"
 	DstPort			4
       }
@@ -5198,10 +5440,12 @@ Model {
       DstPort		      1
     }
     Line {
+      Name		      "LeftyRightyOut"
       ZOrder		      64
+      Labels		      [1, 1]
       SrcBlock		      "Arbitration"
       SrcPort		      2
-      Points		      [253, 0; 0, -60]
+      Points		      [253, 0; 0, -65]
       DstBlock		      "ForwardBack_LeftRight"
       DstPort		      2
     }
@@ -5220,7 +5464,7 @@ Model {
       Branch {
 	ZOrder			65
 	Labels			[2, 0]
-	Points			[0, 335]
+	Points			[0, 330]
 	DstBlock		"Arbitration"
 	DstPort			1
       }
@@ -5266,6 +5510,13 @@ Model {
       SrcPort		      2
       DstBlock		      "Mux"
       DstPort		      2
+    }
+    Line {
+      ZOrder		      78
+      SrcBlock		      "FullNav\n"
+      SrcPort		      1
+      DstBlock		      "Arbitration"
+      DstPort		      6
     }
     Annotation {
       SID		      "162"
@@ -5394,6 +5645,136 @@ Model {
     }
   }
 }
+MatData {
+  NumRecords		  6
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    F     8    (    $0         !          $ ! !-0T]3 0   \"    !3:6UU;&EN:RY(34DN4VEG;F%L4W"
+    "!E8VEF:6-A=&EO;@X   !(    !@    @    -          4    (    !@    $    !          8    8        W0(    !     0    $ "
+    "   !    #@   \"@*   &    \"     D         !0    @    !    ^ D   $          @   /@)     4E-      X   !8\"0  !@    @"
+    "    \"          4    (     0    $    !          4 !  %     0    4   !-0T]3      X    0\"0  !@    @    1          $"
+    "          0 $ $U#3U,!    #0   $9I;&57<F%P<&5R7U\\    .    T @   8    (     0         %    \"     @    !     0     "
+    "    .    V $   8    (    \"0         %    \"    *@!   !     0         \"    J $   ,    1    \" $  \"@!   H 0  6 $ "
+    " )@!  \"H 0            !554E$ $)L;V-K4&%T:%\\ 4TE$7P!3:6=N86Q.86UE7P!3:6=N86Q3<&5C:69I8V%T:6]N %-I;75L:6YK+DA-20!3"
+    "=6)0871H7P!/=71P=710;W)T26YD97A? $QO9VEC86Q0;W)T26YD97A? %-U8E-Y<U!A=&A? $1E8VEM871I;VY? $UA>%!O:6YT<U\\ 5&%R9V5T0"
+    "G5F9F5R9613=')E86UI;F=? $ES1G)A;65\"87-E9%\\ 1&]M86EN5'EP95\\ 5FES=6%L5'EP95\\ 1&]M86EN4&%R86US7P                 "
+    "        &    !0                                               0                    $    !               $     0   "
+    " $          @    $    !     P    $    \"    !     $    #                               .          X   !8    !@    "
+    "@    $          4    (     0   \"0    !         !     D    9C0V,S8T-C0M.3<P-\"TT93)A+6)B83@M.#-C-S9B,C Q,C(Y      "
+    "X   !     !@    @    $          4    (     0    L    !         !     +    07)B:71R871I;VX       X    P    !@    @ "
+    "   $          4    (     0    $    !         !   0 Q    #@   $     &    \"     0         !0    @    !    #P    $  "
+    "       $     \\   !&;W)W87)D<T)A8VM/=70 #@   #@    &    \"     P         !0    @    \"     0    $         !0    @ "
+    "              X   !0!0  !@    @    !          4    (     @    $    !          X    X    !@    @    \"          4  "
+    "  (     0         !          4 !  !     0         .    X 0   8    (     @         %    \"     $    !     0        "
+    " %  0 &0    $   !> 0  0FQO8VM0871H7P                   %-)1%\\                           !3=6)0871H7P             "
+    "         3W5T<'5T4&]R=$EN9&5X7P           $QO9VEC86Q0;W)T26YD97A?          !3:6=N86Q.86UE7P                  4W5B4"
+    "WES4&%T:%\\                  $1E8VEM871I;VY?                  !-87A0;VEN='-?                    5&%R9V5T0G5F9F5R96"
+    "13=')E86UI;F=? $ES1G)A;65\"87-E9%\\               !$;VUA:6Y4>7!E7P                  5FES=6%L5'EP95\\              "
+    "    $1O;6%I;E!A<F%M<U\\                   X    P    !@    @    $          4    (               !         !        "
+    "  #@   #     &    \"     0         !0    @               $         $          .    ,     8    (    !          %   "
+    " \"                0         0          X    X    !@    @    &          4    (     0    $    !          D    (    "
+    "        \\#\\.    .     8    (    !@         %    \"     $    !     0         )    \"               #@   #     &  "
+    "  \"     0         !0    @               $         $          .    ,     8    (    !          %    \"             "
+    "   0         0          X    X    !@    @    &          4    (     0    $    !          D    (            \\#\\.  "
+    "  .     8    (    !@         %    \"     $    !     0         )    \"               #@   #@    &    \"     8      "
+    "   !0    @    !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !  "
+    "        D    (               .    ,     8    (    !          %    \"                0         0          X    P   "
+    " !@    @    $          4    (               !         !          #@   #@    &    \"     (         !0    @    !    "
+    " 0    $         !0 $  $    !          X   \"(    !@    @    )          4    (     0   %@    !          (   !8     "
+    " %)30     .    2     8    (     @         %    \"     $    !     0         %  0 !0    $    %    34-/4P     .      "
+    "    "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    ( $   8    (     @         %    \"     $    !     0         %  0 !@    $    2    36EN  "
+    "  36%X    0V]L;W(         #@   #@    &    \"     8         !0    @    !     0    $         \"0    @               "
+    "X    X    !@    @    &          4    (     0    $    !          D    (               .    2     8    (    !@      "
+    "   %    \"     $    #     0         )    &               G)R<G)R<W#^XM[>WM[?G/P"
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    F     8    (    $0         !          $ ! !-0T]3 0   \"    !3:6UU;&EN:RY(34DN4VEG;F%L4W"
+    "!E8VEF:6-A=&EO;@X   !(    !@    @    -          4    (    !@    $    !          8    8        W0(    !     0    $ "
+    "   !    #@   ' *   &    \"     D         !0    @    !    0 H   $          @   $ *     4E-      X   \"@\"0  !@    @"
+    "    \"          4    (     0    $    !          4 !  %     0    4   !-0T]3      X   !8\"0  !@    @    1          $"
+    "          0 $ $U#3U,!    #0   $9I;&57<F%P<&5R7U\\    .    & D   8    (     0         %    \"     D    !     0     "
+    "    .    X $   8    (    \"0         %    \"    + !   !     0         \"    L $   ,    1    \" $  \"@!   H 0  6 $ "
+    " * !  \"P 0            !554E$ $)L;V-K4&%T:%\\ 4TE$7P!/=71P=710;W)T26YD97A? %-I9VYA;$YA;65? %-I9VYA;%-P96-I9FEC871I"
+    ";VX 4VEM=6QI;FLN2$U) %-U8E!A=&A? $QO9VEC86Q0;W)T26YD97A? %-U8E-Y<U!A=&A? $1E8VEM871I;VY? $UA>%!O:6YT<U\\ 5&%R9V5T0"
+    "G5F9F5R9613=')E86UI;F=? $ES1G)A;65\"87-E9%\\ 1&]M86EN5'EP95\\ 5FES=6%L5'EP95\\ 1&]M86EN4&%R86US7P                 "
+    "        '    !@                                               0                    $    !               %     0   "
+    " $          @    $    !     P    $    \"    !     $    #    !0    $    $                          X         #@   %"
+    "@    &    \"     0         !0    @    !    )     $         $    \"0    U9C V,#8S.\"TS,6$W+30Q8F(M83-E-BUF-&0R-SEC-"
+    "F0U-&(     #@   $     &    \"     0         !0    @    !    \"P    $         $     L   !!<F)I=')A=&EO;@      #@   "
+    "#     &    \"     0         !0    @    !     0    $         $  ! #$    .    .     8    (    !@         %    \"    "
+    " $    !     0         )    \"             ! #@   $     &    \"     0         !0    @    !    #@    $         $    "
+    " X   !,969T>5)I9VAT>4]U=   #@   #@    &    \"     P         !0    @    \"     0    $         !0    @              "
+    " X   !0!0  !@    @    !          4    (     @    $    !          X    X    !@    @    \"          4    (     0    "
+    "     !          4 !  !     0         .    X 0   8    (     @         %    \"     $    !     0         %  0 &0    $"
+    "   !> 0  0FQO8VM0871H7P                   %-)1%\\                           !3=6)0871H7P                      3W5T"
+    "<'5T4&]R=$EN9&5X7P           $QO9VEC86Q0;W)T26YD97A?          !3:6=N86Q.86UE7P                  4W5B4WES4&%T:%\\  "
+    "                $1E8VEM871I;VY?                  !-87A0;VEN='-?                    5&%R9V5T0G5F9F5R9613=')E86UI;F="
+    "? $ES1G)A;65\"87-E9%\\               !$;VUA:6Y4>7!E7P                  5FES=6%L5'EP95\\                  $1O;6%I;E"
+    "!A<F%M<U\\                   X    P    !@    @    $          4    (               !         !          #@   #     "
+    "&    \"     0         !0    @               $         $          .    ,     8    (    !          %    \"          "
+    "      0         0          X    X    !@    @    &          4    (     0    $    !          D    (            \\#\\"
+    ".    .     8    (    !@         %    \"     $    !     0         )    \"               #@   #     &    \"     0   "
+    "      !0    @               $         $          .    ,     8    (    !          %    \"                0         "
+    "0          X    X    !@    @    &          4    (     0    $    !          D    (            \\#\\.    .     8    "
+    "(    !@         %    \"     $    !     0         )    \"               #@   #@    &    \"     8         !0    @   "
+    " !     0    $         \"0    @               X    X    !@    @    &          4    (     0    $    !          D    "
+    "(               .    ,     8    (    !          %    \"                0         0          X    P    !@    @    $"
+    "          4    (               !         !          #@   #@    &    \"     (         !0    @    !     0    $      "
+    "   !0 $  $    !          X   \"(    !@    @    )          4    (     0   %@    !          (   !8      %)30     .  "
+    "  2     8    (     @         %    \"     $    !     0         %  0 !0    $    %    34-/4P     .          "
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    ( $   8    (     @         %    \"     $    !     0         %  0 !@    $    2    36EN  "
+    "  36%X    0V]L;W(         #@   #@    &    \"     8         !0    @    !     0    $         \"0    @               "
+    "X    X    !@    @    &          4    (     0    $    !          D    (               .    2     8    (    !@      "
+    "   %    \"     $    #     0         )    &               G)R<G)R<W#^XM[>WM[?G/P"
+  }
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    F     8    (    $0         !          $ ! !-0T]3 0   !P   !3:6UU;&EN:RY(34DN4&%R86U3;W5"
+    "R8V5);F9O      X   !(    !@    @    -          4    (    !@    $    !          8    8        W0(    !     0    $  "
+    "  \"    #@   (@(   &    \"     D         !0    @    !    6 @   $          @   %@(     4E-      X   \"X!P  !@    @ "
+    "   \"          4    (     0    $    !          4 !  %     0    4   !-0T]3      X   !P!P  !@    @    1          $  "
+    "        0 $ $U#3U,!    #0   $9I;&57<F%P<&5R7U\\    .    , <   8    (     0         %    \"     D    !     0       "
+    "  .    V $   8    (    \"0         %    \"    *@!   !     0         \"    J $   ,    -    H    -    #0    , $  (@!"
+    "  \"H 0            !\";&]C:U!A=&A? '!A=&@ <W-I9 !\";&]C:U!A=&@ 4VEM=6QI;FL <W5B7W!A=&@ 4&%R86U.86UE7P!554E$ %!A<F%"
+    "M4V]U<F-E26YF;P!3:6UU;&EN:RY(34D 3&%B96Q? %9A<DYA;65? %=K<U1Y<&5?                        !0    0               H  "
+    "  )                                               \"                     0    ,    !                     @    $   "
+    " !                     P    (               ,    !     0    (    '     0    ,    (     0    0    \"     @    $    "
+    "      P    $    !                                                               .          X   !H    !@    @    ! "
+    "         4    (     0    $    !          X    X    !@    @    $          4    (     0    @    !         !     (   "
+    " 1G5L;$YA=B .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !          %    "
+    "\"     $    #     0         0  , ,3@V  X   !(    !@    @    -          4    (    !@    $    !          8    8     "
+    "   W0(    !     0    (    !    #@   #@    &    \"     0         !0    @    !    !0    $         $     4   !686QU90"
+    "    X   !8    !@    @    $          4    (     0   \"0    !         !     D    -C$X835B9#<M,V$W-RTT864S+3DQ.38M-F)"
+    "F9F5B8F0X,61A      X   !     !@    @    ,          4    (     P    $    !          4    ,                         "
+    " X    ( P  !@    @    !          4    (     P    $    !          X    X    !@    @    \"          4    (     0    "
+    "     !          4 !  !     0         .    \\     8    (     @         %    \"     $    !     0         %  0 \"0   "
+    " $    ;    <&%T:       <W-I9       <W5B7W!A=&@        .    *     8    (     0         %    \"                0    "
+    "     .    *     8    (     0         %    \"                0         .    ,     8    (    !          %    \"     "
+    "           0         0          X   \"@ 0  !@    @    \"          4    (     0    $    !          4 !  +     0   #"
+    "<   !\";&]C:U!A=&A? $QA8F5L7P      4&%R86U.86UE7P!687).86UE7P   %=K<U1Y<&5?      X   !(    !@    @    -          4"
+    "    (    !@    $    !          8    8        W0(    !     0    ,    !    #@   #     &    \"     0         !0    @ "
+    "              $         $          .    ,     8    (    !          %    \"                0         0          X  "
+    "  P    !@    @    $          4    (               !         !          #@   #     &    \"     0         !0    @   "
+    "            $         $          .    B     8    (    \"0         %    \"     $   !8     0         \"    6      !2"
+    "4T     #@   $@    &    \"     (         !0    @    !     0    $         !0 $  4    !    !0   $U#3U,     #@        "
+    " "
+  }
+  DataRecord {
+    Tag			    DataTag5
+    Data		    "  %)30     .    $ $   8    (     0         %    \"     $    \"     0         .    F     8    (     0   "
+    "      %    \"     $    \"     0         .    ,     8    (    !          %    \"     $    #     0         0  , 3V9F"
+    "  X    P    !@    @    $          4    (     0    (    !         !   @!/;@  #@   $     &    \"     8         !0   "
+    " @    !     @    $         \"0   !                       / _"
+  }
+}
 #Finite State Machines
 #
 #   Stateflow 80000019
@@ -5415,8 +5796,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 3 0 0]
     viewObj		    2
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -5540,8 +5919,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 10 0 0]
     viewObj		    9
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -5665,8 +6042,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 17 0 0]
     viewObj		    16
-    subviewS {
-    }
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -5843,8 +6218,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 26 0 0]
     viewObj		    25
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -5969,8 +6342,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 33 0 0]
     viewObj		    32
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

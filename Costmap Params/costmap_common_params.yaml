@@ -1,4 +1,4 @@
-footprint: [[ 0.3,  0.3], [-0.3,  0.3], [-0.3, -0.3], [ 0.3, -0.3]]
+footprint: [[ 0.4,  0.4], [-0.4,  0.4], [-0.4, -0.4], [ 0.4, -0.4]] # this is a polygon of the robot
 footprint_padding: 0.02
 #robot_radius: 0.38
 #robot_radius: ir_of_robot
