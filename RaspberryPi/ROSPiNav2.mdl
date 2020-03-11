@@ -1,12 +1,12 @@
 Model {
   Name			  "ROSPiNav2"
   Version		  10.0
-  SavedCharacterEncoding  "UTF-8"
+  SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.10"
+    ComputedModelVersion    "1.13"
     NumModelReferences	    0
     NumTestPointedSignals   5
     TestPointedSignal {
@@ -54,11 +54,29 @@ Model {
     IsArchitectureModel	    0
     IsAUTOSARArchitectureModel 0
     NumParameterArguments   0
-    NumExternalFileReferences 4
+    NumExternalFileReferences 7
     ExternalFileReference {
       Reference		      "simulink/Sources/Counter\nLimited"
       Path		      "ROSPiNav2/Counter Limited"
       SID		      "32"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sensehatlib/HTS221 Humidity Sensor"
+      Path		      "ROSPiNav2/PiSenseHat/HTS221 Humidity Sensor"
+      SID		      "120"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sensehatlib/LPS25H Pressure Sensor"
+      Path		      "ROSPiNav2/PiSenseHat/LPS25H Pressure Sensor"
+      SID		      "122"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "sensehatlib/LSM9DS1 IMU Sensor"
+      Path		      "ROSPiNav2/PiSenseHat/LSM9DS1 IMU Sensor"
+      SID		      "123"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -85,11 +103,11 @@ Model {
   SuppressorTable	  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n<!DOCTYPE boost_serialization>\n<"
   "boost_serialization signature=\"serialization::archive\" version=\"15\">\n<DiagnosticSuppressor class_id=\"0\" track"
   "ing_level=\"0\" version=\"6\">\n	<Table class_id=\"1\" tracking_level=\"0\" version=\"0\">\n		<count>1</count>\n		<b"
-  "ucket_count>2</bucket_count>\n		<item_version>0</item_version>\n		<item class_id=\"2\" tracking_level=\"0\" version="
+  "ucket_count>8</bucket_count>\n		<item_version>0</item_version>\n		<item class_id=\"2\" tracking_level=\"0\" version="
   "\"0\">\n			<first class_id=\"3\" tracking_level=\"0\" version=\"6\">\n				<Source class_id=\"4\" tracking_level=\"0\""
   " version=\"0\">\n					<count>1</count>\n					<item_version>0</item_version>\n					<item>ROSPiNav2/Counter Limited</i"
   "tem>\n				</Source>\n			</first>\n			<second class_id=\"5\" tracking_level=\"0\" version=\"6\">\n				<SuppressedData"
-  " class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<count>2</count>\n					<bucket_count>5</bucket_count>\n			"
+  " class_id=\"6\" tracking_level=\"0\" version=\"0\">\n					<count>2</count>\n					<bucket_count>8</bucket_count>\n			"
   "		<item_version>0</item_version>\n					<item class_id=\"7\" tracking_level=\"0\" version=\"0\">\n						<first class_"
   "id=\"8\" tracking_level=\"0\" version=\"6\">\n							<ID>Simulink:DataType:WarningOverFlowDetected</ID>\n							<Cau"
   "se>\n								<Source>\n									<count>0</count>\n									<item_version>0</item_version>\n								</Source>\n						"
@@ -109,12 +127,11 @@ Model {
   "				<time_duration_fractional_seconds>0</time_duration_fractional_seconds>\n								</ptime_time_duration>\n							<"
   "/LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedData>\n	"
   "		</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
-  AnimationPlugin	  "on"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "c8c877dd-a2d7-4449-817a-3d091eaa01f0,b65482df-6083-4df0-8804-932ee4a1c904,d5d3a0d7-9de6"
-  "-498d-bd3e-b3a3d3b67ba2,3bc10de9-2fa7-4451-9b63-790e2e79518c,0b4ee2b6-c9ba-4ba2-86b4-30ad931c7907"
-  WebScopes_FoundationPlugin "on"
+  LogicAnalyzerSignalOrdering "2a121d46-b95e-4507-89f2-75febecf56f8"
   SLCCPlugin		  "on"
+  AnimationPlugin	  "on"
+  WebScopes_FoundationPlugin "on"
   NotesPlugin		  "on"
   slprops.hdlmdlprops {
     $PropName		    "HDLParams"
@@ -137,7 +154,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
-  LastSavedArchitecture	  "glnxa64"
+  LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    2
@@ -147,7 +164,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [67.0, 27.0, 1853.0, 1053.0]
+      Location		      [-7.0, -7.0, 1839.0, 1191.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -174,13 +191,35 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1753.0, 821.0]
-	  ZoomFactor		  [0.4607786170830912]
-	  Offset		  [395.34803490577275, 148.67074939841945]
-	  SceneRectInView	  [395.34803490577275, 148.67074939841945, 3804.4300126103408, 1781.766708701135]
+	  Extents		  [2606.0, 1444.0]
+	  ZoomFactor		  [0.6]
+	  Offset		  [1499.0783907816349, 492.97901442321859]
+	  SceneRectInView	  [1499.0783907816349, 492.97901442321859, 2895.5555555555557, 1604.4444444444446]
 	}
 	Object {
 	  $ObjectID		  7
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "117"
+	  Extents		  [2606.0, 1444.0]
+	  ZoomFactor		  [1.2499999999999998]
+	  Offset		  [-102.15972177526699, 211.35798700502144]
+	  SceneRectInView	  [-102.15972177526699, 211.35798700502144, 1389.866666666667, 770.13333333333355]
+	}
+	Object {
+	  $ObjectID		  8
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "138"
+	  Extents		  [2606.0, 1444.0]
+	  ZoomFactor		  [1.2499999999999998]
+	  Offset		  [39.5061631944445, -125.96666666666665]
+	  SceneRectInView	  [39.5061631944445, -125.96666666666665, 1389.866666666667, 770.13333333333355]
+	}
+	Object {
+	  $ObjectID		  9
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -191,7 +230,7 @@ Model {
 	  SceneRectInView	  [-604.87288135593224, -351.4576271186441, 1485.5932203389832, 695.76271186440681]
 	}
 	Object {
-	  $ObjectID		  8
+	  $ObjectID		  10
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -202,7 +241,7 @@ Model {
 	  SceneRectInView	  [-808.5546875, -533.5, 2191.25, 1026.25]
 	}
 	Object {
-	  $ObjectID		  9
+	  $ObjectID		  11
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -213,7 +252,7 @@ Model {
 	  SceneRectInView	  [-538.33876742377845, -239.87115839243512, 1239.5837848475569, 682.74231678487024]
 	}
 	Object {
-	  $ObjectID		  10
+	  $ObjectID		  12
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -222,28 +261,6 @@ Model {
 	  ZoomFactor		  [0.8]
 	  Offset		  [-1429.1215400796641, -333.95487913653164]
 	  SceneRectInView	  [-1429.1215400796641, -333.95487913653164, 2153.75, 1186.25]
-	}
-	Object {
-	  $ObjectID		  11
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "138"
-	  Extents		  [1723.0, 949.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [45.26171875, -238.5]
-	  SceneRectInView	  [45.26171875, -238.5, 1723.0, 949.0]
-	}
-	Object {
-	  $ObjectID		  12
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "117"
-	  Extents		  [1723.0, 949.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [-528.4609375, 22.165995839792764]
-	  SceneRectInView	  [-528.4609375, 22.165995839792764, 1723.0, 949.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -258,15 +275,15 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[300]
-	Height			[29]
+	Width			[426]
+	Height			[320]
 	Minimized		"On"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAAf//wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAAf//wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAALAD///8AAAb/AAADcgAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
+      "QBjAHQAbwByAAAAAAD/////AAAAUwD///8AAApmAAAF8AAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiA"
       "GwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA=="
@@ -284,11 +301,11 @@ Model {
   Creator		  "FRED-Surface"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "earth"
+  LastModifiedBy	  "FRED-Surface"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Mar 08 16:58:50 2020"
-  RTWModifiedTimeStamp	  505584553
-  ModelVersionFormat	  "1.%<AutoIncrement:10>"
+  LastModifiedDate	  "Wed Mar 11 16:10:04 2020"
+  RTWModifiedTimeStamp	  505843799
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1935,7 +1952,7 @@ Model {
   }
   System {
     Name		    "ROSPiNav2"
-    Location		    [67, 27, 1920, 1080]
+    Location		    [-7, -7, 1832, 1184]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1950,9 +1967,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "46"
+    ZoomFactor		    "60"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "188"
+    SIDHighWatermark	    "189"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
@@ -2268,7 +2285,7 @@ Model {
 	Annotation {
 	  SID			  "23"
 	  Name			  "Possibility here to switch from the commands to a fixed velocity"
-	  Position		  [-418, -84, -138, -69]
+	  Position		  [-418, -84, -138, -70]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
@@ -2277,7 +2294,7 @@ Model {
 	  Name			  "Looking here to see if we are on the stright and narrow if not, pause and rotate before moving forwards.\n"
 	  "The data coming from the Navigation node gives forward velocity and twist velocity. this ranges from -0.5 to 0.5 on"
 	  " both sides.\n\n"
-	  Position		  [-508, -155, 47, -101]
+	  Position		  [-508, -155, 47, -105]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	}
@@ -2610,14 +2627,14 @@ Model {
 	Annotation {
 	  SID			  "48"
 	  Name			  "input a -100 to 100 value for reverse and forwards. -100 is 100% speed backwards 100 is 100%speed forwards"
-	  Position		  [-151, -73, 341, -58]
+	  Position		  [-151, -73, 341, -59]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
 	Annotation {
 	  SID			  "47"
 	  Name			  "input a -100 to 100 value for left and right. -100 is 100% speed left 100 is 100%speed right"
-	  Position		  [-103, 139, 297, 154]
+	  Position		  [-103, 139, 297, 153]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
 	}
@@ -2645,7 +2662,6 @@ Model {
       SID		      "51"
       Position		      [2485, 625, 2585, 645]
       ZOrder		      553
-      Commented		      "on"
       GotoTag		      "SenseHatOut"
     }
     Block {
@@ -3681,14 +3697,14 @@ Model {
 	    Annotation {
 	      SID		      "95"
 	      Name		      "add a dead zone"
-	      Position		      [47, 92, 123, 107]
+	      Position		      [47, 92, 123, 106]
 	      InternalMargins	      [0, 0, 0, 0]
 	      ZOrder		      -1
 	    }
 	    Annotation {
 	      SID		      "94"
 	      Name		      "D PAD "
-	      Position		      [443, 266, 477, 281]
+	      Position		      [443, 266, 477, 280]
 	      InternalMargins	      [0, 0, 0, 0]
 	      ZOrder		      -2
 	    }
@@ -3942,7 +3958,6 @@ Model {
       SID		      "108"
       Position		      [2470, 1780, 2570, 1800]
       ZOrder		      552
-      Commented		      "on"
       GotoTag		      "SenseHatOut"
     }
     Block {
@@ -3995,7 +4010,6 @@ Model {
       Position		      [2400, 1702, 2405, 1878]
       ZOrder		      551
       ShowName		      off
-      Commented		      "on"
       Inputs		      "7"
       DisplayOption	      "bar"
     }
@@ -4039,12 +4053,11 @@ Model {
       Ports		      [0, 7]
       Position		      [2060, 1695, 2360, 1885]
       ZOrder		      537
-      Commented		      "on"
       RequestExecContextInheritance off
       ContentPreviewEnabled   on
       System {
 	Name			"PiSenseHat"
-	Location		[8, 8, 1847, 1199]
+	Location		[-7, -7, 1832, 1184]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4059,7 +4072,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"125"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Reference
@@ -4172,7 +4185,7 @@ Model {
 	  Name			  "MATLAB Function"
 	  SID			  "124"
 	  Ports			  [3, 1]
-	  Position		  [420, 623, 570, 677]
+	  Position		  [420, 618, 570, 672]
 	  ZOrder		  499
 	  ErrorFcn		  "Stateflow.Translate.translate"
 	  PermitHierarchicalResolution "ExplicitOnly"
@@ -4584,7 +4597,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "MagField"
 	  SID			  "131"
-	  Position		  [880, 643, 910, 657]
+	  Position		  [880, 638, 910, 652]
 	  ZOrder		  480
 	  Port			  "5"
 	  IconDisplay		  "Port number"
@@ -4635,7 +4648,7 @@ Model {
 	  Points		  [108, 0]
 	  Branch {
 	    ZOrder		    5
-	    Points		    [0, 140]
+	    Points		    [0, 130]
 	    DstBlock		    "MATLAB Function"
 	    DstPort		    1
 	  }
@@ -4666,7 +4679,7 @@ Model {
 	  Points		  [63, 0]
 	  Branch {
 	    ZOrder		    10
-	    Points		    [0, 80]
+	    Points		    [0, 75]
 	    DstBlock		    "MATLAB Function"
 	    DstPort		    2
 	  }
@@ -4709,7 +4722,7 @@ Model {
 	  SID			  "134"
 	  Name			  "For some reason the GPIO is broken. I don't know why. but these two blocks do not work. However the IMU d"
 	  "ata we care about is fine"
-	  Position		  [-87, -90, 505, -75]
+	  Position		  [-87, -90, 505, -76]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -1
 	}
@@ -4784,7 +4797,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"Subsystem"
-	Location		[8, 8, 1847, 1199]
+	Location		[-7, -7, 1832, 1184]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4799,7 +4812,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"125"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -5221,10 +5234,10 @@ Model {
     Line {
       Name		      "ForwardsBackOut"
       ZOrder		      20
-      Labels		      [3, 1]
+      Labels		      [1, 1]
       SrcBlock		      "Arbitration"
       SrcPort		      1
-      Points		      [127, 0; 0, -25]
+      Points		      [260, 0; 0, -25]
       DstBlock		      "ForwardBack_LeftRight"
       DstPort		      1
     }
@@ -5624,7 +5637,7 @@ Model {
       "yle:normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;"
       " -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22px; font-weight:600; text-decoration: underli"
       "ne;\">Switch Xbox or AutoNav</span></p></body></html>"
-      Position		      [2884, 332, 3141, 359]
+      Position		      [2884, 332, 3140, 359]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
       ZOrder		      -4
@@ -5636,8 +5649,8 @@ Model {
       "\n</style></head><body align=\"left\" style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-st"
       "yle:normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;"
       " -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22px; font-weight:600; text-decoration: underli"
-      "ne;\">Cheeky Dev Interface</span></p></body></html>"
-      Position		      [2655, 181, 2879, 208]
+      "ne;\">Dev Interface</span></p></body></html>"
+      Position		      [2655, 181, 2795, 208]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
       ZOrder		      -5
@@ -5645,14 +5658,14 @@ Model {
     Annotation {
       SID		      "167"
       Name		      "Xbox"
-      Position		      [2849, 431, 2873, 446]
+      Position		      [2849, 431, 2873, 445]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -6
     }
     Annotation {
       SID		      "168"
       Name		      "Counter to show Pi is functiuoning when running in external mode"
-      Position		      [2621, 272, 2913, 287]
+      Position		      [2621, 272, 2913, 286]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -7
     }
@@ -5664,7 +5677,7 @@ Model {
       "yle:normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;"
       " -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22px; font-weight:600; text-decoration: underli"
       "ne;\">Send Data</span></p></body></html>"
-      Position		      [3480, 1029, 3590, 1056]
+      Position		      [3480, 1029, 3589, 1056]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
       ZOrder		      -8
@@ -5698,7 +5711,7 @@ Model {
     Annotation {
       SID		      "172"
       Name		      "AutoNav"
-      Position		      [2841, 388, 2881, 403]
+      Position		      [2841, 388, 2881, 402]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -11
     }
