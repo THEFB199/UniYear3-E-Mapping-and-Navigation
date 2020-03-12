@@ -2,15 +2,17 @@
 
 # Summary
 
+- launch files for Rtabmap and freenect on the pi provided in relavant folders.
+- Pi4 code to send commands to the botboarduino can be found in the raspberry pi folder
+
 - Currently ros is used witha kinect for RGBD mapping using RTABMap 
 - The outputs:
-  - localisation information (needs additional imu data for reliability)
+  - localisation information
   - 3D point cloud map of the area
   - 2D occupancy grid of floor
   - Current pose
  
 - using remote mapping in this current example http://wiki.ros.org/rtabmap_ros/Tutorials/RemoteMapping
-- note may move this onto the pi 4 if it can handle it (tests to come)
 
 - kinect camera needs to be calibrated, calibraion files can be found in this repo.
 
