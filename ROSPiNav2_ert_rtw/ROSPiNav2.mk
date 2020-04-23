@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'ROSPiNav2'. 
 ## 
 ## Makefile     : ROSPiNav2.mk
-## Generated on : Sun Mar 08 14:41:08 2020
+## Generated on : Thu Apr 23 15:23:57 2020
 ## MATLAB Coder version: 4.3 (R2019b)
 ## 
 ## Build Info:
@@ -27,7 +27,7 @@ MATLAB_ROOT               = /usr/local/MATLAB/R2019b
 MATLAB_BIN                = /usr/local/MATLAB/R2019b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/glnxa64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = /home/earth/GitHub/E-Mapping-and-Navigation
+START_DIR                 = /home/fred/GitHub/E-Mapping-and-Navigation
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -153,7 +153,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/include -I/home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/shared/svd/include -I$(START_DIR)/ROSPiNav2_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
+INCLUDES_BUILDINFO = -I$(START_DIR) -I/home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/realtime/targets/raspi/server -I/home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/include -I/home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/shared/svd/include -I$(START_DIR)/ROSPiNav2_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/ros/slros/include -I$(MATLAB_ROOT)/toolbox/target/codertarget/rtos/inc
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -175,7 +175,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_IMPLIED)
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2.cpp $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2_data.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
+SRCS = /home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2.cpp $(START_DIR)/ROSPiNav2_ert_rtw/ROSPiNav2_data.cpp $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/rtiostream_interface.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip/rtiostream_tcpip.c $(MATLAB_ROOT)/toolbox/target/codertarget/rtos/src/linuxinitialize.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_busmsg_conversion.cpp $(START_DIR)/ROSPiNav2_ert_rtw/slros_initialize.cpp $(MATLAB_ROOT)/toolbox/ros/slros/src/slros_generic_param.cpp
 
 MAIN_SRC = $(START_DIR)/ROSPiNav2_ert_rtw/ert_main.cpp
 
@@ -217,7 +217,7 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
-CFLAGS_SKIPFORSIL =   -fpermissive
+CFLAGS_SKIPFORSIL =   -fpermissive -fpermissive
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
@@ -226,7 +226,7 @@ CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 # C++ Compiler
 #-----------------
 
-CPPFLAGS_SKIPFORSIL =   -fpermissive
+CPPFLAGS_SKIPFORSIL =   -fpermissive -fpermissive
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
@@ -360,15 +360,15 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-%.c.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.c
+%.c.o : /home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 
-%.s.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.s
+%.s.o : /home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
 
-%.cpp.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.cpp
+%.cpp.o : /home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/%.cpp
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
@@ -432,7 +432,7 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o $@ $<
 
 
-MW_SPI.c.o : /home/earth/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c
+MW_SPI.c.o : /home/fred/Documents/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/raspberrypi/src/MW_SPI.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 

@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'ROSPiNav2'.
 //
-// Model version                  : 1.9
+// Model version                  : 1.15
 // Simulink Coder version         : 9.2 (R2019b) 18-Jul-2019
-// C/C++ source code generated on : Sun Mar  8 15:54:33 2020
+// C/C++ source code generated on : Thu Apr 23 13:04:58 2020
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -324,12 +324,12 @@ P_ROSPiNav2_T ROSPiNav2_P = {
   // Computed Parameter: Saturation_UpperSat
   //  Referenced by: '<S3>/Saturation'
 
-  2000.0F,
+  1600.0F,
 
   // Computed Parameter: Saturation_LowerSat
   //  Referenced by: '<S3>/Saturation'
 
-  1000.0F,
+  1400.0F,
 
   // Computed Parameter: uDLookupTable1_tableData_b
   //  Referenced by: '<S3>/1-D Lookup Table1'
@@ -344,12 +344,12 @@ P_ROSPiNav2_T ROSPiNav2_P = {
   // Computed Parameter: Saturation1_UpperSat
   //  Referenced by: '<S3>/Saturation1'
 
-  2000.0F,
+  1600.0F,
 
   // Computed Parameter: Saturation1_LowerSat
   //  Referenced by: '<S3>/Saturation1'
 
-  1000.0F,
+  1400.0F,
 
   // Computed Parameter: Constant5_Value
   //  Referenced by: '<Root>/Constant5'
