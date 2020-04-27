@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
+    ComputedModelVersion    "1.14"
     NumModelReferences	    0
     NumTestPointedSignals   5
     TestPointedSignal {
@@ -128,7 +128,6 @@ Model {
   "/LastModified>\n							<SuppressionType>1</SuppressionType>\n						</second>\n					</item>\n				</SuppressedData>\n	"
   "		</second>\n		</item>\n	</Table>\n</DiagnosticSuppressor>\n</boost_serialization>\n\n"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "2a121d46-b95e-4507-89f2-75febecf56f8"
   SLCCPlugin		  "on"
   AnimationPlugin	  "on"
   WebScopes_FoundationPlugin "on"
@@ -164,7 +163,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, -7.0, 1839.0, 1191.0]
+      Location		      [58.0, 108.0, 1839.0, 1191.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -191,10 +190,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [1499.0783907816349, 492.97901442321859]
-	  SceneRectInView	  [1499.0783907816349, 492.97901442321859, 2895.5555555555557, 1604.4444444444446]
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [0.59148199445983363]
+	  Offset		  [289.56608414296863, 706.96630567651232]
+	  SceneRectInView	  [289.56608414296863, 706.96630567651232, 2913.0218943917585, 1604.4444444444448]
 	}
 	Object {
 	  $ObjectID		  7
@@ -202,10 +201,10 @@ Model {
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "117"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [1.2499999999999998]
-	  Offset		  [-102.15972177526699, 211.35798700502144]
-	  SceneRectInView	  [-102.15972177526699, 211.35798700502144, 1389.866666666667, 770.13333333333355]
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [0.6]
+	  Offset		  [-748.58792690347218, -350.9112613265554]
+	  SceneRectInView	  [-748.58792690347218, -350.9112613265554, 2871.666666666667, 1581.6666666666667]
 	}
 	Object {
 	  $ObjectID		  8
@@ -275,15 +274,15 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[426]
-	Height			[320]
+	Width			[640]
+	Height			[480]
 	Minimized		"On"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAAf//wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAAf//wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAUwD///8AAApmAAAF8AAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAbhAAAD8gAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiA"
       "GwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA=="
@@ -301,11 +300,11 @@ Model {
   Creator		  "FRED-Surface"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "FRED-Surface"
+  LastModifiedBy	  "fredd"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Mar 11 16:10:04 2020"
-  RTWModifiedTimeStamp	  505843799
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Mon Apr 27 15:57:06 2020"
+  RTWModifiedTimeStamp	  509903820
+  ModelVersionFormat	  "1.%<AutoIncrement:14>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1952,7 +1951,7 @@ Model {
   }
   System {
     Name		    "ROSPiNav2"
-    Location		    [-7, -7, 1832, 1184]
+    Location		    [58, 108, 1897, 1299]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1967,7 +1966,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "60"
+    ZoomFactor		    "59"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "189"
     SimulinkSubDomain	    "Simulink"
@@ -2350,26 +2349,6 @@ Model {
       SID		      "29"
       Position		      [3195, 1222, 3260, 1258]
       ZOrder		      524
-      Value		      "0"
-      OutDataTypeStr	      "single"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant6"
-      SID		      "30"
-      Position		      [1705, 1172, 1735, 1208]
-      ZOrder		      549
-      Commented		      "on"
-      Value		      "0"
-      OutDataTypeStr	      "single"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant7"
-      SID		      "31"
-      Position		      [1705, 1212, 1735, 1248]
-      ZOrder		      550
-      Commented		      "on"
       Value		      "0"
       OutDataTypeStr	      "single"
     }
@@ -4057,7 +4036,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"PiSenseHat"
-	Location		[-7, -7, 1832, 1184]
+	Location		[58, 108, 1897, 1299]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4072,7 +4051,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"60"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Reference
