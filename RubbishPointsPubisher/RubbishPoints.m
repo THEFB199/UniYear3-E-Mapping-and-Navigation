@@ -25,7 +25,7 @@ for i = 1:length(Regions)
 rectangle('Position', Regions(i).BoundingBox,'EdgeColor','r','LineWidth',2);
 plot(uint32(Regions(i).Centroid(1)),uint32(Regions(i).Centroid(2)), 'r+', 'MarkerSize', 15, 'LineWidth', 2);
 end
-plot(RobotStart(2),RobotStart(1), 'r+', 'MarkerSize', 15, 'LineWidth', 2);
+plot(RobotStart(2),RobotStart(1), 'g+', 'MarkerSize', 15, 'LineWidth', 2);
 %% Calculate best items to go to first
 Distances = [];
 
