@@ -1,0 +1,47 @@
+# http://wiki.ros.org/base_local_planner
+
+TrajectoryPlannerROS:
+
+  # Acceleration limits in m/sec^2
+  acc_lim_x:  1 
+  acc_lim_y:  1
+  # Angular Acceleration limit in radians/sec^2
+  acc_lim_theta: 4
+
+  # Here - think about how the arbitration code works -> it takes a -1 to 1 single precision value, scales it by 100 and maps it to the motor limits
+  max_vel_x:  1 # max forward velocity (m/sec) 
+  min_vel_x:  0.45 # minimum forward velocity - think of how much demand do we need to make the thing move (poss experiment to do)
+  
+  # possibly some problems with rotation - need to consider holonomic robot
+  max_vel_theta: 1 # max rotation velocity (radians/sec^2)
+  min_vel_theta: -1 # minimum rotational velocity (radians/sec^2)
+  min_in_place_vel_theta: 0.5 # rotational velocity command to make the thing rotate on the spot
+  holonomic_robot: false # we don't have a holonomic robot as we can not strafe.
+
+  escape_vel: -0.5 # this is the value used to reverse when it becomes stuck (has to be negative)
+
+  xy_goal_tolerance:  0.2 # x,y position tolarance in meters for the goal (how far away from the goal is the goal rached)
+  yaw_goal_tolerance: 1 # rotational tolarance to goal in radiens
+  latch_xy_goal_tolerance: false # I dont know why you would want this to be true... robot will just spin in place once the goal is reached
+  
+  # make sure that the minimum velocity multiplied by the sim_period is less than twice the tolerance on a goal. Otherwise, the robot will prefer to rotate in place just outside of range of its target position rather than moving towards the goal.
+  sim_time: 1.5 # set between 1 and 2. The higher he value, the smoother the path (though more samples would be required).
+  sim_granularity: 0.01 # step size when calcualting trajectory
+  angular_sim_granularity: 0.01 # angular step size for trajectory
+  vx_samples: 12 # samples for x velocity space
+  vtheta_samples: 20 # sample for the rotational velocity space
+
+  meter_scoring: true
+
+  pdist_scale: 0.7 # The higher will follow more the global path.
+  gdist_scale: 0.8
+  occdist_scale: 0.01
+  publish_cost_grid_pc: false
+
+#move_base
+controller_frequency: 10.0 #The robot can move faster when higher.
+
+#global planner 
+NavfnROS:
+    allow_unknown: true
+    visualize_potential: false

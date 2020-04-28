@@ -1,0 +1,6 @@
+On Pi
+roslaunch freenect_throttle.launch rate:=10
+
+On ROS Machine
+roslaunch rtabmap_ros tritrackv2.launch subscribe_rgbd:=true rgbd_topic:=/camera/rgbd_image compressed:=true
+rtabmap_args:="--delete_db_on_start" rtabmapviz:=false
