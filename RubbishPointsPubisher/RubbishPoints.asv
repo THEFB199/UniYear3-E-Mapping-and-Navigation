@@ -66,23 +66,7 @@ for i = 1:(length(Distance)-1) % loop through rubbish in section
     
     [resultMsg,resultState] = sendGoalAndWait(actClient,goalMsg,10);
     
-    while ~resultState
-    end
-    if (resultState == ('aborted' || 'rejected')) %#ok These are ros message returns too
-        Rejected = Rejected + 1;
     
-    end
-    
-    % return to the rubbish bin
-    
-    PoseMsg.Point.X = RobotStart(1);
-    PoseMsg.Point.Y = RobotStart(2);
-    Quaternion.W = pi; %way in so set forward so bucket if facing the bin
-    
-    [resultMsg,resultState] = sendGoalAndWait(actClient,goalMsg,10);
-    
-    while ~resultState
-    end
     if (resultState == ('aborted' || 'rejected')) %#ok These are ros message returns too
         Rejected = Rejected + 1;
     
