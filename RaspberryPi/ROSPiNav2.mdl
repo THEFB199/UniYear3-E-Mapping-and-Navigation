@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.14"
+    ComputedModelVersion    "1.16"
     NumModelReferences	    0
     NumTestPointedSignals   5
     TestPointedSignal {
@@ -183,7 +183,7 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		7
+	Dimension		8
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [1]
@@ -192,8 +192,8 @@ Model {
 	  LoadSaveID		  "0"
 	  Extents		  [1723.0, 949.0]
 	  ZoomFactor		  [0.59148199445983363]
-	  Offset		  [289.56608414296863, 706.96630567651232]
-	  SceneRectInView	  [289.56608414296863, 706.96630567651232, 2913.0218943917585, 1604.4444444444448]
+	  Offset		  [354.63879780704428, 703.24630076095821]
+	  SceneRectInView	  [354.63879780704428, 703.24630076095821, 2913.0218943917585, 1604.4444444444448]
 	}
 	Object {
 	  $ObjectID		  7
@@ -202,45 +202,34 @@ Model {
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "117"
 	  Extents		  [1723.0, 949.0]
-	  ZoomFactor		  [0.6]
-	  Offset		  [-748.58792690347218, -350.9112613265554]
-	  SceneRectInView	  [-748.58792690347218, -350.9112613265554, 2871.666666666667, 1581.6666666666667]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-430.48426790526582, -276.18404922145032]
+	  SceneRectInView	  [-430.48426790526582, -276.18404922145032, 1723.0, 949.0]
 	}
 	Object {
 	  $ObjectID		  8
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "138"
-	  Extents		  [2606.0, 1444.0]
-	  ZoomFactor		  [1.2499999999999998]
-	  Offset		  [39.5061631944445, -125.96666666666665]
-	  SceneRectInView	  [39.5061631944445, -125.96666666666665, 1389.866666666667, 770.13333333333355]
+	  LoadSaveID		  "1"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [0.8]
+	  Offset		  [-415.37154007966456, -169.64771031599059]
+	  SceneRectInView	  [-415.37154007966456, -169.64771031599059, 2153.75, 1186.25]
 	}
 	Object {
 	  $ObjectID		  9
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "55"
-	  Extents		  [1753.0, 821.0]
-	  ZoomFactor		  [1.18]
-	  Offset		  [-604.87288135593224, -351.4576271186441]
-	  SceneRectInView	  [-604.87288135593224, -351.4576271186441, 1485.5932203389832, 695.76271186440681]
+	  LoadSaveID		  "82"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [-233.86171875000002, -274.25]
+	  SceneRectInView	  [-233.86171875000002, -274.25, 1378.4, 759.2]
 	}
 	Object {
 	  $ObjectID		  10
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "73"
-	  Extents		  [1753.0, 821.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-808.5546875, -533.5]
-	  SceneRectInView	  [-808.5546875, -533.5, 2191.25, 1026.25]
-	}
-	Object {
-	  $ObjectID		  11
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -251,21 +240,43 @@ Model {
 	  SceneRectInView	  [-538.33876742377845, -239.87115839243512, 1239.5837848475569, 682.74231678487024]
 	}
 	Object {
+	  $ObjectID		  11
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "138"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [43.295091088197005, -219.69339971798365]
+	  SceneRectInView	  [43.295091088197005, -219.69339971798365, 1723.0, 949.0]
+	}
+	Object {
 	  $ObjectID		  12
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
+	  LoadSaveID		  "55"
 	  Extents		  [1723.0, 949.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-1429.1215400796641, -333.95487913653164]
-	  SceneRectInView	  [-1429.1215400796641, -333.95487913653164, 2153.75, 1186.25]
+	  ZoomFactor		  [1.1598060467769538]
+	  Offset		  [-604.87288135593224, -412.69640064137246]
+	  SceneRectInView	  [-604.87288135593224, -412.69640064137246, 1485.5932203389832, 818.24025890986354]
+	}
+	Object {
+	  $ObjectID		  13
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "73"
+	  Extents		  [1723.0, 949.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-469.75216283372015, -527.45850261172382]
+	  SceneRectInView	  [-469.75216283372015, -527.45850261172382, 1723.0, 949.0]
 	}
 	PropName		"EditorsInfo"
       }
       Object {
 	$PropName		"DockComponentsInfo"
-	$ObjectID		13
+	$ObjectID		14
 	$ClassName		"Simulink.DockComponentInfo"
 	Type			"GLUE2:PropertyInspector"
 	ID			"Property Inspector"
@@ -302,9 +313,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "fredd"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Apr 27 15:57:06 2020"
-  RTWModifiedTimeStamp	  509903820
-  ModelVersionFormat	  "1.%<AutoIncrement:14>"
+  LastModifiedDate	  "Tue Apr 28 09:58:09 2020"
+  RTWModifiedTimeStamp	  509968667
+  ModelVersionFormat	  "1.%<AutoIncrement:16>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -364,7 +375,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    14
+    $ObjectID		    15
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "ROSPiNav2"
     overrideMode_	    [0.0]
@@ -383,7 +394,7 @@ Model {
   }
   Object {
     $PropName		    "InstrumentedSignals"
-    $ObjectID		    15
+    $ObjectID		    16
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
@@ -534,7 +545,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      16
+      $ObjectID		      17
       Version		      "19.1.1"
       DisabledProps	      []
       Description	      ""
@@ -542,7 +553,7 @@ Model {
 	Type			"Handle"
 	Dimension		11
 	Simulink.SolverCC {
-	  $ObjectID		  17
+	  $ObjectID		  18
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -585,7 +596,7 @@ Model {
 	  SolverOrder		  3
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  18
+	  $ObjectID		  19
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -627,7 +638,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  19
+	  $ObjectID		  20
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -687,7 +698,7 @@ Model {
 	  EfficientTunableParamExpr on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  20
+	  $ObjectID		  21
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -804,7 +815,7 @@ Model {
 	  ArithmeticOperatorsInVariantConditions "error"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  21
+	  $ObjectID		  22
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -854,7 +865,7 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  22
+	  $ObjectID		  23
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -874,7 +885,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  23
+	  $ObjectID		  24
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -909,7 +920,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  24
+	  $ObjectID		  25
 	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
@@ -1002,7 +1013,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      25
+	      $ObjectID		      26
 	      Version		      "19.1.1"
 	      DisabledProps	      []
 	      Description	      ""
@@ -1060,7 +1071,7 @@ Model {
 	    }
 	    Simulink.ERTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      26
+	      $ObjectID		      27
 	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
@@ -1235,7 +1246,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  27
+	  $ObjectID		  28
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1276,7 +1287,7 @@ Model {
 	  CovMcdcMode		  "Masking"
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  28
+	  $ObjectID		  29
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "HDL Coder custom configuration component"
@@ -1291,7 +1302,7 @@ Model {
 	  HDLCActiveTab		  "0"
 	}
 	CoderTarget.SettingsController {
-	  $ObjectID		  29
+	  $ObjectID		  30
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Coder Target"
@@ -1389,11 +1400,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    16
+    $ObjectID		    17
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    30
+    $ObjectID		    31
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1968,7 +1979,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "59"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "189"
+    SIDHighWatermark	    "196"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
@@ -1989,7 +2000,7 @@ Model {
       }
       System {
 	Name			"Arbitration"
-	Location		[67, 27, 1920, 1080]
+	Location		[58, 108, 1897, 1299]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2281,22 +2292,6 @@ Model {
 	  FixedWidth		  on
 	  ZOrder		  -1
 	}
-	Annotation {
-	  SID			  "23"
-	  Name			  "Possibility here to switch from the commands to a fixed velocity"
-	  Position		  [-418, -84, -138, -70]
-	  InternalMargins	  [0, 0, 0, 0]
-	  ZOrder		  -1
-	}
-	Annotation {
-	  SID			  "22"
-	  Name			  "Looking here to see if we are on the stright and narrow if not, pause and rotate before moving forwards.\n"
-	  "The data coming from the Navigation node gives forward velocity and twist velocity. this ranges from -0.5 to 0.5 on"
-	  " both sides.\n\n"
-	  Position		  [-508, -155, 47, -105]
-	  InternalMargins	  [0, 0, 0, 0]
-	  ZOrder		  -2
-	}
       }
     }
     Block {
@@ -2452,7 +2447,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"ForwardBack_LeftRight"
-	Location		[67, 27, 1920, 1080]
+	Location		[58, 108, 1897, 1299]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2467,7 +2462,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"120"
+	ZoomFactor		"139"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -2604,6 +2599,14 @@ Model {
 	  DstPort		  1
 	}
 	Annotation {
+	  SID			  "192"
+	  Name			  "Stop values exceeding max and min values of sabertooth"
+	  Position		  [206, -16, 375, 8]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	}
+	Annotation {
 	  SID			  "48"
 	  Name			  "input a -100 to 100 value for reverse and forwards. -100 is 100% speed backwards 100 is 100%speed forwards"
 	  Position		  [-151, -73, 341, -59]
@@ -2616,6 +2619,15 @@ Model {
 	  Position		  [-103, 139, 297, 153]
 	  InternalMargins	  [0, 0, 0, 0]
 	  ZOrder		  -2
+	}
+	Annotation {
+	  SID			  "193"
+	  Name			  "Stop values exceeding max and min values of sabertooth"
+	  Position		  [206, 167, 375, 191]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	  ZOrder		  -1
 	}
       }
     }
@@ -2706,7 +2718,7 @@ Model {
       }
       System {
 	Name			"GetRosMessage"
-	Location		[67, 27, 1920, 1080]
+	Location		[58, 108, 1897, 1299]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2721,7 +2733,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"118"
+	ZoomFactor		"116"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -3031,7 +3043,7 @@ Model {
 	  "\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-ind"
 	  "ent:0; text-indent:0px;\"><span style=\" font-size:14px; font-weight:600; text-decoration: underline;\">AngularComm"
 	  "ands</span></p></body></html>"
-	  Position		  [158, 31, 289, 49]
+	  Position		  [42, 31, 173, 49]
 	  InternalMargins	  [0, 0, 0, 0]
 	  Interpreter		  "rich"
 	  ZOrder		  -2
@@ -3049,7 +3061,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"GetRosMessage1"
-	Location		[67, 27, 1920, 1080]
+	Location		[58, 108, 1897, 1299]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -3064,7 +3076,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -3136,7 +3148,7 @@ Model {
 	  BlockType		  Gain
 	  Name			  "Gain"
 	  SID			  "187"
-	  Position		  [670, -215, 700, -185]
+	  Position		  [775, -215, 805, -185]
 	  ZOrder		  484
 	  Gain			  "-1"
 	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
@@ -3384,7 +3396,7 @@ Model {
 	  ContentPreviewEnabled	  on
 	  System {
 	    Name		    "XboxControllerMappings\n"
-	    Location		    [67, 27, 1920, 1080]
+	    Location		    [58, 108, 1897, 1299]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -3399,7 +3411,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "80"
+	    ZoomFactor		    "125"
 	    SimulinkSubDomain	    "Simulink"
 	    Block {
 	      BlockType		      Inport
@@ -3637,7 +3649,7 @@ Model {
 	      ZOrder		      17
 	      SrcBlock		      "Demux2"
 	      SrcPort		      1
-	      Points		      [37, 0; 0, -145]
+	      Points		      [43, 0; 0, -145]
 	      DstBlock		      "Mux"
 	      DstPort		      3
 	    }
@@ -3645,7 +3657,6 @@ Model {
 	      ZOrder		      18
 	      SrcBlock		      "Demux3"
 	      SrcPort		      1
-	      Points		      [157, 0; 0, -5]
 	      DstBlock		      "Mux"
 	      DstPort		      1
 	    }
@@ -3653,7 +3664,7 @@ Model {
 	      ZOrder		      19
 	      SrcBlock		      "Demux3"
 	      SrcPort		      2
-	      Points		      [150, 0; 0, -15]
+	      Points		      [172, 0; 0, -15]
 	      DstBlock		      "Mux"
 	      DstPort		      2
 	    }
@@ -3661,7 +3672,7 @@ Model {
 	      ZOrder		      20
 	      SrcBlock		      "Demux3"
 	      SrcPort		      3
-	      Points		      [150, 0; 0, 35]
+	      Points		      [170, 0; 0, 30]
 	      DstBlock		      "Mux"
 	      DstPort		      4
 	    }
@@ -3669,15 +3680,24 @@ Model {
 	      ZOrder		      21
 	      SrcBlock		      "Demux3"
 	      SrcPort		      4
-	      Points		      [153, 0; 0, 25]
+	      Points		      [170, 0; 0, 15]
 	      DstBlock		      "Mux"
 	      DstPort		      5
 	    }
 	    Annotation {
-	      SID		      "95"
-	      Name		      "add a dead zone"
-	      Position		      [47, 92, 123, 106]
+	      SID		      "191"
+	      Name		      "This Maps the inputs to the correct outputs and values so that the old code is now compatible with"
+	      " the ros joy node\n"
+	      Position		      [239, -169, 746, -143]
 	      InternalMargins	      [0, 0, 0, 0]
+	    }
+	    Annotation {
+	      SID		      "95"
+	      Name		      "add a dead zone to stop rogue erros"
+	      Position		      [47, 62, 134, 106]
+	      InternalMargins	      [0, 0, 0, 0]
+	      FixedHeight	      on
+	      FixedWidth	      on
 	      ZOrder		      -1
 	    }
 	    Annotation {
@@ -3901,6 +3921,12 @@ Model {
 	  DstPort		  1
 	}
 	Annotation {
+	  SID			  "190"
+	  Name			  "Navstack is inverted so match"
+	  Position		  [714, -183, 848, -169]
+	  InternalMargins	  [0, 0, 0, 0]
+	}
+	Annotation {
 	  SID			  "105"
 	  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html"
 	  "><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</styl"
@@ -4051,7 +4077,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"60"
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Reference
@@ -4698,6 +4724,12 @@ Model {
 	  DstPort		  3
 	}
 	Annotation {
+	  SID			  "194"
+	  Name			  "Conversions from gauss numbers to meaningfull data for the robot"
+	  Position		  [331, 429, 625, 443]
+	  InternalMargins	  [0, 0, 0, 0]
+	}
+	Annotation {
 	  SID			  "134"
 	  Name			  "For some reason the GPIO is broken. I don't know why. but these two blocks do not work. However the IMU d"
 	  "ata we care about is fine"
@@ -4776,7 +4808,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"Subsystem"
-	Location		[-7, -7, 1832, 1184]
+	Location		[58, 108, 1897, 1299]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -4791,7 +4823,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -4850,7 +4882,7 @@ Model {
 	  BlockType		  DataTypeConversion
 	  Name			  "Data Type Conversion"
 	  SID			  "145"
-	  Position		  [980, 218, 1055, 252]
+	  Position		  [920, 218, 995, 252]
 	  ZOrder		  433
 	  OutDataTypeStr	  "uint16"
 	  RndMeth		  "Round"
@@ -4859,7 +4891,7 @@ Model {
 	  BlockType		  Constant
 	  Name			  "EndofData"
 	  SID			  "146"
-	  Position		  [690, 397, 755, 433]
+	  Position		  [365, 397, 430, 433]
 	  ZOrder		  427
 	  Value			  "65535"
 	  OutDataTypeStr	  "single"
@@ -4998,6 +5030,23 @@ Model {
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  3
+	}
+	Annotation {
+	  SID			  "196"
+	  Name			  "uint16 gives enough resolution compared to transfer complexity. This could be different hower reciveing c"
+	  "ode on arduino also needs changing"
+	  Position		  [867, 145, 1047, 204]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
+	}
+	Annotation {
+	  SID			  "195"
+	  Name			  "Rate limit the data to slow down the model and allow the SPI transfer to function correctly\n"
+	  Position		  [1068, 152, 1223, 198]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  on
+	  FixedWidth		  on
 	}
       }
     }
@@ -5644,7 +5693,7 @@ Model {
     Annotation {
       SID		      "168"
       Name		      "Counter to show Pi is functiuoning when running in external mode"
-      Position		      [2621, 272, 2913, 286]
+      Position		      [2610, 272, 2902, 286]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -7
     }
@@ -5970,6 +6019,9 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 10 0 0]
     viewObj		    9
+    visible		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -6093,6 +6145,9 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 17 0 0]
     viewObj		    16
+    visible		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
