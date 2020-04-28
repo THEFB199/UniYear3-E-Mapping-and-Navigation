@@ -1,22 +1,21 @@
-# E-Mapping
+# E-Mapping-and-Navigation
 
 # Summary
 
-- launch files for Rtabmap and freenect on the pi provided in relavant folders.
-- Pi4 code to send commands to the botboarduino can be found in the raspberry pi folder
+- This repo contains all code to provide locomotion to the tri track with autonomous navigation to goals
 
-- Currently ros is used witha kinect for RGBD mapping using RTABMap 
-- The outputs:
-  - localisation information
-  - 3D point cloud map of the area
-  - 2D occupancy grid of floor
-  - Current pose
- 
-- using remote mapping in this current example http://wiki.ros.org/rtabmap_ros/Tutorials/RemoteMapping
+- launch files for Rtabmap are provided [here](/Launch).
+- the standard freenect_launch launch files are used on the Pi found [here](https://github.com/ros-drivers/freenect_stack/blob/master/freenect_launch/launch/freenect.launch)
+- Embedded Simulink code to be compiled and run on the Pi found [here](/RaspberryPi)
+- C++ for the Botbaorduino to recive data from the Pi and send it to the botbaorduino can be found [here](/Arduino_SPI)
+- Matlab script to publish rubbish points to ROS network for the scenario found [here](/RubbishPointsPubisher)
 
-- kinect camera needs to be calibrated, calibraion files can be found in this repo.
+- ROS Rtabmap used to get kinect 360 data in and produce a point cloud for the 3D map. This is then translated in Rtabmap to a 2D occupancy grid map which is used for navigation
+- using remote mapping in this current setup http://wiki.ros.org/rtabmap_ros/Tutorials/RemoteMapping
+- Rtabmap costmap paramaters configured for the tri track robot with a bucket found [here](/Costmap%20Params)
+- kinect camera needs to be calibrated, calibraion files can be found [here](/CameraCals).
 
-# Installation on ROS Computer (ubuntu)
+# Installation of Rtabmap and freenect on ROS Computer (ubuntu)
 ## Note: this is to document the steps taken, all of this has already been completed on the ROS computer
 
 ### 1 Please install ros melodic 
